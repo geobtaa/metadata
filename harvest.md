@@ -3,7 +3,7 @@ title: "Harvest & Transition"
 permalink: /harvest.md/
 
 
-2\. METADATA HARVES & TRANSITION
+2\. METADATA HARVEST & TRANSITION
 =======================
 
 This stage involves batch processing of the records, including harvesting, transformations, crosswalking information. This stage is carried out by the Metadata Coordinator, who may contact Task Force members for assistance.
