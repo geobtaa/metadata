@@ -1,18 +1,23 @@
 <div align="center">
-<h1>Metadata Workflow Handbook<br/>for Task Force Members</h1>
-<div>Big Ten Academic Alliance Geospatial Data Project</div>
+
+# Metadata Workflow Handbook
+# for Task Force Members
+
+
 <br/>
+
+![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
+
+
 <br/>
-<br/>
-<img src="https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg"> 
-<br/>
-<br/>
-<h4>Prepared by: Karen Majewicz, Project Metadata Coordinator</h4>
-<h4>Version 3.3</h4>
-<h4>Published July 2021</h4>
-Updated December 15, 2020<br/>
-Updated January 8, 2020<br/>
-Updated May 13, 2020<br/>
+
+#### Prepared by: Karen Majewicz, Project Metadata Coordinator
+#### Version 3.3
+#### Published July 2021
+
+Updated December 15, 2020
+Updated January 8, 2020
+Updated May 13, 2020
 <br/><br/><br/>
 </div>
 
@@ -20,7 +25,7 @@ Updated May 13, 2020<br/>
 
 
 
-<hr>
+
 <h2 align="center">Introduction</h2>
 This guide was prepared with the objective of assisting Task Force members in the [Big Ten Academic Alliance Geospatial Data Project](http://z.umn.edu/btaagdp) and includes:
 
@@ -56,18 +61,18 @@ The [project glossary](https://sites.google.com/umn.edu/btaa-gdp/about/project-d
 
 
 
-<hr>
+
 <h2 align="center">Metadata Schemas</h2>
 
 ### The GeoBlacklight Schema
 The primary metadata record for each resource is in the GeoBlacklight schema. This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. [The schema is documented on our project website](https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/metadata-guides/metadata-profile-of-geoblacklight-schema), and in the [Collections Management Database](https://airtable.com/shruGYkqsNqj8USyQ).
 
-> **_General Features of the GeoBlacklight Schema_**
+**_General Features of the GeoBlacklight Schema_**
 - Based upon and shares most of its elements with [Dublin Core](http://dublincore.org/documents/dcmi-terms/)
 - Includes a few GeoBlacklight custom elements for spatial metadata
 - Published as a JSON document
 
-> **_B1G Project Specific Features of the GeoBlacklight Schema_**
+**_B1G Project Specific Features of the GeoBlacklight Schema_**
 - The B1G profile of the GeoBlacklight Schema includes several custom elements specific to our project’s implementation of GeoBlacklight
 - The records are created with spreadsheets and stored in Google Drive
 - The JSONs are created by transforming the CSV spreadsheets to JSON with a Python script
@@ -88,7 +93,7 @@ All other forms of metadata, such as ISO 19139, FGDC Content Standard for Digita
 
 
 
-<hr>
+
 <h2 align="center">Submit Records</h2>
 
 The B1G Geoportal holds metadata records that point to geospatial data, maps, aerial imagery, and websites hosted online by external organizations. It is the role of the Task Force members to seek out new content for the geoportal. Task Force members are responsible for finding records in their own or adjacent states. Regional or national collections will be selected by the Collections Steering Group. 
@@ -118,6 +123,7 @@ The Metadata Coordinator will assign an alphanumeric code for the group. This co
 
 
 ### Code Naming Schema 
+
 | First part of string | Contributing institution |
 | --- | ----------- |
 | 01 | Indiana University |
@@ -152,7 +158,7 @@ The Metadata Coordinator will assign an alphanumeric code for the group. This co
 
 
 
-<hr>
+
 <h2 align="center">Metadata Transition</h2>
 
 This stage involves batch processing of the records, including harvesting, transformations, crosswalking information. This stage is carried out by the Metadata Coordinator, who may contact Task Force members for assistance.
@@ -165,37 +171,37 @@ Because of the variety of platforms and standards, this process can take many fo
 
 
 ### Geospatial data
-> **_API Harvesting_**
+**_API Harvesting_**
 - Most data portals have APIs that can be programmatically parsed to obtain metadata for each record. 
 - DCAT enabled portals: ArcGIS Open Data Portals (HUB), Socrata portals, and some others share metadata in the [DCAT standard](https://www.w3.org/TR/vocab-dcat/). This is typically accessed by appending “/data.json” to the end of the portal’s base URL. Our project created Python scripts to harvest from these portals that are stored in the GitHub Repository [BTAA-Geospatial-Data-Project/dcat-metadata](https://github.com/BTAA-Geospatial-Data-Project/dcat-metadata) 
 - CKAN / DKAN portals: This application uses a custom metadata schema for their API. Our project uses the Python scripts found in the BTAA fork of the CKAN project at [BTAA-Geospatial-Data-Project/ckanapi-exporter](https://github.com/BTAA-Geospatial-Data-Project/ckanapi-exporter).
 
-> **_HTML Parsing_**
+**_HTML Parsing_**
 - If a data portal or website does not have an API, we may be able to parse the HTML pages to obtain the metadata needed to create GeoBlacklight schema records. 
 - This is done using the project created Python scripts found in  [BTAA-Geospatial-Data-Project/parse-html](https://github.com/BTAA-Geospatial-Data-Project/parse-html).
 
-> **_Individual Geospatial Metadata Standard files_**
+**_Individual Geospatial Metadata Standard files_**
 - Geospatial metadata standards are expressed in the XML format, which can be parsed to extract metadata needed to create GeoBlacklight schema records. 
 - The following file types are accepted for metadata extraction and can serve as Supplemental Metadata:
     - **ISO 19139 XML and FGDC XML files**: These records are uploaded to our [project’s web server directory](http://btaagdp.org/metadata/). They are next parsed to extract metadata values for GeoBlacklight metadata using the project created Python scripts found in [BTAA-Geospatial-Data-Project/parse-xml](https://github.com/BTAA-Geospatial-Data-Project/parse-xml)
     - **ArcGIS 1.0 Metadata XML files**: These records are transformed to ISO 19139 using XSLT. They are then treated the same as the ISO as described above.
 
-> **_Downloading Data_**
+**_Downloading Data_**
 - Some metadata is only available as part of a zipped download of the datasets. 
 - In this case, the Metadata Coordinator will use scripts to batch download the records, unzip them, and process their metadat
 
 
 ### Maps
-> **_OAI-PMH_**
+**_OAI-PMH_**
 - The [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](https://www.openarchives.org/pmh/) is a framework that can be used to harvest metadata records from enabled repositories. 
 - The records are usually available as a simple Dublin Core XML format. 
 - If the protocol is not set up to include extra fields, such as the map image's download link or bounding box, this method may not be sufficient on its own. 
 
-> **_Spreadsheets_**
+**_Spreadsheets_**
 - Administrators for university repositories for scanned maps or data can often export metadata into a spreadsheet, especially for Dublin Core. 
 - This method is preferred, because the University IT professionals and librarians can control which fields to export, and because transformations by the Metadata Coordinator are not necessary.
 
-> **_MARC files_**
+**_MARC files_**
 - The best way to transfer this type of metadata is to send a single file containing multiple records in the .MRC or MARC XML format. 
 - The Metadata Coordinator will use MarcEdit to transform the records to GeoBlacklight using the project-designated MARC to GBL crosswalk, but Task Force members can specify preferences.
 
@@ -203,7 +209,7 @@ Because of the variety of platforms and standards, this process can take many fo
 
 
 
-<hr>
+
 <h2 align="center">Edit Records</h2>
 
 Once the metadata is in spreadsheet form, it is ready to be normalized and augmented. The Metadata Coordinator will add template information that each record in a group shares, and use spreadsheet functions or scripts to programmatically complete the metadata records.
@@ -214,56 +220,56 @@ Once the metadata is in spreadsheet form, it is ready to be normalized and augme
 
 
 ### Element Details
-> #### IDENTIFICATION 
-#### _`DESCRIPTIVE`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title
+#### IDENTIFICATION 
+##### _`DESCRIPTIVE`_
+Title
 : When practical, titles for GIS data are changed to the format theme:place. Dates can be added at the end if the dataset is for a specific time period. Most dates or numbers are moved from the beginning of the title to facilitate browsing in the geoportal. Titles for scanned maps are not altered from their official title in a library catalog.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternative Title
+Alternative Title
 : This field keeps the original title from the data provider.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description
+Description
 : These are plain text fields, so HTML formatting is removed. The description may be a concatenation of multiple fields from another metadata format to include things such as scale, rights, or purpose. If no description is available, it can be created by combining the GeoBlacklight metadata elements: geometry type, format, theme, place, date, publisher.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Language
+Language
 : The language(s) used in the dataset or map. Spell the name of the language out in English (e.g., "French")
 
 
-#### _`CREDITS`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creator
+##### _`CREDITS`_
+Creator
 : This field can contain multiple creators. For maps, it may include the surveyor, cartographer, and lithographer. For GIS data, it can be personal names or specific agencies. Often, it will further refine the Collection & Publisher fields. Example: “Collection: State Agencies Geospatial Data; Publisher: State of Iowa; Creator: Iowa Department of Transportation”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publisher
+Publisher
 : The concept of publisher for digital resources is not well defined. For the Geospatial data in our project, we indicate the administrative body that made the resource available. Choose from the name of a state, county, city, regional organization, NGO, or University/College. Example: “State of Maryland” or “University of Minnesota.” In most cases, the publisher should correspond to the collection. Ex. “Collection: State Agencies Geospatial Data; Publisher: State of Maryland”. For scanned maps in our project, this field can include the publisher of the original map, but also the University Library that published the digital version.
 
 
-#### _`CATEGORIES`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Genre
+##### _`CATEGORIES`_
+Genre
 : This is a custom field for the B1G geoportal for users to be able to easily filter between resource types. The three options are: “Geospatial data”, “Maps”, or “Aerial imagery”.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject
+Subject
 : These terms are chosen from controlled vocabulary lists. Geospatial data should have an ISO Topic Category, and Maps should have a Library of Congress Cartographic Genre (if applicable). Aerial imagery should have the ISO Topic Category of “Imagery and Base Maps”.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keyword
+Keyword
 : These free form terms are not part of a controlled vocabulary. They are searchable by users, but not viewable in the interface.
 
 
-#### _`TEMPORAL`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date Issued
+##### _`TEMPORAL`_
+Date Issued
 : This is the publication date, if known.  It can be in the form YYYY or YYYY-MM-DD.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temporal Coverage
+Temporal Coverage
 : This is a string value and can be formatted in any way that clarifies the time period. Examples: “1910?”, “1800-1805”, “before 2000”.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date Range
+Date Range
 : This is a Solr date type field. Multiple ranges can be entered. The format should be [1900 TO 1900] or [1900 TO 1950]. This field is used for indexing the Year & Time Period facet.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solr Year
+Solr Year
 : This is an integer field in the form YYYY that is used for indexing in the Year & Time Period facet. Use the earliest date in the temporal coverage field, or the Date Issued. If no date is provided, it will default to 9999, so an estimate is preferred.
 
 
-#### _`SPATIAL`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spatial Coverage
+##### _`SPATIAL`_
+Spatial Coverage
 : Our place name keywords are normalized to the state level for all values in the United States. Place names from other nations should be written out to the country level.
 : - City, state - ”Dublin, Ohio”
 : - County, state - “Cook County, Illinois”
@@ -271,135 +277,135 @@ Once the metadata is in spreadsheet form, it is ready to be normalized and augme
 : - State or territory, country - “British Columbia, Canada”
 : - Country - “Maldives”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GeoNames
+GeoNames
 : This optional field records a GeoNames URI in the form http://sws.geonames.org/numericcode
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bounding Box
+Bounding Box
 : The four coordinates should be provided as decimal degrees in the form W,S,E,N. This is the same format as the CSV output setting on the [Klokan Bounding Box](http://boundingbox.klokantech.com/).
 
 
 
-> #### DISTRIBUTION
-#### _`OBJECT`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type
+#### DISTRIBUTION
+##### _`OBJECT`_
+Type
 : This field observes the Dublin Core controlled vocabulary for [Type](https://github.com/geoblacklight/geoblacklight/wiki/Type-values). Values used in the Geoportal include: Dataset, Image, Collection, Service, and Interactive Resource.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Geometry Type
+Geometry Type
 : This field helps to differentiate between vector (Point, Line, Polygon), raster (Raster, Image), nonspatial formats (table), or a combination (Mixed). The value will trigger an associated icon that displays next to an item in the search results.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format
+Format
 : It is preferred to select a format type from the dropdown lists provided in the templates.  However, custom file formats or general terms are allowed. This term appears in the Download button in the geoportal as Download {format}.
 
 
-#### _`ACCESS LINKS`_
+##### _`ACCESS LINKS`_
 In the spreadsheet, each link type will have its own column. There can only be one link per type:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information
+Information
 : This link is for an external web page. Ideally, it is a landing page for the single resource. If that is unavailable, the home page for the resource’s publisher can be added.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Download
+Download
 : The first choice for this link is a direct download file. If that is unavailable, a landing page for the item can be added. Even if it duplicates the Information page, there should always be a value here to facilitate a standardized user experience.
 
 
-#### _`GEOSPATIAL WEB SERVICES`_
+##### _`GEOSPATIAL WEB SERVICES`_
 Geospatial web services will only display if they are in the Web Mercator projection. All web services must be hosted over a secure protocol (https://). 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArcGIS REST SERVICES
+ArcGIS REST SERVICES
 : These should be a single layer, rather than a group of layers. For example, this service https://gis.ohiodnr.gov/arcgis/rest/services/DGS_Services/Earthquakes/MapServer/1 with the “1” at the end displays. If we remove the 1, there are two layers at that address. They may show up in the geoportal web preview, but often they will not, especially if there are many of them.
 
 : The link itself will contain one of the phrases to indicate which column to add it to:
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FeatureServer**
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MapServer**
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ImageServer**
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TileServer**
+    **FeatureServer**
+    **MapServer**
+    **ImageServer**
+    **TileServer**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OGC WEB SERVICES
+OGC WEB SERVICES
 : These services generally come from GeoServer.
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**WFS (Web Feature Service)**
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only the base URL should be added here. Example: “https://bloomington.in.gov/geoserver/wfs”
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**WMS (Web Map Service)**
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only the base URL should be added here. Example: “https://bloomington.in.gov/geoserver/wms”
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Layer ID**
-: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The layer for these types of services needs to be added to a second field called Layer ID. Example for the Layer ID field: “publicgis:MPOPlanningArea”
+: **WFS (Web Feature Service)**
+: Only the base URL should be added here. Example: “https://bloomington.in.gov/geoserver/wfs”
+: **WMS (Web Map Service)**
+: Only the base URL should be added here. Example: “https://bloomington.in.gov/geoserver/wms”
+: **Layer ID**
+: The layer for these types of services needs to be added to a second field called Layer ID. Example for the Layer ID field: “publicgis:MPOPlanningArea”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open Index Map
+Open Index Map
 : A link to an online GeoJSON document in the [Open Index Map specification](https://openindexmaps.org/) that functions as a selectable index map in the geoportal.
 
 
-#### _`IMAGES`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image
+##### _`IMAGES`_
+Image
 : A static image URL that will be used for a thumbnail on the Search Results page and on the item view page if there is no web service. Use the highest quality image available online for this value. It will be compressed for display in the geoportal.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IIIF
+IIIF
 : This is for the International Image Interoperability Framework Image API. The URL will end with “.json”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manifest
+Manifest
 : This is another form of IIIF Json that includes metadata and multiple items, known as a Presentation Manifest.
 
 
-#### _`METADATA`_
+##### _`METADATA`_
 This is for the supplemental metadata file that will display in an iframe when the user clicks the “Metadata” text in the Tools palette. XML files must be valid as they are transformed on the fly by an application internal XSLT.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISO Metadata
+ISO Metadata
 : Valid ISO 19139 XML file
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FGDC Metadata
+FGDC Metadata
 : Valid FGDC XML file
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML
+HTML
 : Any standard
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentation
+Documentation
 : Link or downloadable file representing a codebook, attribute table, or other supporting information.
 
 
 
-> #### ADMINISTRATIVE ELEMENTS
-#### _`CODES`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Identifier
+#### ADMINISTRATIVE ELEMENTS
+##### _`CODES`_
+Identifier
 : This is a long alphanumeric string that is assigned to the metadata file for the resource. If available and sufficiently unique, the original identifier for the item will be used. Otherwise, it will be generated as a [Version 4 UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)). The identifier is also part of the slug for a record’s URL address in the geoportal.
 Collection records will use the group’s Code as the Identifier.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provenance
+Provenance
 : The name of the institution that holds the resource or acts as the custodian for the metadata record. The value is the short name for the Institution:
 Illinois, Iowa, Maryland, Minnesota, Michigan State, Michigan, Penn State, Purdue, Wisconsin, Ohio State, Chicago
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+Code
 : The alphanumeric code assigned to the collection (see Code Naming Schema chart on page 5).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is Part Of
+Is Part Of
 : This field is used to establish collection-item records. The Code of the collection is added to this field in each of the item records.  Do not add a value to the parent record. The GeoBlacklight application will display this relationship in the interface. [More information about this widget](https://github.com/geoblacklight/geoblacklight/wiki/Using-data-relations-widget).
 : When records are retired, this field is set to empty.
 
 
-#### _`LIFE CYCLE`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status
+##### _`LIFE CYCLE`_
+Status
 : This field indicates if the status of the record is ACTIVE, RETIRED, or UNKNOWN.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accrual Method
+Accrual Method
 : This field indicates how the record was obtained. Values include ArcGIS Hub, Socrata, DCAT, HTML, ISO, FGDC, GeoBlacklight, Dublin Core, and Manual Download.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accrual Periodicity
+Accrual Periodicity
 : Used for collection level records to indicate frequency of re-accessions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date Accessioned
+Date Accessioned
 : The date the record was added to the Geoportal in the form YYYY-MM-DD
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date Retired
+Date Retired
 : This field indicates when the record was retired from the Geoportal.  This record will still be accessible via a direct link, but will be suppressed in search results and will be noted as “Retired” in the Description field.
 
 
-#### _`ACCESSIBILITY`_
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rights
+##### _`ACCESSIBILITY`_
+Rights
 : Values are “Public” or “Restricted.” Restricted items will display a padlock next to the title, and any download or web services links will be suppressed.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access Rights
+Access Rights
 : Free text field for information about rights, access, or licenses.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suppressed
+Suppressed
 : This is a boolean field with the values TRUE or FALSE. If set to TRUE, the record will not appear in search results, but can still be accessed via a direct link.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child
+Child
 : This is a boolean field with the values TRUE or FALSE. If set to TRUE, the record will not be boosted in search results and should appear towards the end of the list.
 
 
@@ -425,7 +431,7 @@ All records are grouped into collections that are represented by collection leve
 
 
 
-<hr>
+
 <h2 align="center">Publish Records</h2>
 
 The following actions are carried out by the Metadata Coordinator. They require the Python scripts found in the [BTAA-Geospatial-Data-Project/workflow](https://github.com/BTAA-Geospatial-Data-Project/workflow) GitHub Repository, and a University of Minnesota VPN connection.
@@ -465,7 +471,7 @@ Use the CSV module to upload the updated records
 
 
 
-<hr>
+
 <h2 align="center">Maintenance</h2>
 
 ### General Maintenance
