@@ -23,7 +23,7 @@ All B1G custom elements:  [https://btaa-geospatial-data-project.github.io/metada
 
 
 ## Version History
-Changes for Version 4.0 (July 2021)
+**_Changes for Version 4.0 (July 2021)_**
 - Incorporation of GEOMG Metadata Editor
 - Upgrade to Aardvark Metadata Schema for GeoBlacklight
 

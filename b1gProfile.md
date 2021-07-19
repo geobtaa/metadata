@@ -1,7 +1,7 @@
-# Custom Elements for the B1G Profile of Aardvark
+# Custom Elements for the B1G Profile of GeoBlacklight Metadata
 
 
-This is an overview of the custom metadata elements for the B1G Profile
+This is an overview of the custom metadata elements for the B1G Profile. These elements extend the [official GeoBlacklight (Aardvark) schema](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html)
 
 | b1g-id | Label                                         | URI                             | Obligation  |
 | ------ | --------------------------------------------- | ------------------------------- | ----------- |
