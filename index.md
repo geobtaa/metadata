@@ -5,9 +5,6 @@ Big Ten Academic Alliance Geoportal
 ![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
 
 
-Prepared by: Karen Majewicz, Project Metadata Coordinator
-
-
 ## Introduction
 This guide was prepared with the objective of assisting Task Force members in the [Big Ten Academic Alliance Geospatial Data Project](http://z.umn.edu/btaagdp) and includes:
 
@@ -53,3 +50,7 @@ B1G Metadata Templates: [https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-t
 
 
 
+**Credits**
+Handbook prepared by:
+- Karen Majewicz, Project Metadata Coordinator
+- Ziying (Gene) Cheng - Graduate Research Assistant
