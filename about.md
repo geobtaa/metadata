@@ -10,6 +10,14 @@
 - The B1G profile of the GeoBlacklight Schema adds 9 custom elements to Aardvark
 - [The B1G custom elements are documented here](b1gProfile.html)
 
+## Editing Template
+The [B1G Metadata](https://z.umn.edu/b1g-template) Template contains the following tabs:
+- B1G Aardvark Documentation: Full documentation of all fields in Aardvark and the B1G custom elements
+- Map Template: Just the fields need for scanned maps, including some pre-filled values
+- Dataset Template: Just the fields needed for datasets, including some pre-filled values
+- Collection Record Template: Just the fields needed for a collection record.
+- Values: All of the controlled vocabulary values for the various fields.
+
 
 ## Supplemental Metadata
 All other forms of metadata, such as ISO 19139, FGDC Content Standard for Digital Geospatial Metadata, attribute table definitions, or custom schemas are treated as Supplemental Metadata.

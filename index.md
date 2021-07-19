@@ -21,6 +21,7 @@ All Aardvark schema elements: [https://opengeometadata.github.io/aardvark/aardva
 
 All B1G custom elements:  [https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html](https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html)
 
+B1G Metadata Templates: [https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-template)
 
 ## Version History
 **_Changes for Version 4.0 (July 2021)_**
