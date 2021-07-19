@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# Big Ten Academic Alliance Geoportal Metadata Workflow Handbook
 
-You can use the [editor on GitHub](https://github.com/BTAA-Geospatial-Data-Project/metadata/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<br/>
 
-### Markdown
+![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+<br/>
+Prepared by: Karen Majewicz, Project Metadata Coordinator
+Version 4.0
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Introduction
+This guide was prepared with the objective of assisting Task Force members in the [Big Ten Academic Alliance Geospatial Data Project](http://z.umn.edu/btaagdp) and includes:
 
-**Bold** and _Italic_ and `Code` text
+- overviews of collections scope and metadata schemas
+- a general description of the full workflow process
+- the roles and activities undertaken by Task Force members and the Metadata Coordinator
 
-[Link](url) and ![Image](src)
-```
+The [project glossary](https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary) defines many of the terms in this guide.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Changes for Version 4.0 (July 2021)
+- Incorporation of GEOMG Metadata Editor
+- Upgrade to Aardvark Metadata Schema for GeoBlacklight
 
-### Jekyll Themes
+> **_Changes for version 3 (Oct, 2019)_**
+- GeoNetwork and Omeka deprecated
+- all GeoBlacklight records are stored in a master spreadsheet in Google - Sheets
+- records are transformed from CSV to GeoBlacklight JSON with a Python script
+- additional metadata fields were added for administrative purposes
+- IsPartOf field now holds a code pointing to the collection record
+- Administrative groupings such as “State agencies geospatial data” are now subjects, not a Collection
+- updated editing templates available
+- all supplemental metadata can be stored as XML or HTML in project hosted folder
+- updated links to collections database 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BTAA-Geospatial-Data-Project/metadata/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+> **_Changes for version 3.1 (Dec 19, 2019)_**
+- Added collection level records metadata schema
 
-### Support or Contact
+> **_Changes for version 3.2 (Jan 8, 2020)_**
+- Added Date Range element
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+> **_Changes for version 3.3 (May 13, 2020)_**
+- Added University of Nebraska
+- Reorganized Metadata Elements to match [editing template](https://docs.google.com/spreadsheets/d/1dZoO1WZeyfWJnxqT9x7lJsH0MsSqlih8T-mXXjvzLNU/edit?usp=sharing)
+- Updated the “Update the Collections” section to match new administrative process for tracking records
