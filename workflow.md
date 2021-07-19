@@ -1,5 +1,8 @@
 # Workflow
 
+![Metadata Workflow](/images/btaa-metadata-workflow.png)
+
+
 ## 1. Submit Records
 
 The B1G Geoportal holds metadata records that point to geospatial data, maps, aerial imagery, and websites hosted online by external organizations. It is the role of the Task Force members to seek out new content for the geoportal. Task Force members are responsible for finding records in their own or adjacent states. Regional or national collections will be selected by the Collections Steering Group. 
