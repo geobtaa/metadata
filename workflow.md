@@ -27,7 +27,7 @@ The B1G Geoportal holds metadata records that point to geospatial data, maps, ae
 
 **2. Send an email to the Metadata Coordinator**
 
-**3. The submission will be added to our Collections Management Database**
+**3. The submission will be added to our collections processing queue**
 The Metadata Coordinator will assign an alphanumeric code for the group. This code will also be added to each metadata record to facilitate administrative tasks and for grouping items by their source.
 
 
@@ -65,7 +65,6 @@ The Metadata Coordinator will assign an alphanumeric code for the group. This co
 | -55079 | County FIPS code for Milwaukee County, Wisconsin |
 
 
-</br>
 
 ## 2. Metadata Transition
 
@@ -89,12 +88,12 @@ Because of the variety of platforms and standards, this process can take many fo
 **_Individual Geospatial Metadata Standard files_**
 - Geospatial metadata standards are expressed in the XML format, which can be parsed to extract metadata needed to create GeoBlacklight schema records. 
 - The following file types are accepted for metadata extraction and can serve as Supplemental Metadata:
-    - **ISO 19139 XML and FGDC XML files**: These records are uploaded to our [project’s web server directory](http://btaagdp.org/metadata/). They are next parsed to extract metadata values for GeoBlacklight metadata using the project created Python scripts found in [BTAA-Geospatial-Data-Project/parse-xml](https://github.com/BTAA-Geospatial-Data-Project/parse-xml)
+    - **ISO 19139 XML and FGDC XML files**: They are parsed to extract metadata values for GeoBlacklight metadata using the project created Python scripts found in [BTAA-Geospatial-Data-Project/parse-xml](https://github.com/BTAA-Geospatial-Data-Project/parse-xml)
     - **ArcGIS 1.0 Metadata XML files**: These records are transformed to ISO 19139 using XSLT. They are then treated the same as the ISO as described above.
 
 **_Downloading Data_**
 - Some metadata is only available as part of a zipped download of the datasets. 
-- In this case, the Metadata Coordinator will use scripts to batch download the records, unzip them, and process their metadat
+- In this case, the Metadata Coordinator will use scripts to batch download the records, unzip them, and process their metadata locally.
 
 
 ### Maps
@@ -106,10 +105,11 @@ Because of the variety of platforms and standards, this process can take many fo
 **_Spreadsheets_**
 - Administrators for university repositories for scanned maps or data can often export metadata into a spreadsheet, especially for Dublin Core. 
 - This method is preferred, because the University IT professionals and librarians can control which fields to export, and because transformations by the Metadata Coordinator are not necessary.
+- The [B1G Map Template](https://z.umn.edu/b1g-template) shows all of the fields needed for GeoBlacklight.
 
 **_MARC files_**
 - The best way to transfer this type of metadata is to send a single file containing multiple records in the .MRC or MARC XML format. 
-- The Metadata Coordinator will use MarcEdit to transform the records to GeoBlacklight using the project-designated MARC to GBL crosswalk, but Task Force members can specify preferences.
+- The Metadata Coordinator will use MarcEdit or XML parsing to transform the records to GeoBlacklight using the project-designated MARC to GBL crosswalk, but Task Force members can specify preferences.
 
 
 
@@ -118,15 +118,17 @@ Because of the variety of platforms and standards, this process can take many fo
 
 Once the metadata is in spreadsheet form, it is ready to be normalized and augmented. The Metadata Coordinator will add template information that each record in a group shares, and use spreadsheet functions or scripts to programmatically complete the metadata records.
 
+This work is carried out by the Metadata Coordinator and Graduate Research Assistants.
 
 ### Editing Template
-[The GBL Metadata Template](http://z.umn.edu/b1g-template) is for creating GeoBlacklight metadata.
+- [The GBL Metadata Template](http://z.umn.edu/b1g-template) is for creating GeoBlacklight metadata.
+- Refer to the documentation for the [Aardvark fields](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html) and the [B1G profile fields](b1gProfile.html) for guidance on values and formats.
 
 
 
 ## 4. Publish Records
 
-The following actions are carried out by the Metadata Coordinator.
+The following actions are carried out by the Metadata Coordinator and Graduate Research Assistants.
 
 ### 1. Save edited template as a CSV file
 
