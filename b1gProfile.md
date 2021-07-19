@@ -1,4 +1,4 @@
-# B1G Custom Elements
+# Custom Elements for the B1G Profile of Aardvark
 
 
 This is an overview of the custom metadata elements for the B1G Profile
@@ -17,6 +17,22 @@ This is an overview of the custom metadata elements for the B1G Profile
 
 ## Code
 
+| Label                 | Code                                                                                                                                                                                                                                                                                          |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_code_s                                                                                                                                                                                                                                                                                    |
+| Profile ID            | b1g-01                                                                                                                                                                                                                                                                                        |
+| Obligation            | Required                                                                                                                                                                                                                                                                                      |
+| Multiplicity          | 1-1                                                                                                                                                                                                                                                                                           |
+| Field type            | string                                                                                                                                                                                                                                                                                        |
+| Purpose               | To group records based upon their source                                                                                                                                                                                                                                                      |
+| Entry Guidelines      | Codes are developed by the metadata coordinator and indicate the provider, the type of institution hosting the resources, and a numeric sequence number.                                                                                                                                      |
+| Commentary            | This administrative field is used to group and track records based upon where they are harvested. This is frequently an identical value to "Member Of". The value will differ for records that are retired (these are removed from "Member Of") and records that are part of a subcollection. |
+| Controlled Vocabulary | yes-strict                                                                                                                                                                                                                                                                                    |
+| Example value         | 12d-01                                                                                                                                                                                                                                                                                        |
+| Element Set           | B1G                                                                                                                                                                                                                                                                                           |
+
+## Status
+
 | Label                 | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | URI                   | b1g_status_s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -31,18 +47,115 @@ This is an overview of the custom metadata elements for the B1G Profile
 | Example value         | Active                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Element Set           | B1G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-## Status
 
 ## Accrual Method
 
+| Label                 | Accrual Method                                                                                                                                                            |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_dct_accrualMethod_s                                                                                                                                                   |
+| Profile ID            | b1g-03                                                                                                                                                                    |
+| Obligation            | Required                                                                                                                                                                  |
+| Multiplicity          | 1-1                                                                                                                                                                       |
+| Field type            | string                                                                                                                                                                    |
+| Purpose               | To describe how the record was obtained                                                                                                                                   |
+| Entry Guidelines      | Some values, such as "ArcGIS Hub" should be entered consistently. Others may be more descriptive, such as "Manually entered from text file."                              |
+| Commentary            | This allows us to find all of the ArcGIS records in one search. It also can help track records that have been harvested via different methods within the same collection. |
+| Controlled Vocabulary | no                                                                                                                                                                        |
+| Example value         | ArcGIS Hub                                                                                                                                                                |
+| Element Set           | B1G/ Dublin Core                                                                                                                                                          |
+
 ## Accrual Periodicity
+
+| Label                 | Accrual Periodicity                                                                      |
+|-----------------------|------------------------------------------------------------------------------------------|
+| URI                   | b1g_dct_accrualPeriodicity_s                                                             |
+| Profile ID            | b1g-04                                                                                   |
+| Obligation            | Optional                                                                                 |
+| Multiplicity          | 0-1                                                                                      |
+| Field type            | string                                                                                   |
+| Purpose               | To indicate how often a collection is reaccessioned                                      |
+| Entry Guidelines      | Enter one of the following values: Annually, Semiannually, Quarterly, Monthly, As Needed |
+| Commentary            | This field is primarily for collection level records.                                    |
+| Controlled Vocabulary | yes-not strict                                                                           |
+| Example value         | As Needed                                                                                |
+| Element Set           | B1G/ Dublin Core                                                                         |
 
 ## Date Accessioned
 
+| Label                 | Date Accessioned                                                                                                             |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_dateAccessioned_s                                                                                                        |
+| Profile ID            | b1g-05                                                                                                                       |
+| Obligation            | Required                                                                                                                     |
+| Multiplicity          | 1-1                                                                                                                          |
+| Field type            | string                                                                                                                       |
+| Purpose               | To store the date a record was harvested                                                                                     |
+| Entry Guidelines      | Enter the date a record was harvested OR when it was added to the geoportal using the format yyyy-mm-dd                      |
+| Commentary            | This field allows us to track how many records are ingested into the portal in a given time period and to which collections. |
+| Controlled Vocabulary | no                                                                                                                           |
+| Example value         | 2021-01-01                                                                                                                   |
+| Element Set           | B1G                                                                                                                          |
+
 ## Date Retired
+
+| Label                 | Date Retired                                                                                                                 |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_dateRetired_s                                                                                                            |
+| Profile ID            | b1g-06                                                                                                                       |
+| Obligation            | Conditional                                                                                                                  |
+| Multiplicity          | 0-1                                                                                                                          |
+| Field type            | string                                                                                                                       |
+| Purpose               | To store the date the record was removed from the geoportal public interface                                                 |
+| Entry Guidelines      | Enter the date a record was removed from the geoportal                                                                       |
+| Commentary            | This field allows us to track how many records have been removed from the geoportal interface by time period and collection. |
+| Controlled Vocabulary | no                                                                                                                           |
+| Example value         | 2021-01-02                                                                                                                   |
+| Element Set           | B1G                                                                                                                          |
 
 ## Child Record
 
+| Label                 | Child Record                                                                                                                                                                      |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_child_record_b                                                                                                                                                                |
+| Profile ID            | b1g-07                                                                                                                                                                            |
+| Obligation            | Optional                                                                                                                                                                          |
+| Multiplicity          | 0-1                                                                                                                                                                               |
+| Field type            | string boolean                                                                                                                                                                    |
+| Purpose               | To apply an algorithm to the record that causes it to appear lower in search results                                                                                              |
+| Entry Guidelines      | Only one of two values are allowed: true or false                                                                                                                                 |
+| Commentary            | This is used to lower a record's placement in search results. This can be useful for a large collection with many similar metadata values that might clutter a user's experience. |
+| Controlled Vocabulary | string boolean                                                                                                                                                                    |
+| Example value         | true                                                                                                                                                                              |
+| Element Set           | B1G                                                                                                                                                                               |
+
 ## Mediator
 
+| Label                 | Mediator                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_dct_mediator_sm                                                                                                                                          |
+| Profile ID            | b1g-08                                                                                                                                                       |
+| Obligation            | Conditional                                                                                                                                                  |
+| Multiplicity          | 0-0 or 1-*                                                                                                                                                   |
+| Field type            | string                                                                                                                                                       |
+| Purpose               | To indicate the universities that have licensed access to a record                                                                                           |
+| Entry Guidelines      | The value for this field should be one of the names for each institution that have been coded in the GeoBlacklight application.                              |
+| Commentary            | This populates a facet on the search page so that users can filter to only databases that they are able log into based upon their institutional affiliation. |
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | University of Wisconsin-Madison                                                                                                                              |
+| Element Set           | B1G/ Dublin Core                                                                                                                                             |
+
 ## Access
+
+| Label                 | Access                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_access_s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Profile ID            | b1g-09                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Obligation            | Conditional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Multiplicity          | 0-0 or 1-1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Field type            | string JSON                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Purpose               | To supply the links for restricted records                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Entry Guidelines      | The field value is an array of key/value pairs, with keys representing an insitution code and values the URL for the library catalog record. See the Access Template for entry.                                                                                                                                                                                                                                                                                                                             |
+| Commentary            | This field is challenging to construct manually, is it is a JSON string of institutional codes and URLs. The codes are used instead of the actual names in order to make the length of the field more manageable and to avoid spaces.                                                                                                                                                                                                                                                                       |
+| Controlled Vocabulary | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Example value         | {\"03\":\"https://purl.lib.uiowa.edu/PolicyMap\",\"04\":\"https://www.lib.umd.edu/dbfinder/id/UMD09180\",\"05\":\"https://primo.lib.umn.edu/permalink/f/1q7ssba/UMN_ALMA51581932400001701\",\"06\":\"http://catalog.lib.msu.edu/record=b10238077~S39a\",\"07\":\"https://search.lib.umich.edu/databases/record/39117\",\"09\":\"https://libraries.psu.edu/databases/psu01762\",\"10\":\"https://digital.library.wisc.edu/1711.web/policymap\",\"11\":\"https://library.ohio-state.edu/record=b7869979~S7\"} |
+| Element Set           | B1G                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
