@@ -8,7 +8,9 @@
 The B1G Geoportal holds metadata records that point to geospatial data, maps, aerial imagery, and websites hosted online by external organizations. It is the role of the Task Force members to seek out new content for the geoportal. Task Force members are responsible for finding records in their own or adjacent states. Regional or national collections will be selected by the Collections Steering Group. 
 
 **Criteria for submission**
+- Review the [Collections Strategy](https://docs.google.com/document/d/1aRjH36dM76G_LCIUGJo1cIl4IGBizvA-Qncp39_DMic/edit?usp=sharing) from the Collections Development Committee.
 - Resources need to be accessible over the web. Datasets should have a download or web services link. Maps should have a scanned image with a thumbnail and download link.
+- Websites and Interactive Applications will be evaluated for accession on a case by case basis.
 - The resources should be out of copyright and publicly available.
 - Places to find public domain collections:
     - State GIS clearinghouses
@@ -26,9 +28,11 @@ The B1G Geoportal holds metadata records that point to geospatial data, maps, ae
 - If metadata for the resources are not readily available, the organization may be able to send them to you.
 
 **2. Send an email to the Metadata Coordinator**
+- Include a link to the collection
+- Provide a Title and Description for the collection record
 
 **3. The submission will be added to our collections processing queue**
-The Metadata Coordinator will assign an alphanumeric code for the group. This code will also be added to each metadata record to facilitate administrative tasks and for grouping items by their source.
+The Metadata Coordinator will assign an alphanumeric code for the collection. This code will also be added to each metadata record to facilitate administrative tasks and for grouping items by their source.
 
 
 ### Code Naming Schema 
@@ -64,7 +68,7 @@ The Metadata Coordinator will assign an alphanumeric code for the group. This co
 | -02 | Second collection added from same institution and type of organization |
 | -55079 | County FIPS code for Milwaukee County, Wisconsin |
 
-
+Example code for a collection sourced from Milwaukee County: '10b-55079'
 
 ## 2. Metadata Transition
 
