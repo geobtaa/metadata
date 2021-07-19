@@ -125,11 +125,16 @@ Once the metadata is in spreadsheet form, it is ready to be normalized and augme
 
 The following actions are carried out by the Metadata Coordinator.
 
-1. Upload the spreadsheet to GEOMG
+1. Review the edited spreadsheet for errors or inconsistencies.
 
+2. Upload the spreadsheet to GEOMG
+- This is done via the batch imports function. Go to Admin Tools and select Imports. Click "New Import".
 
+3. Spot check records for errors and consistency
 
-## 5. Publish to GitHub
+4. Convert records from 'Draft' to 'Published'
+
+5. Publish to GitHub
 - Completed records are synced to the workflow GitHub online repository as needed. 
 - Records that are deemed stable and complete can be shared with the [OpenGeoMetadata community](https://github.com/OpenGeoMetadata/big-ten).
 
@@ -138,7 +143,7 @@ The following actions are carried out by the Metadata Coordinator.
 
 
 
-<h2 align="center">Maintenance</h2>
+## Maintenance
 
 ### General Maintenance
 All project team members are encouraged to review the geoportal records assigned to their institutions periodically to check for issues. Use the feedback form at the top of each page in the geoportal to report errors or suggestions.  This submission will include the URL of the last page you were on, and it will be sent to the Metadata Coordinator.
@@ -154,5 +159,8 @@ The geoportal will be programmatically checked for broken links on a monthly bas
 - The Metadata Coordinator and Graduate Research Assistants carry out this work in batches.
 - Task Force members may be asked to review this work and provide input on decisions for problematic records.
 
+### Retired Records
+When an external resource has been moved, deleted, or versioned to a new access link, the original record is retired from the BTAA Geoportal. This is done by converting the Publication State of the record from 'Published' to 'Unpublished'. 
+The record is not deleted from the database and can still be accessed via a direct link. However, it will not show up in any search queries.
 
 

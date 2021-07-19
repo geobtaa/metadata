@@ -1,7 +1,7 @@
-## Metadata Schemas
+# About GeoBlacklight Metadata
 
 ### The GeoBlacklight Schema
-The primary metadata record for each resource is in the GeoBlacklight schema. This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. [The schema is documented on the OpenGeoMetadata project](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html).
+The primary metadata record for each resource is in the Aardvark for GeoBlacklight schema. This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. [The schema is documented on the OpenGeoMetadata project](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html).
 
 **General Features of the GeoBlacklight Schema**
 - Lightweight schema primarily for discovery of resources
