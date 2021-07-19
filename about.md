@@ -11,7 +11,7 @@
 - [The B1G custom elements are documented here](b1gProfile.html)
 
 ## Editing Template
-The [B1G Metadata](https://z.umn.edu/b1g-template) Template contains the following tabs:
+The [B1G Metadata Template](https://z.umn.edu/b1g-template) contains the following tabs:
 - B1G Aardvark Documentation: Full documentation of all fields in Aardvark and the B1G custom elements
 - Map Template: Just the fields need for scanned maps, including some pre-filled values
 - Dataset Template: Just the fields needed for datasets, including some pre-filled values
