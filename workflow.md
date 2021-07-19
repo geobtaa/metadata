@@ -151,6 +151,7 @@ The following actions are carried out by the Metadata Coordinator.
 - Select All and then select the text "Select all results that match this search"
 - Click the State button. From the dropdown, select Published.
 - On the _Bulk Action__ page, click the button **Run Bulk Action**
+- It will take 3-5 minutes for the items to publish in the BTAA Geoportal. Review 3-5 of the published records and test all the links.
 
 4. Convert records from 'Draft' to 'Published'
 

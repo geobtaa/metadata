@@ -1,15 +1,11 @@
-# Big Ten Academic Alliance Geoportal Metadata Workflow Handbook
+# Metadata Handbook
+Big Ten Academic Alliance Geoportal 
 
-
-<br/>
 
 ![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
 
 
-<br/>
 Prepared by: Karen Majewicz, Project Metadata Coordinator
-Version 4.0
-
 
 
 ## Introduction
@@ -19,13 +15,30 @@ This guide was prepared with the objective of assisting Task Force members in th
 - a general description of the full workflow process
 - the roles and activities undertaken by Task Force members and the Metadata Coordinator
 
-The [project glossary](https://sites.google.com/umn.edu/btaa-gdp/about/project-documents/glossary) defines many of the terms in this guide.
 
+## Quicklinks
+All Aardvark schema elements: [https://opengeometadata.github.io/aardvark/aardvarkMetadata.html](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html)
+
+All B1G custom elements:  [https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html](https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html)
+
+
+## Version History
 Changes for Version 4.0 (July 2021)
 - Incorporation of GEOMG Metadata Editor
 - Upgrade to Aardvark Metadata Schema for GeoBlacklight
 
-> **_Changes for version 3 (Oct, 2019)_**
+**_Changes for version 3.3 (May 13, 2020)_**
+- Added University of Nebraska
+- Reorganized Metadata Elements to match [editing template](https://docs.google.com/spreadsheets/d/1dZoO1WZeyfWJnxqT9x7lJsH0MsSqlih8T-mXXjvzLNU/edit?usp=sharing)
+- Updated the “Update the Collections” section to match new administrative process for tracking records
+
+**_Changes for version 3.2 (Jan 8, 2020)_**
+- Added Date Range element
+
+**_Changes for version 3.1 (Dec 19, 2019)_**
+- Added collection level records metadata schema
+
+**_Changes for version 3 (Oct, 2019)_**
 - GeoNetwork and Omeka deprecated
 - all GeoBlacklight records are stored in a master spreadsheet in Google - Sheets
 - records are transformed from CSV to GeoBlacklight JSON with a Python script
@@ -36,13 +49,6 @@ Changes for Version 4.0 (July 2021)
 - all supplemental metadata can be stored as XML or HTML in project hosted folder
 - updated links to collections database 
 
-> **_Changes for version 3.1 (Dec 19, 2019)_**
-- Added collection level records metadata schema
 
-> **_Changes for version 3.2 (Jan 8, 2020)_**
-- Added Date Range element
 
-> **_Changes for version 3.3 (May 13, 2020)_**
-- Added University of Nebraska
-- Reorganized Metadata Elements to match [editing template](https://docs.google.com/spreadsheets/d/1dZoO1WZeyfWJnxqT9x7lJsH0MsSqlih8T-mXXjvzLNU/edit?usp=sharing)
-- Updated the “Update the Collections” section to match new administrative process for tracking records
+
