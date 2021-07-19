@@ -1,7 +1,4 @@
-<div align="center">
-
-# Metadata Workflow Handbook
-# for Task Force Members
+# Big Ten Academic Alliance Geoportal Metadata Workflow Handbook
 
 
 <br/>
@@ -55,18 +52,18 @@ Changes for Version 4.0 (July 2021)
 
 
 
-<h2 align="center">Metadata Schemas</h2>
+## Metadata Schemas
 
 ### The GeoBlacklight Schema
 The primary metadata record for each resource is in the GeoBlacklight schema. This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. [The schema is documented on the OpenGeoMetadata project](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html).
 
-**_General Features of the GeoBlacklight Schema_**
+**General Features of the GeoBlacklight Schema**
 - Lightweight schema primarily for discovery of resources
 - Based upon and shares most of its elements with [Dublin Core](http://dublincore.org/documents/dcmi-terms/)
 - Includes a few elements from other schemas or custom fields
 - Published as a JSON document
 
-**_B1G Project Specific Features of the GeoBlacklight Schema_**
+**B1G Project Specific Features of the GeoBlacklight Schema**
 - The B1G profile of the GeoBlacklight Schema includes nine custom elements specific to our project’s implementation of GeoBlacklight
 - Metadata records are stored and edited in a custom application, [GEOMG](https://github.com/BTAA-Geospatial-Data-Project/geomg)
 
@@ -84,13 +81,13 @@ All other forms of metadata, such as ISO 19139, FGDC Content Standard for Digita
     - HTML (any standard)
 
 
-# Workflow
+## Workflow
 
-<h2 align="center">1. Submit Records</h2>
+### 1. Submit Records
 
 The B1G Geoportal holds metadata records that point to geospatial data, maps, aerial imagery, and websites hosted online by external organizations. It is the role of the Task Force members to seek out new content for the geoportal. Task Force members are responsible for finding records in their own or adjacent states. Regional or national collections will be selected by the Collections Steering Group. 
 
-### Criteria for submission
+**Criteria for submission**
 - Resources need to be accessible over the web. Datasets should have a download or web services link. Maps should have a scanned image with a thumbnail and download link.
 - The resources should be out of copyright and publicly available.
 - Places to find public domain collections:
