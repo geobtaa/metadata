@@ -30,7 +30,7 @@ B1G Metadata Templates: [https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-t
 
 **_Changes for version 3.3 (May 13, 2020)_**
 - Added University of Nebraska
-- Reorganized Metadata Elements to match [editing template](https://docs.google.com/spreadsheets/d/1dZoO1WZeyfWJnxqT9x7lJsH0MsSqlih8T-mXXjvzLNU/edit?usp=sharing)
+- Reorganized Metadata Elements to match editing template
 - Updated the “Update the Collections” section to match new administrative process for tracking records
 
 **_Changes for version 3.2 (Jan 8, 2020)_**
