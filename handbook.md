@@ -15,7 +15,7 @@ Version 4.0
 
 
 
-<h2 align="center">Introduction</h2>
+## Introduction
 This guide was prepared with the objective of assisting Task Force members in the [Big Ten Academic Alliance Geospatial Data Project](http://z.umn.edu/btaagdp) and includes:
 
 - overviews of collections scope and metadata schemas
