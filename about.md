@@ -3,7 +3,7 @@
 ## The GeoBlacklight Schema (Aardvark)
 - The primary metadata record for each resource uses the official GeoBlacklight schema, currently versioned as 'Aardvark'. 
 - This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. 
-- [The schema is documented on the OpenGeoMetadata project](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html).
+- [The schema is documented on the OpenGeoMetadata project](https://opengeometadata.github.io/).
 
 
 ## B1G Project Specific Features of the Aardvark for GeoBlacklight Schema
