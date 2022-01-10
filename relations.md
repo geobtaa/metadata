@@ -3,7 +3,7 @@
 The BTAA Geoportal aggregates from many different sources. This document describes how to organize and relate the records.
 
 ## Collections
-One of the Resource Classes is Collections. The BTAA Geoportal interprets Collections as top-level, custom groupings. 
+The BTAA Geoportal interprets Collections as top-level, custom groupings. 
 These reflect our curation activities and priorities.
 
 As of 2022, the Collections are:
