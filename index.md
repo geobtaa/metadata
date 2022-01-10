@@ -21,6 +21,12 @@ All B1G custom elements:  [https://btaa-geospatial-data-project.github.io/metada
 B1G Metadata Templates: [https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-template)
 
 ## Version History
+**_Changes for Version 4.1 (Jan 2022)_**
+- updates Status as optional; removes controlled vocabulary
+- Clarifies relationship model
+
+
+
 **_Changes for Version 4.0 (July 2021)_**
 - Incorporation of GEOMG Metadata Editor
 - Upgrade to Aardvark Metadata Schema for GeoBlacklight
