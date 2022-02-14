@@ -1,0 +1,34 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Weekly Team Sync
+on:
+  schedule:
+    - cron: 35 9 14 2 *
+
+jobs:
+  create_issue:
+    name: Harvest ArcGIS Hubs
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          assignees: "karenmajewicz"
+          labels: "harvests"
+          title: "Harvest ArcGIS Hubs"
+          body: |
+            ### To do
+
+            - [ ] Run harvest script
+            - [ ] Process new items
+            - [ ] Upload new items to GEOMG
+            - [ ] Unpublish retired items
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
