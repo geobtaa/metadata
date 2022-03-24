@@ -6,21 +6,27 @@ Big Ten Academic Alliance Geoportal
 
 
 ## Introduction
-This guide was prepared with the objective of assisting Task Force members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) and includes:
+This guide was prepared with the objective of assisting Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) and includes:
 
 - overviews of collections scope and metadata schemas
 - a general description of the full workflow process
-- the roles and activities undertaken by Task Force members and the Metadata Coordinator
+- the roles and activities undertaken by Team Members and the Metadata Coordinator
 
 
 ## Quicklinks
-All Aardvark schema elements: [https://opengeometadata.org/docs/current-schema](https://opengeometadata.org/docs/current-schema)
+[All OpenGeoMetadata schema elements](https://opengeometadata.org/docs/current-schema)
 
-All B1G custom elements:  [https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html](https://btaa-geospatial-data-project.github.io/metadata/b1gProfile.html)
+[BTAA custom elements](/b1g-custom-elements.html)
 
-B1G Metadata Templates: [https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-template)
+[B1G Metadata Templates](https://z.umn.edu/b1g-template)
 
 ## Version History
+**_Changes for Version 4.2 (March 24, 2022)_**
+- New Entry and Usage Guidelines page
+- Expands content organization model documentation
+- Changes the name of the schema from 'Aardvark' to 'OpenGeoMetadata (version Aardvark)'
+- Cleans up outdated links
+
 **_Changes for Version 4.1 (Jan 2022)_**
 - updates Status as optional; removes controlled vocabulary
 - Clarifies relationship model
