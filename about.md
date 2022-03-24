@@ -15,7 +15,7 @@ The [B1G Metadata Template](https://z.umn.edu/b1g-template) contains the followi
 - B1G Aardvark Documentation: Full documentation of all fields in Aardvark and the B1G custom elements
 - Map Template: Just the fields need for scanned maps, including some pre-filled values
 - Dataset Template: Just the fields needed for datasets, including some pre-filled values
-- Collection Record Template: Just the fields needed for a collection record.
+- Website Record Template: Just the fields needed for a website record.
 - Values: All of the controlled vocabulary values for the various fields.
 
 
