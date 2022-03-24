@@ -14,6 +14,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | b1g-07 | [Child Record](#child-record)               | b1g_child_record_b           | Conditional    |
 | b1g-08 | [Mediator](#mediator)                       | b1g_dct_mediator_sm          | Conditional |
 | b1g-09 | [Access](#access)                           | b1g_access_s                  | Conditional |
+| b1g-10 | [Image](#image)                             | b1g_image_ss                  | Optional |
 
 ## Code
 
