@@ -1,4 +1,5 @@
-#Entry and Usage Guidelines
+# Entry and Usage Guidelines
+
 The BTAA Geoportal has more specific guidelines for some fields from OpenGeoMetadata.
 
 ### Title
