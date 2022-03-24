@@ -1,7 +1,7 @@
 # About Metadata for the BTAA Geoportal
 
-## The OpenGeoMetadata Schema (Aardvark)
-- The primary metadata record for each resource uses the official GeoBlacklight schema, known as OpenGeoMetadata. 
+## The OpenGeoMetadata Schema
+- The primary metadata record for each resource uses the official GeoBlacklight schema, known as OpenGeoMetadata. The current version of OpenGeoMetadata is called 'Aardvark'. 
 - This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. 
 - [The schema is documented on the OpenGeoMetadata website](https://opengeometadata.org).
 
@@ -12,9 +12,9 @@
 
 ## Editing Template
 The [B1G Metadata Template](https://z.umn.edu/b1g-template) contains the following tabs:
-- Map Template: Just the fields need for scanned maps, including some pre-filled values
-- Dataset Template: Just the fields needed for datasets, including some pre-filled values
-- Website Record Template: Just the fields needed for a website record.
+- Map Template
+- Dataset Template
+- Website Record Template
 - Values: All of the controlled vocabulary values for the various fields.
 
 
