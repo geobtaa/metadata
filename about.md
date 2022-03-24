@@ -8,7 +8,7 @@
 
 ## B1G Project Specific Features
 - The B1G profile of the GeoBlacklight Schema adds ten custom elements to OpenGeoMetadata
-- [The B1G custom elements are documented here](b1gProfile.html)
+- [The B1G custom elements are documented here](b1g-custom-elements.md)
 
 ## Editing Template
 The [B1G Metadata Template](https://z.umn.edu/b1g-template) contains the following tabs:
