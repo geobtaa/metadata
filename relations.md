@@ -2,6 +2,13 @@
 
 This document describes how to organize and relate the records in the BTAA Geoportal.
 
+## Model
+All record entries in GeoBlacklight are of the same type. It does not have separate types of records for collections or groups. It is essentially a flat system, whereby items are related to each other via metadata fields, including “Member Of,” “Is Part Of,” “Is Version Of,” “Replaces,” “Source,” and a general “Relation.” These linked fields can present records as hierarchies with parent/child/grandchild relationships or as siblings. This flexibility allows collections to be nested (i.e., a collection can “belong to” another collection). These relationships can also connect data layers about similar topics from different years within an organization.
+
+The following diagram illustrates how different records are related in the BTAA Geoportal using Resource Classes.
+
+![Chart](/images/contentOrganization.png)
+
 ## Collections
 The BTAA Geoportal interprets the Resource Class, "Collections," as top-level, custom groupings. 
 These reflect our curation activities and priorities.
