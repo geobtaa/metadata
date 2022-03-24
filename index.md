@@ -6,11 +6,7 @@ Big Ten Academic Alliance Geoportal
 
 
 ## Introduction
-This guide was prepared with the objective of assisting Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) and includes:
-
-- overviews of collections scope and metadata schemas
-- a general description of the full workflow process
-- the roles and activities undertaken by Team Members and the Metadata Coordinator
+This guide was prepared with the objective of assisting Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) on the BTAA Geoportal's metadata schema, content organization model, and workflows.
 
 
 ## Quicklinks
@@ -18,7 +14,7 @@ This guide was prepared with the objective of assisting Team Members in the [Big
 
 [BTAA custom elements](/b1g-custom-elements.html)
 
-[B1G Metadata Templates](https://z.umn.edu/b1g-template)
+[B1G metadata templates](https://z.umn.edu/b1g-template)
 
 ## Version History
 **_Changes for Version 4.2 (March 24, 2022)_**
