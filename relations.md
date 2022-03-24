@@ -3,83 +3,48 @@
 This document describes how to organize and relate the records in the BTAA Geoportal.
 
 ## Model
-All record entries in GeoBlacklight are of the same type. It does not have separate types of records for collections or groups. It is essentially a flat system, whereby items are related to each other via metadata fields, including “Member Of,” “Is Part Of,” “Is Version Of,” “Replaces,” “Source,” and a general “Relation.” These linked fields can present records as hierarchies with parent/child/grandchild relationships or as siblings. This flexibility allows collections to be nested (i.e., a collection can “belong to” another collection). These relationships can also connect data layers about similar topics from different years within an organization.
 
-The following diagram illustrates how different records are related in the BTAA Geoportal using Resource Classes.
+
+GeoBlacklight organizes records with a network model rather than with a hierarchical model. It is a flat system: every record uses the same metadata fields and appears with the URL of https:geo.btaa.org/catalog/`ID`. Unlike many digital library applications, it does not have separate types of records for entities such as "communities," "collections," or "groups."  
+
+Instead, GeoBlacklight organizes records via relationship-type metadata fields. These fields include `Member Of`, `Is Part Of`, `Is Version Of`, `Source`, and a general `Relation`. This flexibility allows records to be presented in several different ways. For example, records can have multiple parent/child/grandchild/sibling relationships. In addition, they can be nested (i.e., a collection can belong to another collection). They can also connect data layers about similar topics or represent different years in a series.
+
+The following diagram illustrates how the BTAA Geoportal organizes records. The labels reflect each record's Resource Class (**Collections**, **Websites**, **Datasets**, **Maps**, **Web services**). The connecting arrow lines indicate the name of the relationship.
 
 ![Chart](/images/contentOrganization.png)
 
 ## Collections
-The BTAA Geoportal interprets the Resource Class, "Collections," as top-level, custom groupings. 
-These reflect our curation activities and priorities.
+The BTAA Geoportal interprets the Resource Class, **Collections**, as top-level, custom groupings. These reflect our curation activities and priorities.
 
-
-### Relationship Field
-Individual records are linked to Collections using the `Member Of` field. The ID of the parent record is added to the child record only.
-
-### Current Collections
-
-#### General Land Office Township Plats
-Plat drawings created from public land surveys completed in the Big Ten Academic Alliance States.
-
-#### Government Open Geospatial Data Collection
-Open geospatial datasets, web services, interactive maps, and data portals distributed by a federal, state, county, municipal, or regional agency.
-
-#### Indigenous Lands
-Resources and projects that address issues related to indigenous people, territories, reservations, languages, land grants, and more.
-
-#### Libraries Geospatial Data Collection
-Geospatial data that has been curated at academic libraries. Many of the datasets are outputs from research projects or sponsored initiatives. This collection also encompasses government data that was curated and archived at a library.
-The items in this collection are known to have high quality standards metadata and stable access links.
-These records are shared on OpenGeoMetadata under each institution's repository.
-
-#### Libraries Historical Maps Collection
-This collection contains scanned images of historical maps held in libraries.
-The geographic scope of this collection features a concentration on the states in the Big Ten Academic Alliance region, but also includes maps from all over the world. 
-The items in this collection are known to have high quality metadata and stable access links.
-These records are shared on OpenGeoMetadata under each institution's repository.
-
-#### Licensed Resources Collection
-Licensed resources are authorized for use by an individual university, or by multiple universities in the Big Ten Academic Alliance through a subscription. Access to these databases is paid for by an institution for affiliates to use, unlike free public use data.
-
-#### Public Health Dashboards
-Links to dashboards and hubs that track public health statistics related to the Covid-19 Coronavirus pandemic.
-
-#### Research Institutes Geospatial Data Collection
-Resources from various nonprofit institutions, commercial entities, and research repositories. The geographic scope is worldwide. The topical focus includes environment, climate, humanitarian issues, and racial equity.
+Other records are linked to Collections using the `Member Of` field. The ID of the parent record is added to the child record only. View all of the current **Collections** in the geoportal at this link: 
+[https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Collections](https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Collections)
 
 ----------------
 ## Websites
-The BTAA Geoportal uses the Resource Class, "Websites," to create parent records for data portals, digital libraries, dashboards, and interactive maps. These often start off as standalone records.
+The BTAA Geoportal uses the Resource Class, **Websites**, to create parent records for data portals, digital libraries, dashboards, and interactive maps. These often start off as standalone records.
 Once the items in a website have been indexed, they will have child records.
 
-### Relationship Field
-Individual data layers, maps, or web services  are linked to the Website they came from using the `Is Part Of` field. The ID of the parent record is added to the child record only.
+Individual **Datasets**, **Maps**, or **Web service**s  are linked to the **Website** they came from using the `Is Part Of` field. The ID of the parent record is added to the child record only.
 
-### Current Websites
-View all of the current websites in the geoportal at this link: [https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites](https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites)
+View all of the current **Websites** in the geoportal at this link: [https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites](https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites)
 
 -----------------
- ## Provider
-The BTAA Geoportal populates the `Provider` field with the name of the website or organization from which the item was harvested.
+## Datasets, Maps, and Web services
+The items in this Resource Class represent individual data layers, scanned map files, and/or geospatial web services. (Some items may have multiple Resource Classes attached to the same record.)
 
-The provider field comes from schema.org, where is is broadly defined as "The service provider, service operator, or service performer; the goods producer."
+This item class is likely to have the most relationships specified in the metadata. A typical **Datasets** record might have the following: 
 
-For many other GeoBlacklight instances, this field is always the name of a university or college and is attached to logo icons. 
+1. `Member Of` a **Collections** record
+2. `Is Part Of` a **Websites** record
+3. If the data was digitized from a paper map in the geoportal, it can be linked to the **Maps** record via the `Source` relation
+4. a general `Relation` to a research guide or similar dataset
 
-### Relationship Field
-This value is inserted as plain text into the Provider field. Most of the time, this will match the value displayed in the Is Part Of widget. 
-
-### Current Providers
-Use the Provider facet on the Geoportal to browse all of the providers.
 
 ------------------
 ## Multipart Items
-Many items in the geoportal are multipart. There may be individual pages from an atlas, sublayers from a larger project, or datasets broken up into more than one download.
-In these cases, the `Is Part Of` field is used. As a result, these items many have more than one record that it Is Part Of: the original website and the parent for the multipart items.
+Many items in the geoportal are multipart. There may be individual pages from an atlas, sublayers from a larger project, or datasets broken up into more than one download. In these cases, the `Is Part Of` field is used. 
 
-### Relationship Field
-First, create a parent record describing the top level work. Individual data layers or pages are linked using the `Is Part Of` field. The ID of the parent record is added to the child record only.
+As a result, these items many have more than one record that it Is Part Of - (1) the original website and (2) the parent for the multipart items.
 
 
 
