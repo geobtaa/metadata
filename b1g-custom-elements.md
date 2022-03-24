@@ -163,7 +163,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 ## Image
 
-| Label                 | Mediator                                                                                                                                                     |
+| Label                 | Image                                                                                                                                                     |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | URI                   | b1g_image_ss                                                                                                                                          |
 | Profile ID            | b1g-10                                                                                                                                                       |
