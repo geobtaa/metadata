@@ -1,4 +1,4 @@
-# Entry and Usage Guidelines
+# BTAA Specific Entry Guidelines
 
 The BTAA Geoportal has more specific guidelines for some fields from [OpenGeoMetadata](https://opengeometadata.org) (OGM).
 
