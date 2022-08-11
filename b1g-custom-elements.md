@@ -188,12 +188,14 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | Obligation            | Optional                                                                                                                                                  |
 | Multiplicity          | 0-*                                                                                                                                                  |
 | Field type            | URI |                                                                                                                                     
-| Purpose               | To indicate a URI for a place name from the [GeoNames  database](https://www.geonames.org)                                                                                         |
-| Entry Guidelines      | Enter a value in the format "http://sws.geonames.org/`URI`"                           |
+| Purpose               | To indicate a URI for a place name from the [GeoNames database](https://www.geonames.org)                                                                                         |
+| Entry Guidelines      | Enter a value in the format "http://sws.geonames.org/`URI`"   
+|           
 | Commentary            | This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application 
 | Controlled Vocabulary | yes                                                                                                                                                          |
 | Example value         | https://sws.geonames.org/2988507                                                                                                                            |
 | Element Set           | B1G                                                                                                                                          |
+
 ## Publication State
 
 | Label                 | Publication State                                                                                                                                                     |
