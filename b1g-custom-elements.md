@@ -17,6 +17,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | b1g-10 | [Image](#image)                             | b1g_image_ss                  | Optional |
 | b1g-11 | [GeoNames](#geonames)                       | b1g_geonames_sm                  | Optional |
 | b1g-12 | [Publication State](#publication-state)     |b1g_publication_state_s                  | Required |
+| b1g-13 | [Language String](#language-string)     |b1g_language_sm                  | Required |
 
 ## Code
 
@@ -209,4 +210,21 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | Commentary            | When items are first added to GEOMG, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished
 | Controlled Vocabulary | yes                                                                                                                                                          |
 | Example value         | Draft                                                                                                                           |
+| Element Set           | B1G                                                                                                                                          |
+
+
+## Language string
+
+| Label                 | Language string                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_language_sm`                                                                                                                                          |
+| Profile ID            | b1g-13                                                                                                                                                       |
+| Obligation            | Required                                                                                                                                                 |
+| Multiplicity          | 1-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To display the spelled out string (in English) of a language code to users                                                                                      |
+| Entry Guidelines      | This field is automatically generated from the [Language](https://opengeometadata.org/docs/ogm-aardvark/language) field in the main form              |
+| Commentary            | The OGM schema specified using a 3-digit code to indicate lanuage. In order to display this to users, it needs to be translated into a human-readable string. 
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | French                                                                                                                          |
 | Element Set           | B1G                                                                                                                                          |
