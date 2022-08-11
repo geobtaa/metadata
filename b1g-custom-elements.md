@@ -22,7 +22,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Code                                                                                                                                                                                                                                                                                          |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_code_s                                                                                                                                                                                                                                                                                    |
+| URI                   | `b1g_code_s`                                                                                                                                                                                                                                                                                    |
 | Profile ID            | b1g-01                                                                                                                                                                                                                                                                                        |
 | Obligation            | Required                                                                                                                                                                                                                                                                                      |
 | Multiplicity          | 1-1                                                                                                                                                                                                                                                                                           |
@@ -38,7 +38,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_status_s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| URI                   | `b1g_status_s`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Profile ID            | b1g-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Obligation            | Optional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Multiplicity          | 0-1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -55,7 +55,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Accrual Method                                                                                                                                                            |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_dct_accrualMethod_s                                                                                                                                                   |
+| URI                   | `b1g_dct_accrualMethod_s`                                                                                                                                                   |
 | Profile ID            | b1g-03                                                                                                                                                                    |
 | Obligation            | Required                                                                                                                                                                  |
 | Multiplicity          | 1-1                                                                                                                                                                       |
@@ -71,7 +71,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Accrual Periodicity                                                                      |
 |-----------------------|------------------------------------------------------------------------------------------|
-| URI                   | b1g_dct_accrualPeriodicity_s                                                             |
+| URI                   | `b1g_dct_accrualPeriodicity_s`                                                             |
 | Profile ID            | b1g-04                                                                                   |
 | Obligation            | Optional                                                                                 |
 | Multiplicity          | 0-1                                                                                      |
@@ -87,7 +87,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Date Accessioned                                                                                                             |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_dateAccessioned_s                                                                                                        |
+| URI                   | `b1g_dateAccessioned_s`                                                                                                        |
 | Profile ID            | b1g-05                                                                                                                       |
 | Obligation            | Required                                                                                                                     |
 | Multiplicity          | 1-1                                                                                                                          |
@@ -103,7 +103,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Date Retired                                                                                                                 |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_dateRetired_s                                                                                                            |
+| URI                   | `b1g_dateRetired_s`                                                                                                            |
 | Profile ID            | b1g-06                                                                                                                       |
 | Obligation            | Conditional                                                                                                                  |
 | Multiplicity          | 0-1                                                                                                                          |
@@ -119,7 +119,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Child Record                                                                                                                                                                      |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_child_record_b                                                                                                                                                                |
+| URI                   | `b1g_child_record_b`                                                                                                                                                                |
 | Profile ID            | b1g-07                                                                                                                                                                            |
 | Obligation            | Optional                                                                                                                                                                          |
 | Multiplicity          | 0-1                                                                                                                                                                               |
@@ -135,7 +135,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Mediator                                                                                                                                                     |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_dct_mediator_sm                                                                                                                                          |
+| URI                   | `b1g_dct_mediator_sm `                                                                                                                                         |
 | Profile ID            | b1g-08                                                                                                                                                       |
 | Obligation            | Conditional                                                                                                                                                  |
 | Multiplicity          | 0-0 or 1-*                                                                                                                                                   |
@@ -151,7 +151,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Access                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_access_s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| URI                   | `b1g_access_s`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Profile ID            | b1g-09                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Obligation            | Conditional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Multiplicity          | 0-0 or 1-1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -167,7 +167,7 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 
 | Label                 | Image                                                                                                                                                     |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_image_ss                                                                                                                                          |
+| URI                   | `b1g_image_ss`                                                                                                                                          |
 | Profile ID            | b1g-10                                                                                                                                                       |
 | Obligation            | Optional                                                                                                                                                  |
 | Multiplicity          | 0-0 or 0-1                                                                                                                                                   |
@@ -179,28 +179,27 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | Example value         | https://gis.allencountyohio.com/GIS/Image/countyseal.jpg                                                                                                                              |
 | Element Set           | B1G                                                                                                                                            |
 
-## Geonames
+## GeoNames
 
-| Label                 | Geonames                                                                                                                                                     |
+| Label                 | GeoNames                                                                                                                                                     |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_geonames_sm                                                                                                                                          |
+| URI                   | `b1g_geonames_sm`                                                                                                                                           |
 | Profile ID            | b1g-11                                                                                                                                                       |
 | Obligation            | Optional                                                                                                                                                  |
 | Multiplicity          | 0-*                                                                                                                                                  |
-| Field type            | URI |                                                                                                                                     
+| Field type            | stored string (URI)                                                                                                                                                       |
 | Purpose               | To indicate a URI for a place name from the [GeoNames database](https://www.geonames.org)                                                                                         |
-| Entry Guidelines      | Enter a value in the format "http://sws.geonames.org/`URI`"   
-|           
-| Commentary            | This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application 
+| Entry Guidelines      | Enter a value in the format "http://sws.geonames.org/`URI`"                            |
+| Commentary            | This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application |
 | Controlled Vocabulary | yes                                                                                                                                                          |
-| Example value         | https://sws.geonames.org/2988507                                                                                                                            |
-| Element Set           | B1G                                                                                                                                          |
+| Example value         | https://sws.geonames.org/2988507                                                                                                                           |
+| Element Set           | B1G                                                                                                                                            |
 
 ## Publication State
 
 | Label                 | Publication State                                                                                                                                                     |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URI                   | b1g_publication_state_s                                                                                                                                          |
+| URI                   | `b1g_publication_state_s`                                                                                                                                          |
 | Profile ID            | b1g-12                                                                                                                                                       |
 | Obligation            | Required                                                                                                                                                 |
 | Multiplicity          | 1-1                                                                                                                                                  |
