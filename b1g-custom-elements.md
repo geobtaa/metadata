@@ -15,6 +15,8 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | b1g-08 | [Mediator](#mediator)                       | b1g_dct_mediator_sm          | Conditional |
 | b1g-09 | [Access](#access)                           | b1g_access_s                  | Conditional |
 | b1g-10 | [Image](#image)                             | b1g_image_ss                  | Optional |
+| b1g-11 | [GeoNames](#geonames)                       | b1g_geonames_sm                  | Optional |
+| b1g-12 | [Publication State](#publication-state)     |b1g_publication_state_s                  | Required |
 
 ## Code
 
@@ -176,3 +178,34 @@ This is an overview of the custom metadata elements for the B1G Profile. These e
 | Controlled Vocabulary | no                                                                                                                                                          |
 | Example value         | https://gis.allencountyohio.com/GIS/Image/countyseal.jpg                                                                                                                              |
 | Element Set           | B1G                                                                                                                                            |
+
+## Geonames
+
+| Label                 | Geonames                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_geonames_sm                                                                                                                                          |
+| Profile ID            | b1g-11                                                                                                                                                       |
+| Obligation            | Optional                                                                                                                                                  |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | URI |                                                                                                                                     
+| Purpose               | To indicate a URI for a place name from the [GeoNames  database](https://www.geonames.org)                                                                                         |
+| Entry Guidelines      | Enter a value in the format "http://sws.geonames.org/`URI`"                           |
+| Commentary            | This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application 
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | https://sws.geonames.org/2988507                                                                                                                            |
+| Element Set           | B1G                                                                                                                                          |
+## Publication State
+
+| Label                 | Publication State                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | b1g_publication_state_s                                                                                                                                          |
+| Profile ID            | b1g-12                                                                                                                                                       |
+| Obligation            | Required                                                                                                                                                 |
+| Multiplicity          | 1-1                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To communicate to Solr if the item is public or hidden                                                                                      |
+| Entry Guidelines      | Use the dropdown or batch editing functions to change the state              |
+| Commentary            | When items are first added to GEOMG, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | Draft                                                                                                                           |
+| Element Set           | B1G                                                                                                                                          |
