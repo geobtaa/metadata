@@ -1,4 +1,5 @@
 ### 1. Save edited template as a CSV file
+[Use the B1G Template](https://z.umn.edu/b1g-template)
 
 ### 2. Upload the spreadsheet to GEOMG
 - This is done via the batch imports function. 
@@ -28,9 +29,8 @@
 - Select All and then select the text "Select all results that match this search"
 - Click the State button. From the dropdown, select Published.
 - On the _Bulk Action_ page, click the button **Run Bulk Action**
-- It will take 3-5 minutes for the items to publish in the BTAA Geoportal. 
 - Review 3-5 of the published records and test all the links.
 
 ### 5. Publish to OpenGeoMetadata
 - Completed records are synced to the workflow GitHub online repository as needed. 
-- Records that are deemed stable and complete can be shared with the [OpenGeoMetadata community](https://github.com/OpenGeoMetadata/big-ten).
+- Records that are deemed stable and complete can be shared with the [OpenGeoMetadata community](https://github.com/OpenGeoMetadata).
