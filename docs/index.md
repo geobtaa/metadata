@@ -15,32 +15,46 @@ This guide was prepared with the objective of assisting Team Members in the [Big
 [B1G metadata templates](https://z.umn.edu/b1g-template)
 
 ## Version History
+
+**_Changes for Version 4.3 (August 15, 2022)_**
+
+- migrate to MkDocs.org platform
+- update bounding box entry guidelines
+- add GEOMG page
+
 **_Changes for Version 4.2 (March 24, 2022)_**
+
 - New Entry and Usage Guidelines page
 - Expands content organization model documentation
 - Changes the name of the schema from 'Aardvark' to 'OpenGeoMetadata (version Aardvark)'
 - Cleans up outdated links
 
 **_Changes for Version 4.1 (Jan 2022)_**
+
 - updates Status as optional; removes controlled vocabulary
 - Clarifies relationship model
 
 **_Changes for Version 4.0 (July 2021)_**
+
 - Incorporation of GEOMG Metadata Editor
 - Upgrade to Aardvark Metadata Schema for GeoBlacklight
 
 **_Changes for version 3.3 (May 13, 2020)_**
+
 - Added University of Nebraska
 - Reorganized Metadata Elements to match editing template
 - Updated the “Update the Collections” section to match new administrative process for tracking records
 
 **_Changes for version 3.2 (Jan 8, 2020)_**
+
 - Added Date Range element
 
 **_Changes for version 3.1 (Dec 19, 2019)_**
+
 - Added collection level records metadata schema
 
 **_Changes for version 3 (Oct, 2019)_**
+
 - GeoNetwork and Omeka deprecated
 - all GeoBlacklight records are stored in a master spreadsheet in Google - Sheets
 - records are transformed from CSV to GeoBlacklight JSON with a Python script
@@ -56,5 +70,6 @@ This guide was prepared with the objective of assisting Team Members in the [Big
 
 **Credits**
 Handbook prepared by:
+
 - Karen Majewicz, Project Metadata Coordinator
 - Ziying (Gene) Cheng - Graduate Research Assistant

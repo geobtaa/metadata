@@ -127,7 +127,7 @@ The best way to transfer this type of metadata is to send a single file containi
 Once the metadata is in spreadsheet form, it is ready to be normalized and augmented. UMN Staff will add template information and use spreadsheet functions or scripts to programmatically complete the metadata records.
 
 - [The GBL Metadata Template](http://z.umn.edu/b1g-template) is for creating GeoBlacklight metadata.
-- Refer to the documentation for the [Aardvark fields](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html) and the [B1G profile fields](b1gProfile.html) for guidance on values and formats.
+- Refer to the documentation for the [Aardvark fields](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html) and the [B1G profile fields](b1g-custom-elements.md) for guidance on values and formats.
 
 
 ## 4. Publish Records

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Collection Model - BTAA-GIN Metadata Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Collection Model";
+        var mkdocs_page_input_path = "relations.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BTAA-GIN Metadata Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">Metadata for the BTAA Geoportal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../b1g-custom-elements/">Custom Elements</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Collection Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../entry-usage-guidelines/">Entry Guidelines</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Workflows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/">Lifecycle</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../GEOMG/">GEOMG</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BTAA-GIN Metadata Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Overview &raquo;</li>
+      <li>Collection Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="relations-and-the-collection-model">Relations and the Collection Model</h1>
+<p>This document describes the content organization model for the GeoBlacklight application and how to relate records in the BTAA Geoportal.</p>
+<h2 id="content-organization-model">Content Organization Model</h2>
+<p>GeoBlacklight organizes records with a network model rather than with a hierarchical model. It is a flat system whereby every database entry is a "Layer" and uses the same metadata fields. Unlike many digital library applications, it does not have different types of records for entities such as "communities," "collections," or "groups." As a result, it does not present a breadcrumb navigation structure, and all records appear in the same catalog directory with the URL of https:geo.btaa.org/catalog/<code>ID</code>.</p>
+<p>Instead of a hierarchy, GeoBlacklight relates records via metadata fields. These fields include <code>Member Of</code>, <code>Is Part Of</code>, <code>Is Version Of</code>, <code>Source</code>, and a general <code>Relation</code>. This flexibility allows records to be presented in several different ways. For example, records can have multiple parent/child/grandchild/sibling relationships. In addition, they can be nested (i.e., a collection can belong to another collection). They can also connect data layers about similar topics or represent different years in a series.</p>
+<p>The following diagram illustrates how the BTAA Geoportal organizes records. The connecting arrow lines indicate the name of the relationship. The labels reflect each record's <a href="https://opengeometadata.org/docs/ogm-aardvark/resource-class">Resource Class</a> (<strong>Collections</strong>, <strong>Websites</strong>, <strong>Datasets</strong>, <strong>Maps</strong>, <strong>Web services</strong>).</p>
+<p><img alt="Chart" src="../images/contentOrganization.png" /></p>
+<h2 id="collections">Collections</h2>
+<p>The BTAA Geoportal interprets the Resource Class, <strong>Collections</strong>, as top-level, custom groupings. These reflect our curation activities and priorities.</p>
+<p>Other records are linked to Collections using the <code>Member Of</code> field. The ID of the parent record is added to the child record only. View all of the current <strong>Collections</strong> in the geoportal at this link: 
+<a href="https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Collections">https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Collections</a></p>
+<hr />
+<h2 id="websites">Websites</h2>
+<p>The BTAA Geoportal uses the Resource Class, <strong>Websites</strong>, to create parent records for data portals, digital libraries, dashboards, and interactive maps. These often start off as standalone records.
+Once the items in a website have been indexed, they will have child records.</p>
+<p>Individual <strong>Datasets</strong>, <strong>Maps</strong>, or <strong>Web service</strong>s  are linked to the <strong>Website</strong> they came from using the <code>Is Part Of</code> field. The ID of the parent record is added to the child record only.</p>
+<p>View all of the current <strong>Websites</strong> in the geoportal at this link: <a href="https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites">https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites</a></p>
+<hr />
+<h2 id="datasets-maps-and-web-services">Datasets, Maps, and Web services</h2>
+<p>The items in this Resource Class represent individual data layers, scanned map files, and/or geospatial web services. (Some items may have multiple Resource Classes attached to the same record.)</p>
+<p>This item class is likely to have the most relationships specified in the metadata. A typical <strong>Datasets</strong> record might have the following: </p>
+<ol>
+<li><code>Member Of</code> a <strong>Collections</strong> record</li>
+<li><code>Is Part Of</code> a <strong>Websites</strong> record</li>
+<li>If the data was digitized from a paper map in the geoportal, it can be linked to the <strong>Maps</strong> record via the <code>Source</code> relation</li>
+<li>a general <code>Relation</code> to a research guide or similar dataset</li>
+</ol>
+<hr />
+<h2 id="multipart-items">Multipart Items</h2>
+<p>Many items in the geoportal are multipart. There may be individual pages from an atlas, sublayers from a larger project, or datasets broken up into more than one download. In these cases, the <code>Is Part Of</code> field is used. </p>
+<p>As a result, these items may have multiple <code>Is Part Of</code> relationships- (1) the parent for the multipart items and (2) the original website.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../b1g-custom-elements/" class="btn btn-neutral float-left" title="Custom Elements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../entry-usage-guidelines/" class="btn btn-neutral float-right" title="Entry Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../b1g-custom-elements/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../entry-usage-guidelines/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
