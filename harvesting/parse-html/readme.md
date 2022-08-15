@@ -1,1 +1,0 @@
-scripts for parsing HTML to CSV
