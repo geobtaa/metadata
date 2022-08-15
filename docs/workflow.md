@@ -1,6 +1,6 @@
 # Workflow
 
-![Metadata Workflow](/images/btaa-metadata-workflow.png)
+![Metadata Workflow](./images/btaa-metadata-workflow.png)
 
 
 ## 1. Submit Records
