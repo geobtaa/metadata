@@ -11,7 +11,7 @@ Instead of a hierarchy, GeoBlacklight relates records via metadata fields. These
 
 The following diagram illustrates how the BTAA Geoportal organizes records. The connecting arrow lines indicate the name of the relationship. The labels reflect each record's [Resource Class](https://opengeometadata.org/docs/ogm-aardvark/resource-class) (**Collections**, **Websites**, **Datasets**, **Maps**, **Web services**).
 
-![Chart](/images/contentOrganization.png)
+![Chart](./images/contentOrganization.png)
 
 ## Collections
 The BTAA Geoportal interprets the Resource Class, **Collections**, as top-level, custom groupings. These reflect our curation activities and priorities.

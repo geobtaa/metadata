@@ -4,15 +4,13 @@ Big Ten Academic Alliance Geoportal
 
 ![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
 
-
-## Introduction
 This guide was prepared with the objective of assisting Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) on the BTAA Geoportal's metadata schema, content organization model, and workflows.
 
 
 ## Quicklinks
 [All OpenGeoMetadata schema elements](https://opengeometadata.org/docs/current-schema)
 
-[BTAA custom elements](/b1g-custom-elements.html)
+[BTAA custom elements](/b1g-custom-elements.md)
 
 [B1G metadata templates](https://z.umn.edu/b1g-template)
 

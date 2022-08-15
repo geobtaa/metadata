@@ -1,4 +1,4 @@
-# About Metadata for the BTAA Geoportal
+# Overview
 
 ## The OpenGeoMetadata Schema
 - The primary metadata record for each resource uses the official GeoBlacklight schema, known as OpenGeoMetadata. The current version of OpenGeoMetadata is called 'Aardvark'. 
