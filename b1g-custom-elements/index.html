@@ -158,6 +158,24 @@
 <td>b1g_image_ss</td>
 <td>Optional</td>
 </tr>
+<tr>
+<td>b1g-11</td>
+<td><a href="#geonames">GeoNames</a></td>
+<td>b1g_geonames_sm</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>b1g-12</td>
+<td><a href="#publication-state">Publication State</a></td>
+<td>b1g_publication_state_s</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>b1g-13</td>
+<td><a href="#language-string">Language String</a></td>
+<td>b1g_language_sm</td>
+<td>Required</td>
+</tr>
 </tbody>
 </table>
 <h2 id="code">Code</h2>
@@ -703,6 +721,171 @@
 <tr>
 <td>Example value</td>
 <td>https://gis.allencountyohio.com/GIS/Image/countyseal.jpg</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="geonames">GeoNames</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>GeoNames</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_geonames_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-11</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>stored string (URI)</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate a URI for a place name from the <a href="https://www.geonames.org">GeoNames database</a></td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter a value in the format "http://sws.geonames.org/<code>URI</code>"</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>https://sws.geonames.org/2988507</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="publication-state">Publication State</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Publication State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_publication_state_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-12</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To communicate to Solr if the item is public or hidden</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Use the dropdown or batch editing functions to change the state</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>When items are first added to GEOMG, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="language-string">Language string</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Language string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_language_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-13</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To display the spelled out string (in English) of a language code to users</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>This field is automatically generated from the <a href="https://opengeometadata.org/docs/ogm-aardvark/language">Language</a> field in the main form</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>The OGM schema specified using a 3-digit code to indicate lanuage. In order to display this to users, it needs to be translated into a human-readable string.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>French</td>
 </tr>
 <tr>
 <td>Element Set</td>
