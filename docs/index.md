@@ -1,20 +1,53 @@
-# Metadata Handbook
-Big Ten Academic Alliance Geoportal 
+---
+hide:
+  - toc
+---
+
+# GeoBTAA Metadata Handbook
+This handbook describes how to curate metadata records for the [BTAA Geoportal](https://geo.btaa.org).
 
 
-![Big Ten Academic Alliance Geospatial Data Project](https://geo.btaa.org/assets/btaa-logo-e622d081b6b06b467cc6fdf105f8bd4d127734fc25ace50d8178cde95df26d67.jpg)
+## Who is this for?
 
-This guide was prepared with the objective of assisting Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) on the BTAA Geoportal's metadata schema, content organization model, and workflows.
+* Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) (BTAA-GIN)
+
+* Development & Operations Staff in the BTAA-GIN
+
+* Users & developers of open-source geospatial projects, such as [OpenGeoMetadata](https://opengeometadata.org) and [GeoBlacklight](https://geoblacklight.org)
+
+* Users of the [BTAA Geoportal](https://geo.btaa.org)
+
+-----
+
+## Contents:
+
+### [GeoBTAA Metadata Profile](components.md)
 
 
-## Quicklinks
-[All OpenGeoMetadata schema elements](https://opengeometadata.org/docs/current-schema)
+:   The GeoBTAA Metadata Profile combines the [OpenGeoMetadata](https://opengeometadata.org) schema, local input guidelines, and custom elements.
 
-[BTAA custom elements](/b1g-custom-elements.md)
+### [Content Organization Model for the BTAA Geoportal](model.md)
 
-[B1G metadata templates](https://z.umn.edu/b1g-template)
+
+: The Content Organization Model defines how records are organized and how they are related within the BTAA Geoportal.
+
+
+### [Curation workflows](lifecycle.md)
+
+
+: Step by step guides for selecting, submitting, harvesting, editing, publishing, and maintaining metadata records in the BTAA Geoportal
+
+
+----------
+
 
 ## Version History
+
+**_Changes for Version 4.4 (August 23, 2022)_**
+
+- updated theme
+- reorganized and expanded navigation menu
+- new sections for Harvesting Guide and using GEOMG
 
 **_Changes for Version 4.3 (August 15, 2022)_**
 
@@ -68,8 +101,9 @@ This guide was prepared with the objective of assisting Team Members in the [Big
 
 
 
-**Credits**
+## Credits
+
 Handbook prepared by:
 
-- Karen Majewicz, Project Metadata Coordinator
+- Karen Majewicz, Geospatial Product Manager
 - Ziying (Gene) Cheng - Graduate Research Assistant

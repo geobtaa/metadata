@@ -1,22 +1,67 @@
-site_name: BTAA-GIN Metadata Documentation
+site_name: GeoBTAA Metadata Handbook
 #site_url: https://geoblacklight.org/docs
 #repo_url: https://github.com/geoblacklight/docs/main
 #edit_uri: https://github.com/geoblacklight/docs/main
 theme: 
-    name: readthedocs
-#    logo: img/geoblacklight-logo-small@2x.png
-    highlightjs: true
-    titles_only: true
-    include_homepage_in_sidebar: true
+   name: material
+   features:
+     - navigation.instant
+     - navigation.sections
+     - content.tooltips
+#     - navigation.tabs
+#     - navigation.tabs.sticky
+ #    - navigation.prune
+#     - navigation.top
+#     - toc.integrate
+   logo: images/btaa-logo-white.png
+#    highlightjs: true
+#   titles_only: true
+#   include_homepage_in_sidebar: false
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+#      custom_fences:
+#        - name: mermaid
+#          class: mermaid
+#          format: !!python/name:pymdownx.superfences.fence_code_format
+
     
 nav:
-- Home: 'index.md'
-- Overview:
-     - 'Metadata for the BTAA Geoportal': 'about.md'
+- HOME: 'index.md'
+
+- GeoBTAA Metadata Profile: 
+     - 'Overview' : 'components.md'
+     - 'Local Input Guidelines': 'inputGuidelines.md'
      - 'Custom Elements' : 'b1g-custom-elements.md'
-     - 'Collection Model' : 'relations.md'
-     - 'Entry Guidelines' : 'entry-usage-guidelines.md'
-     
-- Workflows:
-      - 'Lifecycle' : 'workflow.md'
-      - 'GEOMG' : 'GEOMG.md'
+     - 'Supplemental Metadata' : 'supplementalMetadata.md'
+     - 'Editing Template' : 'editingTemplate.md'
+
+- Content Organization Model: 
+     - 'Diagram' : 'model.md'
+     - 'Resource Classes' : 'resourceClasses.md'
+
+- Curation Workflows:
+      - 'Identifying Resources' : 'identify.md'
+      - 'Resource Lifecycle' : 'lifecycle.md'
+      - 'Harvest Guide' :  'harvestGuide.md'
+      - 'GEOMG Metadata Toolkit' : 'geomg.md'
