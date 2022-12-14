@@ -402,6 +402,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creator-id" class="md-nav__link">
+    Creator ID
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -718,6 +725,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creator-id" class="md-nav__link">
+    Creator ID
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -825,6 +839,12 @@
 <td><a href="#language-string">Language String</a></td>
 <td><code>b1g_language_sm</code></td>
 <td>Required</td>
+</tr>
+<tr>
+<td>b1g-14</td>
+<td><a href="#creator-id">Creator ID</a></td>
+<td><code>b1g_creatorID_sm</code></td>
+<td>Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1536,6 +1556,61 @@
 <tr>
 <td>Example value</td>
 <td>French</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creator-id">Creator ID</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Creator ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_creatorID_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-14</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To track the URI of a creator value</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>This field is entered as a URI representing an authority record</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>These best practices recommend consulting one or two name registries when deciding how to standardize names of creators: the Faceted Application of Subject Terminology (FAST) or the Library of Congress Name Authority File (LCNAF). FAST is a controlled vocabulary based on the Library of Congress Subject Headings (LCSH) that is well-suited to the faceted navigation of the Geoportal. The LCNAF is an authoritative list of names, events, geographic locations and organizations used by libraries and other organizations to collocate authorized creator names to make searching and browsing easier.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>fst02013467</td>
 </tr>
 <tr>
 <td>Element Set</td>
