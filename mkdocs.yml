@@ -1,22 +1,31 @@
 site_name: GeoBTAA Metadata Handbook
-#site_url: https://geoblacklight.org/docs
-#repo_url: https://github.com/geoblacklight/docs/main
-#edit_uri: https://github.com/geoblacklight/docs/main
+site_author: Big Ten Academic Alliance Geospatial Information Network
+copyright : "2022"
+repo_url: https://github.com/geobtaa/metadata
 theme: 
    name: material
    features:
-     - navigation.instant
-     - navigation.sections
-     - content.tooltips
-#     - navigation.tabs
-#     - navigation.tabs.sticky
- #    - navigation.prune
-#     - navigation.top
-#     - toc.integrate
+#     - navigation.instant
+      - navigation.sections
+      - content.tooltips
+#      - navigation.tabs
+#      - navigation.tabs.sticky
+      - navigation.top
    logo: images/btaa-logo-white.png
+   icon:
+      repo: fontawesome/brands/github
 #    highlightjs: true
 #   titles_only: true
 #   include_homepage_in_sidebar: false
+plugins:
+      - search
+      - with-pdf:
+            output_path: Desktop/b1g-handbook.pdf
+      
+#   - pdf-export:
+#       combined: true
+#   - git-revision-date-localized:
+#       enable_creation_date: false
 
 extra_css:
   - stylesheets/extra.css
@@ -40,10 +49,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
-#      custom_fences:
-#        - name: mermaid
-#          class: mermaid
-#          format: !!python/name:pymdownx.superfences.fence_code_format
 
     
 nav:

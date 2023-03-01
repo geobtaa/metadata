@@ -18,6 +18,7 @@ This pages documents the custom metadata elements for the GeoBTAA Metadata Profi
 | b1g-11 | [GeoNames](#geonames)                       | `b1g_geonames_sm`                  | Optional |
 | b1g-12 | [Publication State](#publication-state)     |`b1g_publication_state_s`                  | Required |
 | b1g-13 | [Language String](#language-string)         |`b1g_language_sm`                  | Required |
+| b1g-14 | [Creator ID](#creator-id)                   |`b1g_creatorID_sm`               |Optional|
 
 ## Code
 
@@ -227,4 +228,20 @@ This pages documents the custom metadata elements for the GeoBTAA Metadata Profi
 | Commentary            | The OGM schema specified using a 3-digit code to indicate lanuage. In order to display this to users, it needs to be translated into a human-readable string. 
 | Controlled Vocabulary | yes                                                                                                                                                          |
 | Example value         | French                                                                                                                          |
+| Element Set           | B1G                                                                                                                                          |
+
+## Creator ID
+
+| Label                 | Creator ID                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_creatorID_sm`                                                                                                                                          |
+| Profile ID            | b1g-14                                                                                                                                                       |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To track the URI of a creator value                                                                                     |
+| Entry Guidelines      | This field is entered as a URI representing an authority record            |
+| Commentary            | These best practices recommend consulting one or two name registries when deciding how to standardize names of creators: the Faceted Application of Subject Terminology (FAST) or the Library of Congress Name Authority File (LCNAF). FAST is a controlled vocabulary based on the Library of Congress Subject Headings (LCSH) that is well-suited to the faceted navigation of the Geoportal. The LCNAF is an authoritative list of names, events, geographic locations and organizations used by libraries and other organizations to collocate authorized creator names to make searching and browsing easier.
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | fst02013467                                                                                                                          |
 | Element Set           | B1G                                                                                                                                          |
