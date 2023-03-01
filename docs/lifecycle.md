@@ -3,8 +3,6 @@ toc:
   baselevel:2
 ---
 
-!!! Warning "This guide is a work in progress (August 2022)"
-
 
 ![Metadata Workflow](./images/btaa-metadata-workflow.png)
 
@@ -26,28 +24,26 @@ Things to include:
 
 **3. The submission will be added to our collections processing queue**
 
-Metadata processing tasks are tracked on our public [GitHub project dashboard](https://github.com/orgs/geobtaa/projects/4).
+!!! info
+
+	Metadata processing tasks are tracked on our public [GitHub project dashboard](https://github.com/orgs/geobtaa/projects/4).
 
 
 ## 2. Metadata Transition
 
 This stage involves batch processing of the records, including harvesting, transformations, crosswalking information. This stage is carried out by the Metadata Coordinator, who may contact Team members for assistance.
 
-!!! info "See our [Harvest Guide](harvestGuide.md) for more information on formats and techniques for harvesting metadata"
-
 Regardless of the method used for acquiring the metadata, it is always transformed into a spreadsheet for editing. These spreadsheets are uploaded to GEOMG Metadata Editor.
 
 Because of the variety of platforms and standards, this process can take many forms. The Metadata Coordinator will contact Team members if they need to supply metadata directly. 
-
-
 
 
 ## 3. Edit Records
 
 Once the metadata is in spreadsheet form, it is ready to be normalized and augmented. UMN Staff will add template information and use spreadsheet functions or scripts to programmatically complete the metadata records.
 
-- [The GBL Metadata Template](http://z.umn.edu/b1g-template) is for creating GeoBlacklight metadata.
-- Refer to the documentation for the [Aardvark fields](https://opengeometadata.github.io/aardvark/aardvarkMetadata.html) and the [B1G profile fields](b1g-custom-elements.md) for guidance on values and formats.
+- [The GeoBTAA Metadata Template](http://z.umn.edu/b1g-template) is for creating GeoBlacklight metadata.
+- Refer to the documentation for the [OpenGeoMetadata, version Aardvark fields](https://opengeometadata.org/docs/ogm-aardvark) and the [GeoBTAA Custom Elements](b1g-custom-elements.md) for guidance on values and formats.
 
 
 ## 4. Publish Records

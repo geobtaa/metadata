@@ -1,5 +1,3 @@
-!!! Warning "This guide is a work in progress (August 2022)"
-
 ## About
 
 **What is it?**
@@ -16,7 +14,9 @@
 
 **Can other GeoBlacklight projects adopt it?**
 
-Not yet. We are currently working on offering this tool as a plugin for GeoBlacklight. Our tentative plan for release is early 2023.  In the meantime, this presentation describes the motivation for building the tool and a few screencasts showing how it works:
+We are currently working on offering this tool as a plugin for GeoBlacklight.
+
+In the meantime, this presentation describes the motivation for building the tool and a few screencasts showing how it works:
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQAlzzbZxoS__W9ZoLQ1A3GbiwEE9lkvPzTw_VLrlY_7dkPrc8k5ApappPv35-1IjyIM1--Rh0UO28j/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
@@ -25,32 +25,40 @@ Not yet. We are currently working on offering this tool as a plugin for GeoBlack
 ## Layout
 
 
-**Dashboard (Home page)**
+### Dashboard (Home page)
 
 The Dashboard shows a list of all records in the index. These can be selected or filtered. The search functionality mimics the GeoBlacklight interface:
 
-* a search bar at the top: lets a user enter text searches
-* a list of facets on the left: lets a user filter records
-* a Date Range filter above the facets: lets a user select items by Date Created (when they were first added to GEOMG).
+* a search bar at the top for text searches
+* a list of facets on the left to filter records
+* a Date Range filter above the facets to select items by Date Created (when they were first added to GEOMG).
 
 ![](images/geomg-dashboard.png)
 
 
 ----------
-**Form view**
+### Form view
 
-This page is where new records can be manually created and existing records can be edited. Click on the button "View in Geoportal" to open a new tab with the record in the Geoportal. Note: the record is still viewable in the Geoportal via this button, even if it is a Draft or Unpublished.
+This page is where new records can be manually created and existing records can be edited.
 
 ![](images/formView.png)
 
+!!! tip
+	Click on the button "View in Geoportal" to open a new tab with the record in the Geoportal. Note: the record is still viewable in the Geoportal via this button, even if it is a Draft or Unpublished.
 
 ------------
-**Notifications**
+### Notifications
 
 Notifications is where the exported files can be found.
 
 ![](images/notifications.png)
 
+------------
+### Admin Tools
+
+The Admin Tools is a dropdown menu item that contains links to the various actions.
+
+![](images/adminTools.png)
 
 
 ## Selecting records
@@ -97,15 +105,14 @@ A user can create records one by one using the form view.
 	- On the _Import_ page, check that the number in the CSV Row Count matches your CSV.
 	- Click the button **Run Import**
 	- The import may take a few minutes. During the process, you can view the Import Results tab. Items in the queue will show up in the first sub-tab ("Failed"), but will transfer to the second tab upon import ("Success").
-	- When complete, review any items that did not import in the Failed tab. See Troubleshooting (_coming soon_) for help.
+	- When complete, review and troubleshoot any items that did not import in the Failed tab.
 
 3. Spot check records for errors and consistency
 
-	- The newly uploaded records will be listed as Draft under the Publication State on the main dashboard
+	- The newly uploaded records will be listed as **Draft** under the Publication State on the main dashboard
 	- Select 'Draft' under Publication State and select an item. This will open it in editing view.
 	- Click the button **View in Geoportal**
-	- Inspect the record and test the links. (note: Metadata and Web Service links will not open while the item is still in Draft)
-	- Repeat this process for about 3 records.
+	- Inspect the record and test the links.	- Repeat this process for about 3 records.
 
 
 4. Convert records from 'Draft' to 'Published'

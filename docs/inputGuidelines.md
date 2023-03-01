@@ -10,7 +10,10 @@ For the following elements, the GeoBTAA Metadata Profile has input guidelines be
 : Although [Language is optional in the OGM schema](https://opengeometadata.org/docs/ogm-aardvark/language), a three-digit code is required for the BTAA Geoportal.
 
 ### Creator
-: Spell all Acronyms out.
+: When possible, Creators should be drawn from a value in the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).
+
+### Creator ID
+: If the Creator value is from a name authority, insert the ID in this field.
 
 ### Publisher
 : **Maps**: Publisher values for maps are pulled from the original catalog record. Remove subfields for place names and dates.
@@ -19,7 +22,6 @@ For the following elements, the GeoBTAA Metadata Profile has input guidelines be
 
 ### Provider
 : This is the name of the organization hosting the resources. If the organization is part of the BTAA library network, a university icon will display next to the resource's title. However, most Providers will not have an icon.
-
 
 ### Bounding Box
 :  On the Metadata Editing Template, provide Bounding Boxes in this format: **W,S,E,N**
