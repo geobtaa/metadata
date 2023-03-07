@@ -69,4 +69,5 @@ nav:
       - 'Resource Lifecycle' : 'lifecycle.md'
       - 'Identifying Resources' : 'identify.md'
       - 'Submitting Metadata' :  'harvest.md'
+      - 'Manually add bounding boxes': 'manual-bbox.md'
       - 'GEOMG Metadata Toolkit' : 'geomg.md'
