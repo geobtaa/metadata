@@ -15,7 +15,7 @@
     
     
       
-        <title>Code Naming Schema - GeoBTAA Metadata Handbook</title>
+        <title>Manually add bounding boxes - GeoBTAA Metadata Handbook</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#code-naming-schema" class="md-skip">
+        <a href="#summary" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Code Naming Schema
+              Manually add bounding boxes
             
           </span>
         </div>
@@ -168,6 +168,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -390,14 +392,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -460,11 +464,109 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../manual-bbox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manually add bounding boxes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Manually add bounding boxes
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-bounding-box-coordinates-for-the-btaa-geoportal" class="md-nav__link">
+    About bounding box coordinates for the BTAA Geoportal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-obtaining-bounding-box-coordinates" class="md-nav__link">
+    Steps for obtaining bounding box coordinates
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps for obtaining bounding box coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a-setup" class="md-nav__link">
+    Part A: Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b-find-the-coordinates" class="md-nav__link">
+    Part B: Find the coordinates
+  </a>
+  
+    <nav class="md-nav" aria-label="Part B: Find the coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-search-for-a-place-name" class="md-nav__link">
+    Option 1: Search for a place name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-draw-a-shape" class="md-nav__link">
+    Option 2: Draw a shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c-copy-back-to-geobtaa-metadata" class="md-nav__link">
+    Part C: Copy back to GeoBTAA metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -498,7 +600,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -507,8 +611,82 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-bounding-box-coordinates-for-the-btaa-geoportal" class="md-nav__link">
+    About bounding box coordinates for the BTAA Geoportal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-obtaining-bounding-box-coordinates" class="md-nav__link">
+    Steps for obtaining bounding box coordinates
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps for obtaining bounding box coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-a-setup" class="md-nav__link">
+    Part A: Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-b-find-the-coordinates" class="md-nav__link">
+    Part B: Find the coordinates
+  </a>
+  
+    <nav class="md-nav" aria-label="Part B: Find the coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-search-for-a-place-name" class="md-nav__link">
+    Option 1: Search for a place name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-draw-a-shape" class="md-nav__link">
+    Option 2: Draw a shape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-c-copy-back-to-geobtaa-metadata" class="md-nav__link">
+    Part C: Copy back to GeoBTAA metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -522,142 +700,55 @@
                 
                   
 
-  <a href="https://github.com/geobtaa/metadata/edit/master/docs/codeNamingSchema.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/geobtaa/metadata/edit/master/docs/manual-bbox.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="code-naming-schema">Code Naming Schema</h1>
-<p>Each website / collection in the BTAA Geoportal has an alphanumeric code. This code is also added to each metadata record to facilitate administrative tasks and for grouping items by their source. Some of the Codes are randomly generated strings, but most are constructed with an administrative schema described below:</p>
-<table>
-<thead>
-<tr>
-<th>First part of string</th>
-<th>Contributing institution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>01</td>
-<td>Indiana University</td>
-</tr>
-<tr>
-<td>02</td>
-<td>University of Illinois Urbana-Campaign</td>
-</tr>
-<tr>
-<td>03</td>
-<td>University of Iowa</td>
-</tr>
-<tr>
-<td>04</td>
-<td>University of Maryland</td>
-</tr>
-<tr>
-<td>05</td>
-<td>University of Minnesota</td>
-</tr>
-<tr>
-<td>06</td>
-<td>Michigan State University</td>
-</tr>
-<tr>
-<td>07</td>
-<td>University of Michigan</td>
-</tr>
-<tr>
-<td>08</td>
-<td>Pennsylvania State University</td>
-</tr>
-<tr>
-<td>09</td>
-<td>Purdue University</td>
-</tr>
-<tr>
-<td>10</td>
-<td>University of Wisconsin-Madison</td>
-</tr>
-<tr>
-<td>11</td>
-<td>The Ohio State University</td>
-</tr>
-<tr>
-<td>12</td>
-<td>University of Chicago</td>
-</tr>
-<tr>
-<td>13</td>
-<td>University of Nebraska-Lincoln</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Rutgers University</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Second part of string</th>
-<th>Type of organization hosting the datasests</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a</td>
-<td>State</td>
-</tr>
-<tr>
-<td>b</td>
-<td>County</td>
-</tr>
-<tr>
-<td>c</td>
-<td>Municipality</td>
-</tr>
-<tr>
-<td>d</td>
-<td>University</td>
-</tr>
-<tr>
-<td>f</td>
-<td>Other (ex. NGOs, Regional Groups, Collaborations)</td>
-</tr>
-<tr>
-<td>g</td>
-<td>Federal</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Third part of string</th>
-<th>The sequence number added in order of accession or a county FIPs code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-01</td>
-<td>First collection added from same institution and type of organization</td>
-</tr>
-<tr>
-<td>-02</td>
-<td>Second collection added from same institution and type of organization</td>
-</tr>
-<tr>
-<td>-55079</td>
-<td>County FIPS code for Milwaukee County, Wisconsin</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>code for a collection sourced from Milwaukee County: '10b-55079'</p>
-</div>
+  <h1>Manually add bounding boxes</h1>
+
+<h2 id="summary">Summary</h2>
+<p>This page describes a process for obtaining bounding box coordinates for our scanned maps. The coordinates will be used for indexing the records in the Big Ten Academic Alliance Geoportal.</p>
+<h2 id="about-bounding-box-coordinates-for-the-btaa-geoportal">About bounding box coordinates for the BTAA Geoportal</h2>
+<ul>
+<li>Bounding boxes enable users to search for items with a map interface. </li>
+<li>The format is 4 coordinates in decimal degrees </li>
+<li>Provide the coordinates in this order: West, South, East, North. </li>
+<li>The bounding boxes do not need to be exact, particularly with old maps that may not be very precise anyways.</li>
+</ul>
+<h2 id="steps-for-obtaining-bounding-box-coordinates">Steps for obtaining bounding box coordinates</h2>
+<h3 id="part-a-setup">Part A: Setup</h3>
+<ol>
+<li>Open and inspect the image file.</li>
+<li>Try to identify a single / combined region that the map or atlas represents</li>
+<li>You can also check to see if the map has the bounding coordinates printed in the text anywhere or you are able to find the bounds by inspecting the edges.  </li>
+<li>Open another window with the <a href="https://boundingbox.klokantech.com">Klokan Bounding Box</a> tool.</li>
+<li>Set the Copy &amp; Paste section to CSV.</li>
+</ol>
+<h3 id="part-b-find-the-coordinates">Part B: Find the coordinates</h3>
+<h4 id="option-1-search-for-a-place-name">Option 1: Search for a place name</h4>
+<ol>
+<li>Use the search boxes on the Klokan Bounding Box tool to zoom to the region.  (For example, search for “Illinois”.</li>
+<li>Manually adjust the grey overlay box in the Klokan site to line up the edges to the edges of the map. </li>
+<li>Try to line it up reasonably closely</li>
+</ol>
+<h4 id="option-2-draw-a-shape">Option 2: Draw a shape</h4>
+<ol>
+<li>Switch to the Polygon tool by clicking on the pentagon icon</li>
+<li>Click as many points on the screen as needed to approximate the map extent.</li>
+<li>Click on the first point to close the polygon</li>
+<li>The interface will display a dotted line showing the bounding box rectangle.</li>
+</ol>
+<h3 id="part-c-copy-back-to-geobtaa-metadata">Part C: Copy back to GeoBTAA metadata</h3>
+<ol>
+<li>Click the “Copy to Clipboard” icon on the Klokan site.</li>
+<li>Paste the coordinates into the Bounding Box field in the GeoBTAA metadata template or in the GEOMG metadata editor.</li>
+</ol>
 
 
+
+  
 
 
 
@@ -676,6 +767,44 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../harvest/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Submitting Metadata" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Submitting Metadata
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../geomg/" class="md-footer__link md-footer__link--next" aria-label="Next: GEOMG Metadata Toolkit" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              GEOMG Metadata Toolkit
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
