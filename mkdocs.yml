@@ -54,20 +54,22 @@ markdown_extensions:
 nav:
 - HOME: 'index.md'
 
-- GeoBTAA Metadata Profile: 
+- Reference: 
      - 'Overview' : 'components.md'
      - 'Local Input Guidelines': 'inputGuidelines.md'
      - 'Custom Elements' : 'b1g-custom-elements.md'
      - 'Supplemental Metadata' : 'supplementalMetadata.md'
      - 'Editing Template' : 'editingTemplate.md'
-
-- Content Organization Model: 
-     - 'Diagram' : 'model.md'
-     - 'Resource Classes' : 'resourceClasses.md'
-
-- Curation Workflows:
+     
+- How-to Guides:
       - 'Resource Lifecycle' : 'lifecycle.md'
       - 'Identifying Resources' : 'identify.md'
       - 'Submitting Metadata' :  'harvest.md'
       - 'Manually add bounding boxes': 'manual-bbox.md'
-      - 'GEOMG Metadata Toolkit' : 'geomg.md'
+
+- Explanation: 
+     - 'Diagram' : 'model.md'
+     - 'Resource Classes' : 'resourceClasses.md'
+     - 'GEOMG Metadata Toolkit' : 'geomg.md'
+
+
