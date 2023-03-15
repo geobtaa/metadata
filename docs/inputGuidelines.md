@@ -24,7 +24,7 @@ For the following elements, the GeoBTAA Metadata Profile has input guidelines be
 : This is the name of the organization hosting the resources. If the organization is part of the BTAA library network, a university icon will display next to the resource's title. However, most Providers will not have an icon.
 
 ### Bounding Box
-:  On the Metadata Editing Template, provide Bounding Boxes in this format: **W,S,E,N**
+:  On the Metadata Editing Template, provide Bounding Boxes in this format: **W,S,E,N** This order matches the DCAT API and is how the Klokan Bounding Box provides coordinates with their "CSV" setting.
 
 : This format will be programmatically converted to other formats when it is published to the Geoportal:
 

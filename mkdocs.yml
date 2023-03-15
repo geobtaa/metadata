@@ -19,8 +19,9 @@ theme:
 #   include_homepage_in_sidebar: false
 plugins:
       - search
+      - table-reader
       - with-pdf:
-            output_path: Desktop/b1g-handbook.pdf
+            output_path: export/b1g-handbook.pdf
       
 #   - pdf-export:
 #       combined: true
