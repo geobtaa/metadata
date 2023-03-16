@@ -5,3 +5,5 @@
 *[CKAN]: Comprehensive Knowledge Archive Network (a type of data portal)
 
 *[API]: Application Programming Interface
+
+*[Product Manager]: Karen Majewicz - majew030@umn.edu

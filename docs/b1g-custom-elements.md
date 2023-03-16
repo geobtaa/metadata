@@ -1,7 +1,7 @@
 # Custom Elements
 
 
-This pages documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the [official OpenGeoMetadata (Aardvark) schema](https://opengeometadata.org).
+This page documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the [official OpenGeoMetadata (Aardvark) schema](https://opengeometadata.org).
 
 | b1g-id | Label                                         | URI                             | Obligation  |
 | ------ | --------------------------------------------- | ------------------------------- | ----------- |

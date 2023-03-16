@@ -1,6 +1,35 @@
+.md-header__topic  {
+  font-size: 1.75em; 
+  font-family: sans-serif;
+  }
+  
+  
+.md-typeset h2{
+      color: #000;
+      font-weight: bold;
+      font-size: 1.5em;
+}
+.md-typeset h3 {
+      color: #772424;
+      font-weight: bold;
+      font-size: 1.3em;
+      }
+
+p {
+  font-size: 1.2em; 
+  }
+  
+  li {
+  font-size: 1em; 
+  }
+
 .md-header, .md-tabs { 
   background-color: #0a4c7b;
 }
+
+.md-tabs__link  {
+  font-size: 1.65em; 
+  }
 
 /* Hide main nav title */
 label[for="__drawer"] {

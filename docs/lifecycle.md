@@ -9,24 +9,7 @@ toc:
 
 ## 1. Submit Records
 
-**1. Optional: Contact the organization**
-
-- Use [this template](https://docs.google.com/document/d/1xqYbutgsrH5UTjKC9m5oBagIgk-8sSCpbYiZ5-tlZr8/edit?usp=sharing) to inform the organization that we plan to include their resources in our geoportal.
-- If metadata for the resources are not readily available, the organization may be able to send them to you.
-
-**2. Send an email to the Metadata Coordinator**
-
-Things to include:
-
-- a link to the website
-- Title and Description of the collection
-- (If known) information about how to harvest the metadata or construct access links
-
-**3. The submission will be added to our collections processing queue**
-
-!!! info
-
-	Metadata processing tasks are tracked on our public [GitHub project dashboard](https://github.com/orgs/geobtaa/projects/4).
+It is the role of the Team members to seek out new content for the geoportal. See the page [How to Submit Resources to the BTAA Geoportal](/submit-resources) for more information.
 
 
 ## 2. Metadata Transition
