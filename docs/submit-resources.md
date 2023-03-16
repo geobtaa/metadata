@@ -18,7 +18,7 @@ It is the role of the Team members to seek out new content for the geoportal.
     - Research institutes
     - Nonprofit organizations
 
-Review the [Curation Priorites](curation-priorities.md) and the [Collection Development Policy](collection-development-policies) for guidelines on selecting resources.
+Review the [Curation Priorites](curation-priorities.md) and the [Collection Development Policy](collection-development-policy.md) for guidelines on selecting resources.
 
 ### Optional: Contact the organization
 

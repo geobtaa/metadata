@@ -24,21 +24,20 @@ This handbook describes how to curate metadata records for the [BTAA Geoportal](
 
 ## Contents:
 
-### [GeoBTAA Metadata Profile](components.md)
+### [Reference](geobtaa-metadata-application-profile.md)
+
+Information about the GeoBTAA Metadata Application Profile
 
 
-:   The GeoBTAA Metadata Profile combines the [OpenGeoMetadata](https://opengeometadata.org) schema, local input guidelines, and custom elements.
+### [How-to guides](submit-resources.md)
 
-### [Content Organization Model for the BTAA Geoportal](model.md)
-
-
-: The Content Organization Model defines how records are organized and how they are related within the BTAA Geoportal.
+Guidelines for identifying, submitting
 
 
-### [Curation workflows](lifecycle.md)
 
+### [Explanation](lifecycle.md)
 
-: Step by step guides for selecting, submitting, harvesting, editing, publishing, and maintaining metadata records in the BTAA Geoportal
+Descriptions and clarifications of processes, policies, and tools
 
 
 ----------
@@ -46,53 +45,78 @@ This handbook describes how to curate metadata records for the [BTAA Geoportal](
 
 ## Version History
 
-**_Changes for Version 4.4 (August 23, 2022)_**
+_Changes for Version 4.6 (March 15, 2023)_
+
+* New page for manually adding bounding boxes
+* Restructure using Diataxis framework
+* Remove some GEOMG how to guidelines (moved to GEOMG Wiki)
+* Clarify Editing Template differences from OGM-Aaardvark documentation
+* Added Collection Development Policy and Curation Priorities documents
+* Update input guidelines for Spatial Coverage (FAST IDs)
+
+
+
+_Changes for Version 4.5.1 (February 28, 2023)_
+
+* Update version documentation
+* Add link to generated PDF
+
+_Changes for Version 4.5 (February 28, 2023)_
+
+* Add Creator ID
+* Update input guidelines for Creator, Creator ID
+* Remove Harvesting Guide info (migrating to separate site)
+* Edit Submitting Metadata page
+* Minor copy editing
+* Add PDF export capability
+
+_Changes for Version 4.4 (August 23, 2022)_
 
 - updated theme
 - reorganized and expanded navigation menu
 - new sections for Harvesting Guide and using GEOMG
 
-**_Changes for Version 4.3 (August 15, 2022)_**
+_Changes for Version 4.3 (August 15, 2022)_
 
 - migrate to MkDocs.org platform
 - update bounding box entry guidelines
 - add GEOMG page
 
-**_Changes for Version 4.2 (March 24, 2022)_**
+_Changes for Version 4.2 (March 24, 2022)_
 
 - New Entry and Usage Guidelines page
 - Expands content organization model documentation
 - Changes the name of the schema from 'Aardvark' to 'OpenGeoMetadata (version Aardvark)'
 - Cleans up outdated links
 
-**_Changes for Version 4.1 (Jan 2022)_**
+_Changes for Version 4.1 (Jan 2022)_
 
 - updates Status as optional; removes controlled vocabulary
 - Clarifies relationship model
 
-**_Changes for Version 4.0 (July 2021)_**
+_Changes for Version 4.0 (July 2021)_
 
 - Incorporation of GEOMG Metadata Editor
 - Upgrade to Aardvark Metadata Schema for GeoBlacklight
 
-**_Changes for version 3.3 (May 13, 2020)_**
+_Changes for version 3.3 (May 13, 2020)_
 
 - Added University of Nebraska
 - Reorganized Metadata Elements to match editing template
 - Updated the “Update the Collections” section to match new administrative process for tracking records
 
-**_Changes for version 3.2 (Jan 8, 2020)_**
+_Changes for version 3.2 (Jan 8, 2020)_
 
 - Added Date Range element
 
-**_Changes for version 3.1 (Dec 19, 2019)_**
+_Changes for version 3.1 (Dec 19, 2019)_
 
 - Added collection level records metadata schema
 
-**_Changes for version 3 (Oct, 2019)_**
+_Changes for version 3 (Oct 2019)_
 
 - GeoNetwork and Omeka deprecated
-- all GeoBlacklight records are stored in a master spreadsheet in Google - Sheets
+- all GeoBlacklight records are stored in a spreadsheet in Google Sheets
 - records are transformed from CSV to GeoBlacklight JSON with a Python script
 - additional metadata fields were added for administrative purposes
 - IsPartOf field now holds a code pointing to the collection record
