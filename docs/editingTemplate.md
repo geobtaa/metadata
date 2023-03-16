@@ -14,7 +14,7 @@ The Template contains the following tabs:
 
 	The input format for some fields in this template may differ from how the field is documented in [OpenGeoMetadata](https://opengeometadata.org). These differences are intended to make it easier to enter values, which will be transformed when we upload the record to GEOMG.
 
-	- **Bounding Box** coordinates should be entered as `W,S,E,N`. The coordinates are automatically transformed to a different order `ENVELOPE(W,E,N,S)`. Read more under the [Local Input Guidelines](/input-guidelines/#bounding-box).
+	- **Bounding Box** coordinates should be entered as `W,S,E,N`. The coordinates are automatically transformed to a different order `ENVELOPE(W,E,N,S)`. Read more under the [Local Input Guidelines](input-guidelines.md).
 
 	- **Date Range **should be entered as `yyyy-yyyy`. This is automatically transformed to [yyyy TO yyyy].
 
