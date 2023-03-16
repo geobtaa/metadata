@@ -2,14 +2,14 @@ site_name: GeoBTAA Metadata Handbook
 site_author: Big Ten Academic Alliance Geospatial Information Network
 copyright : "2022"
 repo_url: https://github.com/geobtaa/metadata
-theme: 
+theme:
    name: material
    features:
 #     - navigation.instant
       - navigation.sections
       - content.tooltips
-#      - navigation.tabs
-#      - navigation.tabs.sticky
+      - navigation.tabs
+      - navigation.tabs.sticky
       - navigation.top
    logo: images/btaa-logo-white.png
    icon:
@@ -20,11 +20,9 @@ theme:
 plugins:
       - search
       - table-reader
-      - with-pdf:
-            output_path: export/b1g-handbook.pdf
-      
-#   - pdf-export:
-#       combined: true
+#       - with-pdf:
+#             output_path: export/b1g-handbook.pdf
+
 #   - git-revision-date-localized:
 #       enable_creation_date: false
 
@@ -36,6 +34,9 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  - toc:
+      toc_depth: 2
+      permalink: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -49,28 +50,35 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
 
-    
+
 nav:
 - HOME: 'index.md'
 
-- Reference: 
-     - 'Overview' : 'components.md'
-     - 'Local Input Guidelines': 'inputGuidelines.md'
+- Reference:
+     - 'GeoBTAA Metadata Application Profile' : 'geobtaa-metadata-application-profile.md'
      - 'Custom Elements' : 'b1g-custom-elements.md'
-     - 'Supplemental Metadata' : 'supplementalMetadata.md'
+     - 'Local Input Guidelines': 'input-guidelines.md'
      - 'Editing Template' : 'editingTemplate.md'
-     
-- How-to Guides:
-      - 'Resource Lifecycle' : 'lifecycle.md'
-      - 'Identifying Resources' : 'identify.md'
-      - 'Submitting Metadata' :  'harvest.md'
-      - 'Manually add bounding boxes': 'manual-bbox.md'
 
-- Explanation: 
-     - 'Diagram' : 'model.md'
+- How-to Guides:
+      - 'Submit Resources' : 'submit-resources.md'
+      - 'Manually add bounding boxes': 'manual-bbox.md'
+      - 'Select records in GEOMG' : 'select-geomg.md'
+      - 'Upload records to GEOMG' : 'upload-geomg.md'
+
+- Explanation:
+     - 'Resource Lifecycle' : 'lifecycle.md'
+     - 'Curation Priorities': 'curation-priorities.md'
+     - 'Collection Development Policy': 'collection-development-policy.md'
+     - 'Content Organization Model' : 'model.md'
      - 'Resource Classes' : 'resourceClasses.md'
+     - 'Supplemental Metadata' : 'supplementalMetadata.md'
      - 'GEOMG Metadata Toolkit' : 'geomg.md'
+
+
+
+
 
 

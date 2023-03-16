@@ -1,5 +1,6 @@
 ---
 hide:
+  - navigation
   - toc
 ---
 
@@ -14,6 +15,8 @@ This handbook describes how to curate metadata records for the [BTAA Geoportal](
 * Development & Operations Staff in the BTAA-GIN
 
 * Users & developers of open-source geospatial projects, such as [OpenGeoMetadata](https://opengeometadata.org) and [GeoBlacklight](https://geoblacklight.org)
+
+* Contributors to the  [BTAA Geoportal](https://geo.btaa.org)
 
 * Users of the [BTAA Geoportal](https://geo.btaa.org)
 
@@ -42,22 +45,6 @@ This handbook describes how to curate metadata records for the [BTAA Geoportal](
 
 
 ## Version History
-
-**_Changes for Version 4.5.1 (February 28, 2023)_**
-
-* Update version documentation
-* Add link to generated PDF
-
-
-**_Changes for Version 4.5 (February 28, 2023)_**
-
-* Add Creator ID
-* Update input guidelines for Creator, Creator ID
-* Remove Harvesting Guide info (migrating to separate site)
-* Edit Submitting Metadata page
-* Minor copy editing
-* Add PDF export capability
-
 
 **_Changes for Version 4.4 (August 23, 2022)_**
 
