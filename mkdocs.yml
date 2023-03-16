@@ -20,7 +20,7 @@ theme:
 #   include_homepage_in_sidebar: false
 plugins:
       - search
-      - table-reader
+#       - table-reader
 #       - with-pdf:
 #             output_path: export/b1g-handbook.pdf
 
