@@ -11,8 +11,8 @@ theme:
       - navigation.tabs.sticky
       - navigation.top
    logo: images/btaa-logo-white.png
-   icon:
-      repo: fontawesome/brands/github
+#    icon:
+#       repo: fontawesome/brands/github
    highlightjs: true
    font:
      text: Georgia
@@ -21,8 +21,8 @@ theme:
 plugins:
       - search
 #       - table-reader
-#       - with-pdf:
-#             output_path: export/b1g-handbook.pdf
+      - with-pdf:
+            output_path: export/b1g-handbook.pdf
 
       - git-revision-date-localized:
             enable_creation_date: false

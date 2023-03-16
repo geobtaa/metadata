@@ -1,8 +1,3 @@
----
-hide:
-
----
-
 # How to submit resources to the BTAA Geoportal
 
 ## 1. Identify Resources

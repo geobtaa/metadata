@@ -7,6 +7,8 @@ hide:
 # GeoBTAA Metadata Handbook
 This handbook describes how to curate metadata records for the [BTAA Geoportal](https://geo.btaa.org).
 
+[Download a PDF of this site here.](export/b1g-handbook.pdf)
+
 
 ## Who is this for?
 
