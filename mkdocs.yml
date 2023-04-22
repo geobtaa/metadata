@@ -3,75 +3,89 @@ site_author: Big Ten Academic Alliance Geospatial Information Network
 copyright : "2023"
 repo_url: https://github.com/geobtaa/metadata
 theme:
-   name: material
-   features:
+      name: material
+      features:
       - navigation.sections
       - content.tooltips
       - navigation.tabs
       - navigation.tabs.sticky
       - navigation.top
-   logo: images/btaa-logo-white.png
-#    icon:
-#       repo: fontawesome/brands/github
-   highlightjs: true
-   font:
-     text: Georgia
-#   titles_only: true
-#   include_homepage_in_sidebar: false
-plugins:
-      - search
-#       - table-reader
-      - with-pdf:
-            output_path: export/b1g-handbook.pdf
-
-      - git-revision-date-localized:
-            enable_creation_date: false
+      - toc.integrate
+      logo: images/btaa-logo-white.png
+      #    icon:
+      #       repo: fontawesome/brands/github
+      highlightjs: true
+      font:
+      text: Georgia
+      #   titles_only: true
+      #   include_homepage_in_sidebar: false
+      plugins:
+            - search
+            - table-reader
+            - with-pdf:
+                  output_path: export/b1g-handbook.pdf
+            - git-revision-date-localized:
+                  enable_creation_date: true
 
 extra_css:
-  - stylesheets/extra.css
+      - stylesheets/extra.css
 
 markdown_extensions:
-  - abbr
-  - tables
-  - attr_list
-  - md_in_html
-  - toc:
-      toc_depth: 2
-      permalink: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.snippets:
-      auto_append:
-        - includes/abbreviations.md
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
+      - abbr
+      - tables
+      - attr_list
+      - md_in_html
+      - toc:
+            toc_depth: 2
+            permalink: true
+      - pymdownx.emoji:
+            emoji_index: !!python/name:materialx.emoji.twemoji
+            emoji_generator: !!python/name:materialx.emoji.to_svg
+      - def_list
+      - pymdownx.tasklist:
+            custom_checkbox: true
+      - pymdownx.snippets:
+            auto_append:
+              - includes/abbreviations.md
+      - admonition
+      - pymdownx.details
+      - pymdownx.superfences:
+            custom_fences:
+                  - name: mermaid
+                    class: mermaid
+                    format: !!python/name:pymdownx.superfences.fence_code_format
+                    showSequenceNumbers: true
+      - pymdownx.tabbed:
+            alternate_style: true
 
 
 nav:
 - HOME: 'index.md'
 
-- Reference:
-     - 'GeoBTAA Metadata Application Profile' : 'geobtaa-metadata-application-profile.md'
-     - 'Custom Elements' : 'b1g-custom-elements.md'
-     - 'Local Input Guidelines': 'input-guidelines.md'
-     - 'Editing Template' : 'editingTemplate.md'
-
 - How-to Guides:
       - 'Submit Resources' : 'submit-resources.md'
-      - 'Manually add bounding boxes': 'manual-bbox.md'
-
+      - 'Add bounding boxes': 'add-bbox.md'
+      - 'Standardize Creator names': 'standardize-creators.md'
+      
+- Reference:
+      - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
+      - 'Custom Elements' : 'b1g-custom-elements.md'
+      - 'Local Input Guidelines': 'input-guidelines.md'
+      - 'Editing Template' : 'editingTemplate.md'
+            
 - Explanation:
-     - 'Resource Lifecycle' : 'lifecycle.md'
-     - 'Curation Priorities': 'curation-priorities.md'
-     - 'Collection Development Policy': 'collection-development-policy.md'
-     - 'Content Organization Model' : 'model.md'
-     - 'Resource Classes' : 'resourceClasses.md'
-     - 'Supplemental Metadata' : 'supplementalMetadata.md'
-     - 'GEOMG Metadata Toolkit' : 'geomg.md'
+      - Metadata Workflows:
+            - 'Resource Lifecycle' : 'resource-lifecycle.md'
+            - 'About Metadata Harvesting' : 'about-harvesting.md'
+            - 'GEOMG Metadata Toolkit' : 'geomg.md'
+            - 'Ephemeral Data' : 'ephemeral-data.md'
+      - Content Organization:
+            - 'Content Organization Model' : 'model.md'
+            - 'Resource Classes' : 'resourceClasses.md'
+            - 'Supplemental Metadata' : 'supplementalMetadata.md'
+      - BTAA Geoportal:
+            - 'About the BTAA Geoportal' : 'purpose.md'
+            - 'Collection Development Policy': 'collection-development-policy.md'
+            - 'Curation Priorities': 'curation-priorities.md'
+      
+      

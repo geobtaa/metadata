@@ -2,8 +2,6 @@
 
 ## 1. Identify Resources
 
-It is the role of the Team members to seek out new content for the geoportal.
-
 !!! info "Places to find public domain collections"
 
     - State GIS clearinghouses

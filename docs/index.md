@@ -26,6 +26,7 @@ This handbook describes how to curate metadata records for the [BTAA Geoportal](
 
 ## Contents:
 
+
 ### [Reference](geobtaa-metadata-application-profile.md)
 
 Information about the GeoBTAA Metadata Application Profile
@@ -33,11 +34,10 @@ Information about the GeoBTAA Metadata Application Profile
 
 ### [How-to guides](submit-resources.md)
 
-Guidelines for identifying, submitting
+Guidelines for identifying, submitting, and editing metadata
 
 
-
-### [Explanation](lifecycle.md)
+### [Explanation](resource-lifecycle.md)
 
 Descriptions and clarifications of processes, policies, and tools
 
