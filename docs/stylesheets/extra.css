@@ -14,6 +14,10 @@
       font-weight: bold;
       font-size: 1.3em;
       }
+      
+.md-nav__item--section > .md-nav__link[for] {
+    color: inherit;
+}
 
 p {
   font-size: 1.2em; 

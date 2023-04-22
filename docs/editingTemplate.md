@@ -8,7 +8,7 @@ The Template contains the following tabs:
 - Dataset Template
 - Website Record Template
 - Values: All of the controlled vocabulary values for the associated fields.
-- Access Links and Multiple Downloads: Fields for adding [secondary tables](/geomg/#secondary-tables)
+- Access Links and Multiple Downloads: Fields for adding secondary tables.
 
 !!! Warning "Note"
 
