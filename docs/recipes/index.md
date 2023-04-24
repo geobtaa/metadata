@@ -10,3 +10,6 @@ These recipes present a series of steps to harvest metadata from the sites that 
 
 !!! warning
 	These recipes are not guaranteed to work! Since they rely on external websites, the scripts are necessarily works-in-progress. They need to be regularly updated and reconfigured in response to changes at the source website, python updates, and adjustments to our metadata schema.
+
+
+To get started, clone or fork the [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).

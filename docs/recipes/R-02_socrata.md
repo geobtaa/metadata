@@ -1,8 +1,8 @@
 ## Purpose
 
-This script will scan the [DCAT API](https://resources.data.gov/resources/dcat-us/) of Socrata Data Portals and return the metadata for all suitable items as a CSV file in the GeoBTAA Metadata Application Profile.
+To scan the [DCAT API](https://resources.data.gov/resources/dcat-us/) of Socrata Data Portals and return the metadata for all suitable items as a CSV file in the GeoBTAA Metadata Application Profile.
 
-Note: This recipe is very similar to the ArcGIS Hubs Scanner. [Read more about Socrata here.](../4-Explanation/data-portals/#socrata)
+Note: This recipe is very similar to the ArcGIS Hubs Scanner.
 
 !!! warning " "
 
@@ -23,7 +23,7 @@ C --> |Yes| E[STEP 3. <br>Publish/unpublish records in GEOMG];
 
 ## Step: Download the list of active Socrata Data Portals
 
-We maintain a list of active ArcGIS Hub sites in GEOMG. 
+We maintain a list of active Socrata Hub sites in GEOMG. 
 
 !!! tip inline end "Shortcut"
 
@@ -53,7 +53,7 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 ## Step 2: Run the harvest script
 
 1. Start Jupyter Notebook and navigate to the Recipes directory.
-2. Open [R-02_socrata.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-02_arcgis-hubs/R-02_aspcrata.ipynb)
+2. Open [R-02_socrata.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-02_socrata/R-02_socrata.ipynb)
 3. Move the downloaded file `socrataPortals.csv` into the same directory as the Jupyter Notebook.
 
 ??? info "Expand to read about the R-02_socrata.ipynb Jupyter Notebook"
@@ -75,7 +75,7 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 
 1. Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. 
 2. Upload the new CSV file. This will overwrite the Date Accessioned value for any items that were already present.
-3. Use the old Date Accessioned value to search for the previous harvest date. This example uses 2023-03-07: (https://geomg.lib.umn.edu/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=ArcGIS+Hub&q=%222023-03-07%22&rows=20&sort=score+desc)
+3. Use the old Date Accessioned value to search for the previous harvest date. 
 4. Unpublish the ones that have the old date in the Date Accessioned field 5. Record this number in the GitHub issue for the scan under Number Deleted
 6. Look for records in the uploaded batch that are still "Draft" - these are new records. 
 7. Publish them and record this number in the GitHub issue under Number Added

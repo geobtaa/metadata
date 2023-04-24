@@ -57,6 +57,7 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 1. Start Jupyter Notebook and navigate to the Recipes directory.
 2. Open [R-01_arcgis-hubs.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-01_arcgis-hubs/R-01_arcgis-hubs.ipynb)
 3. Move the downloaded file `arcHubs.csv` into the same directory as the Jupyter Notebook.
+4. Run all cells.
 
 ??? info "Expand to read about the R-01_arcgis-hubs.ipynb Jupyter Notebook"
 
