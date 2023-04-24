@@ -1,8 +1,6 @@
----
-toc:
-  baselevel:2
----
+!!! warning "Deprecation"
 
+	This lifecycle documentation had been replaced by a newer version at [Resource Lifecycle](resource-lifecycle.md).
 
 ![Metadata Workflow](./images/btaa-metadata-workflow.png)
 

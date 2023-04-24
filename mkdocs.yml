@@ -10,7 +10,7 @@ theme:
       - navigation.tabs
       - navigation.tabs.sticky
       - navigation.top
-      - toc.integrate
+#       - toc.integrate
       logo: images/btaa-logo-white.png
       #    icon:
       #       repo: fontawesome/brands/github
@@ -22,8 +22,8 @@ theme:
       plugins:
             - search
             - table-reader
-            - with-pdf:
-                  output_path: export/b1g-handbook.pdf
+#             - with-pdf:
+#                   output_path: export/b1g-handbook.pdf
             - git-revision-date-localized:
                   enable_creation_date: true
 
@@ -61,24 +61,23 @@ markdown_extensions:
 
 nav:
 - HOME: 'index.md'
-
-- How-to Guides:
-      - 'Submit Resources' : 'submit-resources.md'
-      - 'Add bounding boxes': 'add-bbox.md'
-      - 'Standardize Creator names': 'standardize-creators.md'
-      
+  
 - Reference:
-      - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
-      - 'Custom Elements' : 'b1g-custom-elements.md'
-      - 'Local Input Guidelines': 'input-guidelines.md'
-      - 'Editing Template' : 'editingTemplate.md'
-            
+      - Schema:
+            - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
+            - 'Custom Elements' : 'b1g-custom-elements.md'
+            - 'Editing Template' : 'editingTemplate.md'
+      - Guidelines:
+            - 'Local Input Guidelines': 'input-guidelines.md'
+            - 'Harvest Schedule': 'schedule.md'
+            - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
+            - 'Submit Resources' : 'submit-resources.md'
+      - 'Glossary': 'glossary.md'
+      
 - Explanation:
       - Metadata Workflows:
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
-            - 'About Metadata Harvesting' : 'about-harvesting.md'
             - 'GEOMG Metadata Toolkit' : 'geomg.md'
-            - 'Ephemeral Data' : 'ephemeral-data.md'
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
@@ -87,5 +86,29 @@ nav:
             - 'About the BTAA Geoportal' : 'purpose.md'
             - 'Collection Development Policy': 'collection-development-policy.md'
             - 'Curation Priorities': 'curation-priorities.md'
+      - Harvesting:
+            - 'About Metadata Harvesting' : 'about-harvesting.md'
+            - 'Ephemeral Data' : 'ephemeral-data.md'
+            - 'DCAT JSON Structure' : 'dcat-structure.md'
+            - 'CKAN Data Portals' : 'ckan-structure.md'
+            
+- Tutorials: 'tutorials.md'
+
+- Recipes:  
+      - 'About': 'recipes/index.md'
+      - Harvest:
+            - 'ArcGIS': 'recipes/R-01_arcgis-hubs.md'
+            - 'Socrata': 'recipes/R-02_socrata.md'
+            - 'CKAN': 'recipes/R-03_ckan.md'
+            - 'OAI-PMH': 'recipes/R-04_oai-pmh.md'
+            - 'IIIF': 'recipes/R-05_iiif.md'
+            - 'MODS': 'recipes/R-06_mods.md'
+            - 'OpenGeoMetadata': 'recipes/R-07_ogm.md'
+            - 'PASDA' : 'recipes/R-08_pasda.md'
+            - 'UMedia' : 'recipes/R-09_umedia.md'
+                  
+      - Edit:   
+            - 'Add bounding boxes': 'recipes/add-bbox.md'
+            - 'Standardize Creator names': 'recipes/standardize-creators.md'
       
       
