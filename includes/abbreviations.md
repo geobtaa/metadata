@@ -7,3 +7,5 @@
 *[API]: Application Programming Interface
 
 *[Product Manager]: Karen Majewicz - majew030@umn.edu
+
+*[OpenGeoMetadata]: Metadata schema for GeoBlacklight

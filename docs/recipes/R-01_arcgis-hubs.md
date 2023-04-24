@@ -1,6 +1,6 @@
 ## Purpose
 
-This script will scan the [DCAT 1.1 API](https://resources.data.gov/resources/dcat-us/) of ArcGIS Hubs and return the metadata for all suitable items as a CSV file in the GeoBTAA Metadata Application Profile.
+To scan the [DCAT 1.1 API](https://resources.data.gov/resources/dcat-us/) of ArcGIS Hubs and return the metadata for all suitable items as a CSV file in the GeoBTAA Metadata Application Profile.
 
 !!! warning " "
 
@@ -19,7 +19,7 @@ C --> |Yes| E[STEP 3. <br>Publish/unpublish records in GEOMG];
 ```
 
 
-## Step: Download the list of active ArcGIS Hubs
+## Step 1: Download the list of active ArcGIS Hubs
 
 We maintain a list of active ArcGIS Hub sites in GEOMG. 
 

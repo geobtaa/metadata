@@ -2,7 +2,7 @@
 
 `Version 1.0 - April 18, 2018`
 
-!!! warning "Deprecated"
+!!! failure "Deprecated"
 
 	This document has been replaced by the [BTAA-GIN Scanning Guidelines for ArcGIS Hub, version 2.0](../arcgis-hub-guidelines)
 

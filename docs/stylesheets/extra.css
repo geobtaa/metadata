@@ -1,7 +1,9 @@
+/* 
 .md-header__topic  {
-  font-size: 1.75em; 
+  font-size: 1.5em; 
   font-family: sans-serif;
   }
+ */
    
 .md-typeset h2{
       color: #000;
@@ -16,7 +18,7 @@
       }
       
 .md-nav__item--section > .md-nav__link[for] {
-    color: inherit;
+    color: #000;
 }
 
 p {
