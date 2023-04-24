@@ -1,10 +1,12 @@
-## Purpose: To harvest new records added to the [University Of Minnesota's UMedia Digital Library](https://umedia.lib.umn.edu).
+## Purpose
+
+To harvest new records added to the [University Of Minnesota's UMedia Digital Library](https://umedia.lib.umn.edu).
 
 
 
 ##  Step 1: Set up folders
 
-1. Navigate to the UMedia Recipe directory at [R-09_umedia.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-09_05d-01-umedia)
+1. Navigate to the UMedia Recipe directory at [R-09_umedia.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-09_05d-01-umedia)
 2. Verify the following folders are present:
 
 `requests`
@@ -21,7 +23,7 @@ This folder stores all CSV files for metadata by month. Once we have JSON files 
 
 ## Step 2: Run the harvesting script
 
-1. Start Jupyter Notebook and open [R-09_umedia.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-09_05d-01-umedia/R-09_05d-01_umedia.ipynb)
+1. Start Jupyter Notebook and open [R-09_umedia.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-09_05d-01-umedia/R-09_05d-01_umedia.ipynb)
 2. The second code cell will ask for an input on how many map records you want to harvest.
 3. The third code cell will ask for a date range. Select a month (in the form `yyyy-mm`)  based on the last time you ran the script.
 

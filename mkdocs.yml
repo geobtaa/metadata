@@ -61,9 +61,7 @@ markdown_extensions:
 
 nav:
 - HOME: 'index.md'
-
-
-      
+  
 - Reference:
       - Schema:
             - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
@@ -79,9 +77,7 @@ nav:
 - Explanation:
       - Metadata Workflows:
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
-            - 'About Metadata Harvesting' : 'about-harvesting.md'
             - 'GEOMG Metadata Toolkit' : 'geomg.md'
-            - 'Ephemeral Data' : 'ephemeral-data.md'
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
@@ -90,7 +86,12 @@ nav:
             - 'About the BTAA Geoportal' : 'purpose.md'
             - 'Collection Development Policy': 'collection-development-policy.md'
             - 'Curation Priorities': 'curation-priorities.md'
-
+      - Harvesting:
+            - 'About Metadata Harvesting' : 'about-harvesting.md'
+            - 'Ephemeral Data' : 'ephemeral-data.md'
+            - 'DCAT JSON Structure' : 'dcat-structure.md'
+            - 'CKAN Data Portals' : 'ckan-structure.md'
+            
 - Tutorials: 'tutorials.md'
 
 - Recipes:  

@@ -12,7 +12,7 @@ Collect the metadata JSONs. This type of metadata typically is obtain in one of 
 ## Step 2: Run the conversion script
 
 1. Start Jupyter Notebook and navigate to the Recipes directory.
-2. Open [R-07_openGeoMetadata.ipynb](http://localhost:8888/notebooks/site/2-Recipes/R-07_OpenGeoMetadata/R-07_OpenGeoMetadata.ipynb)
+2. Open [R-07_openGeoMetadata.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-07_OpenGeoMetadata)
 3. Move the folder with the metadata JSONs into the same directory as the Jupyter Notebook.
 4. Declare the paths and folder name in the Notebook.
 5. Run all cells

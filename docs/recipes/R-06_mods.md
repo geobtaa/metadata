@@ -9,7 +9,7 @@ This list may be supplied by the submitter or we may need to query the website t
 ## Step 2: Run the extraction script
 
 1. Start Jupyter Notebook and navigate to the Recipes directory.
-2. Open [R-06-mods.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-06_MODS/R-06_MODS.ipynb)
+2. Open [R-06-mods.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-06_MODS)
 3. Move the downloaded file `arcHubs.csv` into the same directory as the Jupyter Notebook.
 4. Run all cells.
 

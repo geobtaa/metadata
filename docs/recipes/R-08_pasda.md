@@ -1,9 +1,11 @@
-## Purpose to harvest metadata from [Pennsylvania Spatial Data Access (PASDA](https://www.pasda.psu.edu), a custom data portal.
+## Purpose 
+
+To harvest metadata from [Pennsylvania Spatial Data Access (PASDA](https://www.pasda.psu.edu), a custom data portal.
 
 ## Step 1: Start the Jupyter Notebook
 
 1. Start Jupyter Notebook and navigate to the Recipes directory.
-2. Open [R-08_pasda.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-08_08a-01_pasda/R-08_8a-01-pasda.ipynb)
+2. Open [R-08_pasda.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-08_08a-01_pasda)
 3. Move the folder with the metadata JSONs into the same directory as the Jupyter Notebook.
 4. Declare the paths and folder name in the Notebook.
 

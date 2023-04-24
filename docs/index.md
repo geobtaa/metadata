@@ -7,25 +7,8 @@ hide:
 # GeoBTAA Metadata Handbook
 This handbook describes how to harvest and format metadata records for the [BTAA Geoportal](https://geo.btaa.org).
 
-
-## Who is this for?
-
-* Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) (BTAA-GIN)
-
-* Development & Operations Staff in the BTAA-GIN
-
-* Users & developers of open-source geospatial projects, such as [OpenGeoMetadata](https://opengeometadata.org) and [GeoBlacklight](https://geoblacklight.org)
-
-* Contributors to the  [BTAA Geoportal](https://geo.btaa.org)
-
-* Users of the [BTAA Geoportal](https://geo.btaa.org)
-
 -----
-
-## Contents:
-
 <div class="grid cards" markdown>
-
 
 - ### [Reference](geobtaa-metadata-application-profile.md)
 
@@ -50,6 +33,18 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 </div>
 
 ----------
+
+## Who is this handbook for?
+
+* Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) (BTAA-GIN)
+
+* Development & Operations Staff in the BTAA-GIN
+
+* Users & developers of open-source geospatial projects, such as [OpenGeoMetadata](https://opengeometadata.org) and [GeoBlacklight](https://geoblacklight.org)
+
+* Contributors to the  [BTAA Geoportal](https://geo.btaa.org)
+
+* Users of the [BTAA Geoportal](https://geo.btaa.org)
 
 
 ??? info "Metadata Handbook Version History"

@@ -13,7 +13,7 @@ To extract metadata from IIIF JSON Manifests.
 ## Step 2: Run the extraction script
 
 1. Start Jupyter Notebook and navigate to the Recipes directory.
-2. Open [R-05_iiif.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-05_IIIF/R-05_IIIF.ipynb)
+2. Open [R-05_iiif.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-05_IIIF)
 3. Move the downloaded file `jsonUrls.csv` into the same directory as the Jupyter Notebook.
 4. Run all cells
 

@@ -2,7 +2,14 @@
 hide:
 
 ---
-## Python
+
+## Python and scripting
+
+### APIs
+
+An API (Application Programming Interface) is a set of rules, protocols, and tools for building software applications. It specifies how different software components should interact with each other, allowing them to communicate and exchange information.  
+
+In the context of Python, APIs are often used to retrieve data from a web server or to interact with an external service. For example, the requests library is a popular Python package that simplifies making HTTP requests to APIs, while the json module provides an easy way to parse and encode JSON data.
 
 ### Beautiful Soup
 
@@ -95,4 +102,9 @@ CKAN is a tool for making open data websites, it helps you manage and publish co
 
 This chart provides links to documentation about the common metadata standards and schemas we encounter when harvesting.
 
-{{ read_csv('tables/metadataStandards.csv') }}
+{{ read_csv('../tables/metadataStandards.csv') }}
+
+* Dublin Core: A set of metadata elements that are used to describe resources in a simple and standardized way. Dublin Core is widely used in library systems, archives, and other digital repositories.
+* MODS (Metadata Object Description Schema): A flexible and extensible XML schema for describing a wide range of resources, including books, articles, and other types of digital content.
+* METS (Metadata Encoding and Transmission Standard): A standard for encoding descriptive, administrative, and structural metadata for digital objects.
+* MARC (Machine-Readable Cataloging): A metadata format used by libraries to describe bibliographic information about books, journals, and other materials.

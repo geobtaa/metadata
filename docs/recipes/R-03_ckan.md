@@ -31,7 +31,7 @@ We maintain a list of active CKAN sites in GEOMG.
 	
 ## Step 2: Set up directories
 
-1. Navigate to the Recipes directory for [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-03_ckan/R-03_ckan.ipynb).
+1. Navigate to the Recipes directory for [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan/R-03_ckan.ipynb).
 
 2. Verify that there are two folders
 
@@ -43,7 +43,7 @@ We maintain a list of active CKAN sites in GEOMG.
 ## Step 2: Run the harvest script
 
 1. Start Jupyter Notebook 
-2. Open [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/docs/2-Recipes/R-03_ckan/R-03_ckan.ipynb)
+2. Open [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan)
 
 
 ??? info "Expand to read about the R-03_ckan.ipynb Jupyter Notebook"
