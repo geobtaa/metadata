@@ -9,6 +9,7 @@ hide:
 
 **About bounding box coordinates for the BTAA Geoportal
 **
+
 * Bounding boxes enable users to search for items with a map interface. 
 * The format is 4 coordinates in decimal degrees 
 * Provide the coordinates in this order: West, South, East, North. 
