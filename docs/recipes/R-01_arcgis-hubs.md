@@ -25,7 +25,7 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 
 !!! tip inline end "Shortcut"
 
-	[Pre-formmated GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&rows=20&sort=score+desc)
+	[Pre-formatted GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&rows=20&sort=score+desc)
 
 1. Go to the [GEOMG](https://geomg.lib.umn.edu) dashboard
 2. Filter for items with these parameters:

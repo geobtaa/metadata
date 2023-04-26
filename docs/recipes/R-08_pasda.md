@@ -1,6 +1,6 @@
 ## Purpose 
 
-To harvest metadata from [Pennsylvania Spatial Data Access (PASDA](https://www.pasda.psu.edu), a custom data portal.
+To harvest metadata from [Pennsylvania Spatial Data Access (PASDA)](https://www.pasda.psu.edu), a custom data portal.
 
 ## Step 1: Start the Jupyter Notebook
 
