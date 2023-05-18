@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6+insiders-4.32.5">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12+insiders-4.34.0">
     
     
       
@@ -25,10 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.dc5b59cc.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6932e648.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.14411569.min.css">
       
       
 
@@ -39,8 +36,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=helvetica+neue:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"helvetica neue";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -52,16 +49,10 @@
 
     
     
-    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -111,6 +102,8 @@
       </div>
     </div>
     
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1906,7 +1899,7 @@
 <p><code>Version 1.0 - April 18, 2018</code></p>
 <div class="admonition failure">
 <p class="admonition-title">Deprecated</p>
-<p>This document has been replaced by the <a href="../arcgis-hub-guidelines"><abbr title="Big Ten Academic Alliance Geospatial Information Network">BTAA-GIN</abbr> Scanning Guidelines for ArcGIS Hub, version 2.0</a></p>
+<p>This document has been replaced by the <a href="../arcgis-hub-guidelines">BTAA-GIN Scanning Guidelines for ArcGIS Hub, version 2.0</a></p>
 </div>
 <h2 id="overview">OVERVIEW<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This document describes the BTAA GDP Accession Guidelines for ArcGIS Open Data Portals, including eligible sites and records, harvest schedules, and remediation work. This policy may change at any time in response to updates to the ArcGIS Open Data Portal platform and/or the BTAA GDP harvesting and remediation processes.</p>
@@ -1914,7 +1907,7 @@
 <p><strong>Policy</strong>: Any ArcGIS Open Data Portal (Arc-ODP) that serves public geospatial data is eligible for inclusion in the BTAA GDP Geoportal (“the Geoportal”). However, preference is given to portals that are hosting original layers, not federated portals that aggregate from other sites. Task Force members are responsible for finding and submitting Arc-ODPs for inclusion in the Geoportal. Each Arc-ODP will be assigned a Provenance value to the university that submitted it or is closest geographically to the site.</p>
 <p><strong>Explanation</strong>: In order to avoid duplication, records that appear in multiple Arc-ODPs should only be accessioned from one instance.  This also helps to avoid harvesting records that may be out of date or not yet aggregated within federated portals. Although the technical workers at the University of Minnesota will be performing the metadata processing, the Task Force members are expected to periodically monitor their records and make suggestions for edits or additions. </p>
 <h2 id="eligible-records">ELIGIBLE RECORDS<a class="headerlink" href="#eligible-records" title="Permanent link">&para;</a></h2>
-<p><strong>Policy</strong>: The only records that will be harvested from Arc-ODPs are Esri REST Services of the type Map Service, Feature Service, or Image Service. This is further restricted to only items that are harvestable through the <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> <abbr title="Application Programming Interface">API</abbr>. By default, the following records types will not be accessioned on a regular basis:</p>
+<p><strong>Policy</strong>: The only records that will be harvested from Arc-ODPs are Esri REST Services of the type Map Service, Feature Service, or Image Service. This is further restricted to only items that are harvestable through the DCAT API. By default, the following records types will not be accessioned on a regular basis:</p>
 <ul>
 <li>Web applications</li>
 <li>Nonspatial data, tabular data, PDFs</li>
@@ -1926,7 +1919,7 @@
 <p><strong>Explanation</strong>: Removing broken links is a priority for maintaining a positive user experience. However, accessioning and processing records requires remediation work that necessitates a variable time frame.</p>
 <h2 id="remediation-work">REMEDIATION WORK<a class="headerlink" href="#remediation-work" title="Permanent link">&para;</a></h2>
 <p>The records will be processed by the Metadata Coordinator and available UMN Graduate Research Assistants. The following metadata remediation steps will be undertaken:</p>
-<h3 id="1-a-python-script-will-be-run-to-harvest-metadata-from-the-dcat-api-this-will-provide-the-following-elements-for-each-record">1. A Python script will be run to harvest metadata from the <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> <abbr title="Application Programming Interface">API</abbr>.  This will provide the following elements for each record:<a class="headerlink" href="#1-a-python-script-will-be-run-to-harvest-metadata-from-the-dcat-api-this-will-provide-the-following-elements-for-each-record" title="Permanent link">&para;</a></h3>
+<h3 id="1-a-python-script-will-be-run-to-harvest-metadata-from-the-dcat-api-this-will-provide-the-following-elements-for-each-record">1. A Python script will be run to harvest metadata from the DCAT API.  This will provide the following elements for each record:<a class="headerlink" href="#1-a-python-script-will-be-run-to-harvest-metadata-from-the-dcat-api-this-will-provide-the-following-elements-for-each-record" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Identifier</li>
 <li>Title</li>
@@ -2023,7 +2016,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.803ed251.min.js"></script>
+      <script src="../assets/javascripts/bundle.8192e063.min.js"></script>
       
     
   </body>

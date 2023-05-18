@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6+insiders-4.32.5">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12+insiders-4.34.0">
     
     
       
@@ -29,10 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.dc5b59cc.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6932e648.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.14411569.min.css">
       
       
 
@@ -43,8 +40,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=helvetica+neue:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"helvetica neue";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -56,16 +53,10 @@
 
     
     
-    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -115,6 +106,8 @@
       </div>
     </div>
     
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1916,18 +1909,18 @@
   
 
 
-<h1 id="ckan-site-structure-and-harvesting-sample-walkthrough-guide"><abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> Site Structure and Harvesting Sample Walkthrough Guide<a class="headerlink" href="#ckan-site-structure-and-harvesting-sample-walkthrough-guide" title="Permanent link">&para;</a></h1>
+<h1 id="ckan-site-structure-and-harvesting-sample-walkthrough-guide">CKAN Site Structure and Harvesting Sample Walkthrough Guide<a class="headerlink" href="#ckan-site-structure-and-harvesting-sample-walkthrough-guide" title="Permanent link">&para;</a></h1>
 <ul>
-<li>This guide will assist users in deconstructing the Comprehensive Knowledge Archive Network (<abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr>) site structure and Application Programming Interface (<abbr title="Application Programming Interface">API</abbr>) design and how they are created through harvesting from selected portals.  </li>
+<li>This guide will assist users in deconstructing the Comprehensive Knowledge Archive Network (CKAN) site structure and Application Programming Interface (API) design and how they are created through harvesting from selected portals.  </li>
 </ul>
-<h2 id="ckan-site-structure-and-api-breakdown"><abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> Site Structure and <abbr title="Application Programming Interface">API</abbr> Breakdown<a class="headerlink" href="#ckan-site-structure-and-api-breakdown" title="Permanent link">&para;</a></h2>
-<p><abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> is a tool for making open data websites, it helps you manage and publish collections of data.  For <abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> purposes, data is published in units called “datasets”.</p>
+<h2 id="ckan-site-structure-and-api-breakdown">CKAN Site Structure and API Breakdown<a class="headerlink" href="#ckan-site-structure-and-api-breakdown" title="Permanent link">&para;</a></h2>
+<p>CKAN is a tool for making open data websites, it helps you manage and publish collections of data.  For CKAN purposes, data is published in units called “datasets”.</p>
 <ul>
 <li>A dataset contains two things:</li>
 </ul>
 <blockquote>
 <p>Information or “metadata” about the data. For example, the title and publisher, date, what formats it is available in, what license it is released under, etc.</p>
-<p>A number of “resources”, which hold the data itself. <abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> does not mind what format the data is in. A resource can be a CSV or Excel spreadsheet, XML file, PDF document, image file, linked data in RDF format, etc. <abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> can store the resource internally, or store it simply as a link, the resource itself being elsewhere on the web. A dataset can contain any number of resources. For example, different resources might contain the data for different years, or they might contain the same data in different formats.</p>
+<p>A number of “resources”, which hold the data itself. CKAN does not mind what format the data is in. A resource can be a CSV or Excel spreadsheet, XML file, PDF document, image file, linked data in RDF format, etc. CKAN can store the resource internally, or store it simply as a link, the resource itself being elsewhere on the web. A dataset can contain any number of resources. For example, different resources might contain the data for different years, or they might contain the same data in different formats.</p>
 </blockquote>
 <p>This is the Raw site format breakdown for how data is compiled by web notation headers and other indicators in the BTAA format denoted by the harvest.py script for metadata purposes.</p>
 <p><img alt="ckan-data" src="../images/ckan-raw-data.jpg" /></p>
@@ -1935,7 +1928,7 @@
 <p><img alt="ckan-result" src="../images/ckan-result.jpg" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For <abbr title="Comprehensive Knowledge Archive Network (a type of data portal)">CKAN</abbr> it is a series of networks that interlink data units through JSON APIs similar to <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> but are hosted on storage drives like databases and datastores.</p>
+<p>For CKAN it is a series of networks that interlink data units through JSON APIs similar to DCAT but are hosted on storage drives like databases and datastores.</p>
 </div>
 
 
@@ -1988,7 +1981,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.803ed251.min.js"></script>
+      <script src="../assets/javascripts/bundle.8192e063.min.js"></script>
       
     
   </body>

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6+insiders-4.32.5">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12+insiders-4.34.0">
     
     
       
@@ -29,10 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.dc5b59cc.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6932e648.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.14411569.min.css">
       
       
 
@@ -43,8 +40,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=helvetica+neue:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"helvetica neue";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -56,16 +53,10 @@
 
     
     
-    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -110,6 +101,8 @@
       </div>
     </div>
     
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1843,7 +1836,7 @@
 
   <h1>Local Input Guidelines</h1>
 
-<p>For the following elements, the GeoBTAA Metadata Profile has input guidelines beyond what is documented in the <abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr> schema:</p>
+<p>For the following elements, the GeoBTAA Metadata Profile has input guidelines beyond what is documented in the OpenGeoMetadata schema:</p>
 <h3 id="title">Title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
 <p><strong>Maps</strong>: The title for scanned maps is generally left as it was originally cataloged by a participating library. MARC subfields are omitted and can be inserted in the Description field.</p>
 <p><strong>Datasets</strong>: Harvested datasets often are lacking descriptive titles and may need to be augmented with place names. Dates may also be added to the end, but if the dataset is subject to updates, the data should be left off.  Acronyms should be spelled out. The preferred format for dataset titles is:
@@ -1877,17 +1870,17 @@
 </ul>
 </div>
 <h3 id="bounding-box">Bounding Box<a class="headerlink" href="#bounding-box" title="Permanent link">&para;</a></h3>
-<p>On the Metadata Editing Template, provide Bounding Boxes in this format: <strong>W,S,E,N</strong> This order matches the <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> <abbr title="Application Programming Interface">API</abbr> and is how the Klokan Bounding Box provides coordinates with their "CSV" setting.</p>
+<p>On the Metadata Editing Template, provide Bounding Boxes in this format: <strong>W,S,E,N</strong> This order matches the DCAT API and is how the Klokan Bounding Box provides coordinates with their "CSV" setting.</p>
 <p>This format will be programmatically converted to other formats when it is published to the Geoportal:</p>
 <ul>
 <li>
-<p>The <abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr> Bounding Box field (<code>dcat_bbox_s</code>) uses this order: <code>ENVELOPE(W,E,N,S)</code></p>
+<p>The OpenGeoMetadata Bounding Box field (<code>dcat_bbox_s</code>) uses this order: <code>ENVELOPE(W,E,N,S)</code></p>
 </li>
 <li>
-<p>The <abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr> Geometry field (<code>locn_geometry</code>) uses a WKT format and the coordinate order will be converted to this layout: <code>POLYGON((W N, E N, E S, W S, W N))</code></p>
+<p>The OpenGeoMetadata Geometry field (<code>locn_geometry</code>) uses a WKT format and the coordinate order will be converted to this layout: <code>POLYGON((W N, E N, E S, W S, W N))</code></p>
 </li>
 <li>
-<p>The <abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr> Centroid field (<code>dcat_centroid</code>) will be calculated to display longitude,latitude.</p>
+<p>The OpenGeoMetadata Centroid field (<code>dcat_centroid</code>) will be calculated to display longitude,latitude.</p>
 </li>
 </ul>
 <div class="admonition example">
@@ -1949,7 +1942,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.803ed251.min.js"></script>
+      <script src="../assets/javascripts/bundle.8192e063.min.js"></script>
       
     
   </body>
