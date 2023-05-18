@@ -4,6 +4,8 @@ copyright : "2023"
 repo_url: https://github.com/geobtaa/metadata
 theme:
       name: material
+      font:
+            text: helvetica neue
       features:
       - navigation.sections
       - content.tooltips
@@ -15,8 +17,6 @@ theme:
       #    icon:
       #       repo: fontawesome/brands/github
       highlightjs: true
-      font:
-      text: Georgia
       #   titles_only: true
       #   include_homepage_in_sidebar: false
       plugins:
@@ -24,8 +24,8 @@ theme:
             - table-reader
 #             - with-pdf:
 #                   output_path: export/b1g-handbook.pdf
-            - git-revision-date-localized:
-                  enable_creation_date: true
+#             - git-revision-date-localized:
+#                   enable_creation_date: true
 
 extra_css:
       - stylesheets/extra.css
