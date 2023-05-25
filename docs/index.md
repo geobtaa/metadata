@@ -49,6 +49,14 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 ??? info "Metadata Handbook Version History"
 
+	_Changes for Version 5.0 (May 24, 2023)_
+	
+	This version incorporates the Harvesting Guide notesbooks and includes documentation for harvesting metadata from different sources.
+	
+	* New page describing the Tutorials in the Harvesting Guide
+	* Eight Recipe pages corresponding to Harvesting Guide
+	* Updated header design to match Geoportal	 	
+	
 	_Changes for Version 4.6 (March 15, 2023)_
 	
 	* New page for manually adding bounding boxes
