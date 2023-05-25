@@ -51,7 +51,7 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 	_Changes for Version 5.0 (May 24, 2023)_
 	
-	This version incorporates the Harvesting Guide notesbooks and includes documentation for harvesting metadata from different sources.
+	This version incorporates the Harvesting Guide notebooks and includes documentation for harvesting metadata from different sources.
 	
 	* New page describing the Tutorials in the Harvesting Guide
 	* Eight Recipe pages corresponding to Harvesting Guide
