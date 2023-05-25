@@ -55,6 +55,9 @@ markdown_extensions:
                     class: mermaid
                     format: !!python/name:pymdownx.superfences.fence_code_format
                     showSequenceNumbers: true
+                    noteFontWeight: "10px"
+                    actorFontSize: "10px"
+                    messageFontSize: "10px"
       - pymdownx.tabbed:
             alternate_style: true
 
