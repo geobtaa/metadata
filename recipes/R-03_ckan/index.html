@@ -1562,21 +1562,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-download-the-list-of-active-arcgis-hubs" class="md-nav__link">
+  <a href="#step-1-set-up-your-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Download the list of active ArcGIS Hubs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-set-up-directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Set up directories
+        Step 1: Set up your directories
       
     </span>
   </a>
@@ -1949,21 +1938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-download-the-list-of-active-arcgis-hubs" class="md-nav__link">
+  <a href="#step-1-set-up-your-directories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Download the list of active ArcGIS Hubs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-set-up-directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Set up directories
+        Step 1: Set up your directories
       
     </span>
   </a>
@@ -2036,72 +2014,73 @@
   <h1>CKAN</h1>
 
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>To scan the CKAN data portals and retrieve metadata for new items while returning a list of deleted items.</p>
-<h2 id="step-1-download-the-list-of-active-arcgis-hubs">Step 1: Download the list of active ArcGIS Hubs<a class="headerlink" href="#step-1-download-the-list-of-active-arcgis-hubs" title="Permanent link">&para;</a></h2>
-<p>We maintain a list of active CKAN sites in GEOMG. </p>
-<div class="admonition tip inline end">
-<p class="admonition-title">Shortcut</p>
-<p><a href="https://geomg.lib.umn.edu/documents?f%5Bdct_format_s%5D%5B%5D=CKAN+data+portal&amp;rows=20&amp;sort=score+desc">Pre-formmated GEOMG query link</a></p>
-</div>
-<ol>
-<li>Go to the <a href="https://geomg.lib.umn.edu">GEOMG</a> dashboard</li>
-<li>Filter for items with these parameters:<ul>
-<li>Resource Class: Websites</li>
-<li>Format: CKAN data portal</li>
-</ul>
-</li>
-<li>Select all the results and click Export -&gt; CSV</li>
-<li>Download the CSV and rename it <code>ckanPortals.csv</code></li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Exporting from GEOMG will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:</p>
-<ul>
-<li><strong>ID</strong>: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.</li>
-<li><strong>Title</strong>: The name of the Hub. This is transferred to the "Provider" field for each dataset</li>
-<li><strong>Publisher</strong>: The place or administration associated with the portal. This is applied to the title in each dataset in brackets</li>
-<li><strong>Spatial Coverage</strong>: A list of place names. These are transferred to the Spatial Coverage for each dataset</li>
-<li><strong>Member Of</strong>: a larger collection level record. Most of the CKAN portals are either part of our <a href="https://geo.btaa.org/catalog/ba5cc745-21c5-4ae9-954b-72dd8db6815a">Government Open Geospatial Data Collection</a> or the <a href="https://geo.btaa.org/catalog/b0153110-e455-4ced-9114-9b13250a7093">Research Institutes Geospatial Data Collection</a></li>
-</ul>
-<p>However, it is not necessary to take extra time and manually remove the extra fields, because the Jupyter Notebook code will ignore them.</p>
-</div>
-<h2 id="step-2-set-up-directories">Step 2: Set up directories<a class="headerlink" href="#step-2-set-up-directories" title="Permanent link">&para;</a></h2>
+<p>To scan the <a href="https://docs.ckan.org/en/2.9/api/">Action API for CKAN data portals</a> and retrieve metadata for new items while returning a list of deleted items.</p>
+<pre class="mermaid"><code>graph TB
+
+A((STEP 1. &lt;br&gt;Set up directories)) --&gt; B[STEP 2. &lt;br&gt;Run Jupyter Notebook script] ;
+B --&gt; C{Did the script run successfully?};
+C --&gt; |No| D[Troubleshoot];
+D --&gt;A;
+C --&gt; |No &amp; I can't figure it out.| F[Refer issue back to Product Manager];
+C --&gt; |Yes| E[STEP 3. &lt;br&gt;Edit places names &amp; titles]; 
+E --&gt; G[STEP 4. &lt;br&gt;Upload new records];
+G --&gt; H[STEP 5. &lt;br&gt;Unpublish deleted records];
+
+classDef goCell fill:#99d594,stroke:#333,stroke-width:2px
+class A,B,C,E,G goCell;
+classDef troubleCell fill:#ffffbf,stroke:#333,stroke-width:2px;
+class D troubleCell;
+classDef endCell fill:#fc8d59,stroke:#333,stroke-width:2px
+class F,H endCell;
+classDef questionCell fill:#fff,stroke:#333,stroke-width:2px;
+class C questionCell;
+
+
+</code></pre>
+<h2 id="step-1-set-up-your-directories">Step 1: Set up your directories<a class="headerlink" href="#step-1-set-up-your-directories" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Navigate to the Recipes directory for <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan/R-03_ckan.ipynb">R-03_ckan.ipynb</a>.</p>
+<p>Navigate to your local Recipes directory for <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan">R-03_ckan</a>.</p>
 </li>
 <li>
 <p>Verify that there are two folders</p>
+<ul>
+<li><code>resource</code>: contains a CSV for each portal per harvest that lists all of the dataset identifiers</li>
+<li><code>reports</code>: combined CSV metadata files for all new and deleted datasets per harvest</li>
+</ul>
 </li>
 <li>
-<p><code>resource</code> folder: a set of resource names by portal for each re-accession</p>
-</li>
-<li>
-<p><code>reports</code> CSV metadata files for all new and deleted datasets</p>
-</li>
-<li>
-<p>Move the downloaded ckanPortals.csv into this directory.</p>
+<p>Review the CKANportals.csv file. Each active portal should have values in the following fields:</p>
+<ul>
+<li>portalName</li>
+<li>URL</li>
+<li>Provider</li>
+<li>Publisher</li>
+<li>Spatial Coverage</li>
+<li>Bounding Box </li>
+</ul>
 </li>
 </ol>
 <h2 id="step-2-run-the-harvest-script">Step 2: Run the harvest script<a class="headerlink" href="#step-2-run-the-harvest-script" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Start Jupyter Notebook </li>
-<li>Open <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan">R-03_ckan.ipynb</a></li>
+<li>Open your local copy of <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan">R-03_ckan.ipynb</a></li>
 </ol>
-<details class="info">
-<summary>Expand to read about the R-03_ckan.ipynb Jupyter Notebook</summary>
-<p>This script will harvest from a set of CKAN data portals. It saves metadata files and will compare the output between runs. The result will be two CSVs: new items and deleted items.</p>
-</details>
-<h2 id="step-3-edit-the-metadata-for-new-items">Step 3: Edit the metadata for new items<a class="headerlink" href="#step-3-edit-the-metadata-for-new-items" title="Permanent link">&para;</a></h2>
-<p>These records in <code>reports/allNewItems_{today's date}.csv</code> may need manual editing. </p>
 <div class="admonition info">
-<p class="admonition-title">in progress</p>
-<p>This section will be expanded after the CKAN harvest script is updated.</p>
+<p class="admonition-title">Info</p>
+<p>This script will harvest from a set of CKAN data portals. It saves a list of datasets found in each portal and will compare the output between runs. The result will be two CSVs: new items and deleted items.</p>
+<p>The script only harvests items that can be identified as shapefiles or imagery.</p>
 </div>
+<h2 id="step-3-edit-the-metadata-for-new-items">Step 3: Edit the metadata for new items<a class="headerlink" href="#step-3-edit-the-metadata-for-new-items" title="Permanent link">&para;</a></h2>
+<p>The new records can be found in <code>reports/allNewItems_{today's date}.csv</code> and will need some manual editing. </p>
+<ul>
+<li><strong>Spatial Coverage</strong>: Add place names related to the datasets.</li>
+<li><strong>Title</strong>: Concatenate values in the Alternative Title column with the Spatial Coverage of the dataset. </li>
+</ul>
 <h2 id="step-4-upload-metadata-for-new-records">Step 4: Upload metadata for new records<a class="headerlink" href="#step-4-upload-metadata-for-new-records" title="Permanent link">&para;</a></h2>
 <p>Open GEOMG and upload the new items found in <code>reports/allNewItems_{today's date}.csv</code></p>
 <h2 id="step-5-delete-metadata-for-retired-records">Step 5: Delete metadata for retired records<a class="headerlink" href="#step-5-delete-metadata-for-retired-records" title="Permanent link">&para;</a></h2>
-<p>Use the <a href="https://github.com/geobtaa/workflows/tree/main/editing/geomg-documents-update">GEOMG documents update script</a> to unpublish records that are no longer active found in <code>reports/allDeletedItems_{today's date}.csv</code> </p>
+<p>Unpublish records found in <code>reports/allDeletedItems_{today's date}.csv</code>. This can be done in GEOMG manually (one by one) or with the <a href="https://github.com/geobtaa/workflows/tree/main/editing/geomg-documents-update">GEOMG documents update script</a>.</p>
 
 
 
