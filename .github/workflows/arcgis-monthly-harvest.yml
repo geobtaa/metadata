@@ -6,26 +6,26 @@
 name: Weekly Team Sync
 on:
   schedule:
-    - cron: 35 9 14 2 *
+    - cron: 30 13 * * 2
 
 jobs:
   create_issue:
-    name: Harvest ArcGIS Hubs
+    name: Scan ArcGIS Hubs
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
       - name: Create team sync issue
-        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        uses: imjohnbo/issue-bot@3d96848fb5e9a4a473bb81ae62b4b4866a56e93a
         with:
           assignees: "karenmajewicz"
-          labels: "harvests"
+          labels: "New records"
           title: "Harvest ArcGIS Hubs"
           body: |
             ### To do
 
-            - [ ] Run harvest script
-            - [ ] Process new items
+            - [ ] Download list of ArcGIS Hubs
+            - [ ] Run scan
             - [ ] Upload new items to GEOMG
             - [ ] Unpublish retired items
           pinned: false
