@@ -27,7 +27,7 @@ We maintain a list of active Socrata Hub sites in GEOMG.
 
 !!! tip inline end "Shortcut"
 
-	[Pre-formmated GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_publication_state_s%5D%5B%5D=published&f%5Bdct_format_s%5D%5B%5D=Socrata+data+portal&q=&rows=20&sort=score+desc)
+	[Pre-formatted GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_publication_state_s%5D%5B%5D=published&f%5Bdct_format_s%5D%5B%5D=Socrata+data+portal&q=&rows=20&sort=score+desc)
 
 1. Go to the [GEOMG](https://geomg.lib.umn.edu) dashboard
 2. Use the Advanced Search to filter for items with these parameters:

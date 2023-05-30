@@ -1,63 +1,68 @@
 ## Purpose
 
-To scan the CKAN data portals and retrieve metadata for new items while returning a list of deleted items.
+To scan the [Action API for CKAN data portals](https://docs.ckan.org/en/2.9/api/) and retrieve metadata for new items while returning a list of deleted items.
 
-## Step 1: Download the list of active ArcGIS Hubs
 
-We maintain a list of active CKAN sites in GEOMG. 
+``` mermaid
+graph TB
 
-!!! tip inline end "Shortcut"
+A((STEP 1. <br>Set up directories)) --> B[STEP 2. <br>Run Jupyter Notebook script] ;
+B --> C{Did the script run successfully?};
+C --> |No| D[Troubleshoot];
+D -->A;
+C --> |No & I can't figure it out.| F[Refer issue back to Product Manager];
+C --> |Yes| E[STEP 3. <br>Edit places names & titles]; 
+E --> G[STEP 4. <br>Upload new records];
+G --> H[STEP 5. <br>Unpublish deleted records];
 
-	[Pre-formmated GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bdct_format_s%5D%5B%5D=CKAN+data+portal&rows=20&sort=score+desc)
+classDef goCell fill:#99d594,stroke:#333,stroke-width:2px
+class A,B,C,E,G goCell;
+classDef troubleCell fill:#ffffbf,stroke:#333,stroke-width:2px;
+class D troubleCell;
+classDef endCell fill:#fc8d59,stroke:#333,stroke-width:2px
+class F,H endCell;
+classDef questionCell fill:#fff,stroke:#333,stroke-width:2px;
+class C questionCell;
 
-1. Go to the [GEOMG](https://geomg.lib.umn.edu) dashboard
-2. Filter for items with these parameters:
-  	 - Resource Class: Websites
-  	 - Format: CKAN data portal
-3. Select all the results and click Export -> CSV
-4. Download the CSV and rename it `ckanPortals.csv`
 
-!!! info
-    
-	Exporting from GEOMG will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
 
-	* **ID**: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.
-	* **Title**: The name of the Hub. This is transferred to the "Provider" field for each dataset
-	* **Publisher**: The place or administration associated with the portal. This is applied to the title in each dataset in brackets
-	* **Spatial Coverage**: A list of place names. These are transferred to the Spatial Coverage for each dataset
-	* **Member Of**: a larger collection level record. Most of the CKAN portals are either part of our [Government Open Geospatial Data Collection](https://geo.btaa.org/catalog/ba5cc745-21c5-4ae9-954b-72dd8db6815a) or the [Research Institutes Geospatial Data Collection](https://geo.btaa.org/catalog/b0153110-e455-4ced-9114-9b13250a7093)
+```
 
-	However, it is not necessary to take extra time and manually remove the extra fields, because the Jupyter Notebook code will ignore them.
 	
-## Step 2: Set up directories
+## Step 1: Set up your directories
 
-1. Navigate to the Recipes directory for [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan/R-03_ckan.ipynb).
+1. Navigate to your local Recipes directory for [R-03_ckan](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan).
 
 2. Verify that there are two folders
+	* `resource`: contains a CSV for each portal per harvest that lists all of the dataset identifiers
+	* `reports`: combined CSV metadata files for all new and deleted datasets per harvest
 
-- `resource` folder: a set of resource names by portal for each re-accession
-- `reports` CSV metadata files for all new and deleted datasets
-
-3. Move the downloaded ckanPortals.csv into this directory.
+3.  Review the CKANportals.csv file. Each active portal should have values in the following fields:
+	* portalName
+	* URL
+	* Provider
+	* Publisher
+	* Spatial Coverage
+	* Bounding Box 
 
 ## Step 2: Run the harvest script
 
 1. Start Jupyter Notebook 
-2. Open [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan)
+2. Open your local copy of [R-03_ckan.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-03_ckan)
 
+!!! info 
 
-??? info "Expand to read about the R-03_ckan.ipynb Jupyter Notebook"
-
-	This script will harvest from a set of CKAN data portals. It saves metadata files and will compare the output between runs. The result will be two CSVs: new items and deleted items.
+	This script will harvest from a set of CKAN data portals. It saves a list of datasets found in each portal and will compare the output between runs. The result will be two CSVs: new items and deleted items.
+	
+	The script only harvests items that can be identified as shapefiles or imagery.
 	
 ## Step 3: Edit the metadata for new items
 
-These records in `reports/allNewItems_{today's date}.csv` may need manual editing. 
+The new records can be found in `reports/allNewItems_{today's date}.csv` and will need some manual editing. 
 
-!!! info "in progress"
-	
-	This section will be expanded after the CKAN harvest script is updated.
-	
+* **Spatial Coverage**: Add place names related to the datasets.
+* **Title**: Concatenate values in the Alternative Title column with the Spatial Coverage of the dataset. 
+
 
 ## Step 4: Upload metadata for new records
 
@@ -65,7 +70,7 @@ Open GEOMG and upload the new items found in `reports/allNewItems_{today's date}
 
 ## Step 5: Delete metadata for retired records
 
-Use the [GEOMG documents update script](https://github.com/geobtaa/workflows/tree/main/editing/geomg-documents-update) to unpublish records that are no longer active found in `reports/allDeletedItems_{today's date}.csv` 
+Unpublish records found in `reports/allDeletedItems_{today's date}.csv`. This can be done in GEOMG manually (one by one) or with the [GEOMG documents update script](https://github.com/geobtaa/workflows/tree/main/editing/geomg-documents-update).
 
 
 

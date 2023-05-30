@@ -11,7 +11,7 @@ The GeoBTAA Metadata Application Profile consists of the following components:
 - The current version of OpenGeoMetadata is called 'Aardvark'. 
 - This lightweight schema was designed specifically for the GeoBlacklight application and is geared towards discoverability. 
 - The GeoBTAA Metadata Profile aligns with all of the guidelines and recommendations in the official OpenGeoMetadata documentation. 
-- **The schema is documented on the [OpenGeoMetadata website :octicons-link-external-16:](https://opengeometadata.org/docs/ogm-aardvark).** 
+- **The schema is documented on the [OpenGeoMetadata website :octicons-link-external-16:](https://opengeometadata.org/ogm-aardvark).** 
 
 ### 2. Custom Elements
 

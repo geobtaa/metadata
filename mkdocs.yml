@@ -24,8 +24,8 @@ theme:
             - table-reader
 #             - with-pdf:
 #                   output_path: export/b1g-handbook.pdf
-#             - git-revision-date-localized:
-#                   enable_creation_date: true
+            - git-revision-date-localized:
+                  enable_creation_date: true
 
 extra_css:
       - stylesheets/extra.css
@@ -55,6 +55,9 @@ markdown_extensions:
                     class: mermaid
                     format: !!python/name:pymdownx.superfences.fence_code_format
                     showSequenceNumbers: true
+                    noteFontWeight: "10px"
+                    actorFontSize: "10px"
+                    messageFontSize: "10px"
       - pymdownx.tabbed:
             alternate_style: true
 

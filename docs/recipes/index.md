@@ -1,6 +1,6 @@
 These recipes are step-by-step how-to guides for harvesting and processing metadata from the sites that we harvest the most frequently.
 
-The scripts needed for these recipes are all in the form of Jupyter Notebooks in our [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).
+The scripts needed for these recipes are all in the form of Jupyter Notebooks. To get started, download, fork, or clone the [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).
 
 
 !!! warning
