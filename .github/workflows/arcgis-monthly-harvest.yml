@@ -21,6 +21,7 @@ jobs:
           assignees: "karenmajewicz"
           labels: "New records"
           title: "Harvest ArcGIS Hubs"
+          project: 4
           body: |
             ### To do
 
