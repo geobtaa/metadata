@@ -52,7 +52,7 @@ Once the metadata is successfully uploaded to GEOMG, we can publish the records 
 
 Periodically, we need to remove records from the Geoportal. To do this, we use GEOMG to either delete them or change their status to "unpublished."
 
-## 4. Maintain
+## 5. Maintain
 
 :fontawesome-solid-user: BTAA-GIN Team Members, Graduate Research Assistants, and Product Manager 
 
