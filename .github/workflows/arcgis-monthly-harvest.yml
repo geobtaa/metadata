@@ -16,19 +16,17 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Today's date
+        run: echo "TODAY=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
+    
       - name: Create issue
         uses: imjohnbo/issue-bot@3d96848fb5e9a4a473bb81ae62b4b4866a56e93a
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TIME: "${{ steps.current-time.outputs.time }}"
-          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
-          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-          YEAR: "${{ steps.current-time.outputs.year }}"
-          DAY: "${{ steps.current-time.outputs.day }}"
         with:
           assignees: "karenmajewicz"
           labels: "New records"
-          title: ${{ DAY }}-Harvest ArcGIS Hubs
+          title: ${{ env.TODAY }} Scan ArcGIS Hubs
           project: 4
           body: |
             ### To do
