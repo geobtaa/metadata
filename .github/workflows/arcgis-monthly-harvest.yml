@@ -5,6 +5,7 @@
 
 name: ArcGIS Hubs Regular Scan
 on:
+  workflow_dispatch:
   schedule:
     - cron: 30 13 * * 2
 
@@ -15,7 +16,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Create team sync issue
+      - name: Create issue
         uses: imjohnbo/issue-bot@3d96848fb5e9a4a473bb81ae62b4b4866a56e93a
         with:
           assignees: "karenmajewicz"
