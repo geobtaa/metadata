@@ -5,9 +5,9 @@
 
 name: ArcGIS Hubs Regular Scan
 on:
-  workflow_dispatch:
-#   schedule:
-#     - cron: 30 13 * * 2
+#   workflow_dispatch:
+  schedule:
+    - cron: 30 13 * * 2
 
 jobs:
   create_issue:
