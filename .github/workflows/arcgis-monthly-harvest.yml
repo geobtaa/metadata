@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Weekly Team Sync
+name: ArcGIS Hubs Regular Scan
 on:
   schedule:
     - cron: 30 13 * * 2
