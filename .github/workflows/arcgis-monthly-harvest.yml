@@ -21,7 +21,7 @@ jobs:
         with:
           assignees: "karenmajewicz"
           labels: "New records"
-          title: ${{ date }}-Harvest ArcGIS Hubs
+          title: ${{steps.date.outputs.time}}-Harvest ArcGIS Hubs
           project: 4
           body: |
             ### To do
