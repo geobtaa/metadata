@@ -20,7 +20,7 @@ jobs:
         with:
           assignees: "karenmajewicz"
           labels: "New records"
-          title: "Harvest ArcGIS Hubs"
+          title: ${{ date }}-Harvest ArcGIS Hubs
           project: 4
           body: |
             ### To do
