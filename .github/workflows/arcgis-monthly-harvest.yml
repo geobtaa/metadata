@@ -18,10 +18,10 @@ jobs:
     steps:
       - name: Create issue
         uses: imjohnbo/issue-bot@3d96848fb5e9a4a473bb81ae62b4b4866a56e93a
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
         with:
           assignees: "karenmajewicz"
           labels: "New records"
+          run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
           title: ${{ steps.date.outputs.date }}-Harvest ArcGIS Hubs
           project: 4
           body: |
