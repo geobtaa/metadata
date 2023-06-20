@@ -35,6 +35,11 @@ markdown_extensions:
       - tables
       - attr_list
       - md_in_html
+      - pymdownx.critic
+      - pymdownx.caret
+      - pymdownx.keys
+      - pymdownx.mark
+      - pymdownx.tilde
       - toc:
             toc_depth: 2
             permalink: true
@@ -113,5 +118,6 @@ nav:
       - Edit:   
             - 'Add bounding boxes': 'recipes/add-bbox.md'
             - 'Standardize Creator names': 'recipes/standardize-creators.md'
+            - 'Update ArcGIS Hubs list': 'recipes/update-hub-list.md'
       
       
