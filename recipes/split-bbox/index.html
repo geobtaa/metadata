@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../R-08_pasda/">
+        <link rel="prev" href="../add-bbox/">
       
       
-        <link rel="next" href="../add-bbox/">
+        <link rel="next" href="../standardize-creators/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>UMedia - GeoBTAA Metadata Handbook</title>
+        <title>Split bounding boxes - GeoBTAA Metadata Handbook</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#purpose" class="md-skip">
+        <a href="#split-bounding-boxes-that-cross-the-180th-meridian" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UMedia
+              Split bounding boxes
             
           </span>
         </div>
@@ -1395,21 +1395,19 @@
                 
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
         
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
@@ -1428,7 +1426,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1651,33 +1649,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    UMedia
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../R-09_umedia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1692,79 +1666,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Purpose
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-set-up-folders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Set up folders
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-run-the-harvesting-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Run the harvesting script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-edit-the-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Edit the metadata
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-upload-to-geomg" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Upload to GEOMG
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1782,19 +1683,21 @@
                 
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
@@ -1813,7 +1716,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1854,9 +1757,35 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../split-bbox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Split bounding boxes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1871,6 +1800,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1960,6 +1931,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1968,10 +1941,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Problem
       
     </span>
   </a>
@@ -1979,43 +1952,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-set-up-folders" class="md-nav__link">
+  <a href="#solution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Set up folders
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-run-the-harvesting-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Run the harvesting script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-edit-the-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Edit the metadata
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-upload-to-geomg" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Upload to GEOMG
+        Solution
       
     </span>
   </a>
@@ -2041,29 +1981,60 @@
   
 
 
-  <h1>UMedia</h1>
+<h1 id="split-bounding-boxes-that-cross-the-180th-meridian">Split Bounding Boxes that cross the 180th Meridian<a class="headerlink" href="#split-bounding-boxes-that-cross-the-180th-meridian" title="Permanent link">&para;</a></h1>
+<h2 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h2>
+<p>The BTAA Geoportal does not display bounding boxes that cross the 180th meridian (also known as the International Date Line.) In these circumstances, the West coordinate will be a positive number, but the East coordinate will be negative.</p>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<p>One way to mitigate this is to create two bounding boxes for the OGM Aardvark <code>Geometry</code> field. The Bounding Box value will be the same, but the Geometry field will have a multipolygon that is made up of two adjacent boxes.</p>
+<p>The following script will scan a CSV of the records, identify which cross the 180th Meridian, and insert a multipolygon into a new column. </p>
+<p>The script was designed with the assumption that the input CSV will be in the OGM Aardvark format, likely exported from GEOMG. The CSV file must contain a field for <code>Bounding Box</code>.  It may contain a <code>Geometry</code> field with some values that we do not want to overwrite.</p>
+<p>This script will create a new field called "Bounding Box (WKT)". Items that crossed the 180th Meridian will have a multipolygon in that field. Items that don't cross will not have a value in that field. Copy and paste only the new values into the <code>Geometry</code> column and reupload the CSV to GEOMG.</p>
+<div class="highlight"><pre><span></span><code>import csv
 
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>To harvest new records added to the <a href="https://umedia.lib.umn.edu">University Of Minnesota's UMedia Digital Library</a>.</p>
-<h2 id="step-1-set-up-folders">Step 1: Set up folders<a class="headerlink" href="#step-1-set-up-folders" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Navigate to the UMedia Recipe directory at <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-09_05d-01-umedia">R-09_umedia.ipynb</a></li>
-<li>Verify the following folders are present:</li>
-</ol>
-<p><code>requests</code></p>
-<p>This folder stores all search results in JSON format for each reaccession as <code>request_YYYYMMDD.json</code>. </p>
-<p><code>jsons</code></p>
-<p>This folder stores all JSON files by different added month for UMedia maps. After we get the search result JSON file from each reaccession, we will read this <code>request_YYYYMMDD.json</code> file in detail to filter out the included maps by month, and store them to <code>dateAdded_YYYYMM.json</code> individually.</p>
-<p><code>reports</code></p>
-<p>This folder stores all CSV files for metadata by month. Once we have JSON files for different month, we extract all useful metadata and contribute in the <code>dateAdded_YYYYMM.csv</code> in this folder.</p>
-<h2 id="step-2-run-the-harvesting-script">Step 2: Run the harvesting script<a class="headerlink" href="#step-2-run-the-harvesting-script" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Start Jupyter Notebook and open <a href="https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-09_05d-01-umedia/R-09_05d-01_umedia.ipynb">R-09_umedia.ipynb</a></li>
-<li>The second code cell will ask for an input on how many map records you want to harvest.</li>
-<li>The third code cell will ask for a date range. Select a month (in the form <code>yyyy-mm</code>)  based on the last time you ran the script.</li>
-</ol>
-<h2 id="step-3-edit-the-metadata">Step 3: Edit the metadata<a class="headerlink" href="#step-3-edit-the-metadata" title="Permanent link">&para;</a></h2>
-<h2 id="step-4-upload-to-geomg">Step 4: Upload to GEOMG<a class="headerlink" href="#step-4-upload-to-geomg" title="Permanent link">&para;</a></h2>
+def split_coordinates(coordinate_str):
+    if not coordinate_str:
+        return &#39;&#39;
+
+    coordinates = coordinate_str.split(&#39;,&#39;)
+
+    west, south, east, north = map(float, coordinates)
+
+    if west &gt; 0 and east &lt; 0:
+        polygon1 = f&#39;({west} {south}, {179.9} {south}, {179.9} {north}, {west} {north}, {west} {south})&#39;
+        polygon2 = f&#39;({-179.9} {south}, {-179.9} {north}, {east} {north}, {east} {south}, {-179.9} {south})&#39;
+        return f&#39;MULTIPOLYGON(({polygon1}), ({polygon2}))&#39;
+
+    return coordinate_str
+
+# Specify the input CSV file path
+input_file = &#39;your_input_file.csv&#39;
+
+# Specify the output CSV file path
+output_file = &#39;your_output_file.csv&#39;
+
+# Specify the name of the column with the Bounding Box coordinates
+coordinate_column = &#39;Bounding Box&#39;
+
+# Specify the name of the new column to store the updated coordinates
+new_coordinate_column = &#39;New Bounding Box (WKT)&#39;
+
+# Read the input CSV and process the coordinates
+with open(input_file, &#39;r&#39;) as file:
+    reader = csv.DictReader(file)
+    fieldnames = reader.fieldnames + [new_coordinate_column]
+
+    with open(output_file, &#39;w&#39;, newline=&#39;&#39;) as output:
+        writer = csv.DictWriter(output, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for row in reader:
+            bounding_box = row[coordinate_column]
+            new_bounding_box = split_coordinates(bounding_box)
+            row[new_coordinate_column] = new_bounding_box
+            writer.writerow(row)
+
+print(&quot;CSV processing completed!&quot;)
+</code></pre></div>
 
 
 
