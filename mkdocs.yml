@@ -117,6 +117,7 @@ nav:
                   
       - Edit:   
             - 'Add bounding boxes': 'recipes/add-bbox.md'
+            - 'Split bounding boxes': 'recipes/split-bbox.md'
             - 'Standardize Creator names': 'recipes/standardize-creators.md'
             - 'Update ArcGIS Hubs list': 'recipes/update-hub-list.md'
       
