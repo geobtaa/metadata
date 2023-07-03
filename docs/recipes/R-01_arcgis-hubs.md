@@ -12,12 +12,15 @@ graph TB
 A((STEP 1. <br>Download arcHubs.csv)) --> B[STEP 2. <br>Run Jupyter Notebook harvest script] ;
 B --> C{Did the script run successfully?};
 C --> |No| D[Troubleshoot];
-D -->A;
-C --> |No & I can't figure it out.| F[Refer issue back to Product Manager];
+D --> H{Did the script stall because of a Hub?};
+H --> |Yes| I[Refer to the page Update ArcGIS Hubs];
+H --> |No & I can't figure it out.| F[Refer issue back to Product Manager];
+H --> |No| J[Try updating your Python modules or investigating the error];
+J --> B;
+I --> A;
 C --> |Yes| E[STEP 3. <br>Publish/unpublish records in GEOMG]; 
 
 ```
-
 
 ## Step 1: Download the list of active ArcGIS Hubs
 
