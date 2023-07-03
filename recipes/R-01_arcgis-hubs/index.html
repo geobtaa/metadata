@@ -1856,6 +1856,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../split-bbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Split bounding boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../standardize-creators/" class="md-nav__link">
         
   
@@ -2028,12 +2054,8 @@
 A((STEP 1. &lt;br&gt;Download arcHubs.csv)) --&gt; B[STEP 2. &lt;br&gt;Run Jupyter Notebook harvest script] ;
 B --&gt; C{Did the script run successfully?};
 C --&gt; |No| D[Troubleshoot];
-D --&gt; H{Did the script stall because of a Hub?};
-H --&gt; |Yes| I[Refer to the page Update ArcGIS Hubs];
-H --&gt; |No &amp; I can't figure it out.| F[Refer issue back to Product Manager];
-H --&gt; |No| J[Try updating your Python modules or investigating the error];
-J --&gt; B;
-I --&gt; A;
+D --&gt;A;
+C --&gt; |No &amp; I can't figure it out.| F[Refer issue back to Product Manager];
 C --&gt; |Yes| E[STEP 3. &lt;br&gt;Publish/unpublish records in GEOMG]; 
 </code></pre>
 <h2 id="step-1-download-the-list-of-active-arcgis-hubs">Step 1: Download the list of active ArcGIS Hubs<a class="headerlink" href="#step-1-download-the-list-of-active-arcgis-hubs" title="Permanent link">&para;</a></h2>
