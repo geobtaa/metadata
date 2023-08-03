@@ -120,5 +120,6 @@ nav:
             - 'Split bounding boxes': 'recipes/split-bbox.md'
             - 'Standardize Creator names': 'recipes/standardize-creators.md'
             - 'Update ArcGIS Hubs list': 'recipes/update-hub-list.md'
+            - ' Multiple links in GEOMG': 'recipes/secondary-tables.md'
       
       
