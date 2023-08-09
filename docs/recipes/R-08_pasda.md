@@ -46,3 +46,6 @@ It will also pull the geometry type and keywords, if available.
 This step will clean up the harvested metadata and add our administrative values to each row.  At the end, there will be a CSV file in your directory named for today's date.
 
 ## Step 5: Upload the CSV to GEOMG
+
+1. Upload the new records to GEOMG
+2. Use the Date Accessioned field to search for records that were not present in the current harvest. Retire any records that have the code "08a-01" but were not part of this harvest.
