@@ -1,12 +1,12 @@
 These tutorials are short, easy to complete exercises to help someone get the basics of running and writing scripts to harvest metadata. They are available as Jupyter Notebooks hosted in GitHub in the [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).
 
-## 1. [Setting up your environment](https://github.com/geobtaa/harvesting-guide/tree/main/tutorials/T-01_setting-up-environment)
+## 1. Setting up your environment
 
 * This tutorial will guide users on how to set up your environment for harvesting.
 * It will then guide them in setting the right directory/path so that the correct files will be utilized and harvested for APIs.
 * It will also provide a brief overview of environmental settings in GitHub for having "repositories", "branches", "pull requests" and "committed" changes with a walkthrough of creating a repository.
 
-## 2. [Getting started with Jupyter Notebook](https://github.com/geobtaa/harvesting-guide/tree/main/tutorials/T-02_getting-started-jupyter)
+## 2. Getting started with Jupyter Notebook
 
 This guide will show users how to:
 
