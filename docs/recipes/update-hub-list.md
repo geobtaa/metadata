@@ -28,7 +28,7 @@ Each Hub has its own entry in GEOMG. Manually create or update each record with 
      * `b0153110-e455-4ced-9114-9b13250a7093` (Research Institutes Geospatial Data Collection)
 * {++Format++}: `ArcGIS Hub` **This value is used for filtering & finding the Hubs in GEOMG**
 * Links - Reference - "Full layer description" : link to the homepage for the Hub
-* ==ID== and Code: Both of the values will be the same. Create a new code by following the description on the [Code Naming Schema page](..codeNamingSchema.md). Use the Advanced Search in GEOMG to query which codes have already been used. If it is not clear what code to create, ask the Product Manager or use the [UUID Generator website](https://www.uuidgenerator.net) to create a random one. **The ID value will be transferred into the Code field of each dataset.**
+* ==ID== and Code: Both of the values will be the same. Create a new code by following the description on the [Code Naming Schema page](../codeNamingSchema.md). Use the Advanced Search in GEOMG to query which codes have already been used. If it is not clear what code to create, ask the Product Manager or use the [UUID Generator website](https://www.uuidgenerator.net) to create a random one. **The ID value will be transferred into the Code field of each dataset.**
 * ==Identifier==: If the record will be part of the monthly harvests, add this to the end of the baseUrl (usually the homepage): `/api/feed/dcat-us/1.1.json`. **The Identifier will be used to query the metadata for the website.**
 
     !!! warning
