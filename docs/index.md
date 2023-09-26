@@ -49,6 +49,20 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 ??? info "Metadata Handbook Version History"
 
+	_Changes for Version 5.1 (September 25, 2023)_
+	
+	This version adds several new recipes and page cleanups.
+	
+	* New recipes for: 
+		* cleaning metadata
+		* adding bounding boxes
+		* normalizing creators
+		* updating our list of ArcGIS Hubs
+		* how to add multiple download links in GEOMG
+	* Updates the documentation for the ArcGIS, Socrata, and PASDA recipes. 
+	* Updates the DCAT and CKAN documentation pages.
+	
+	
 	_Changes for Version 5.0 (May 24, 2023)_
 	
 	This version incorporates the Harvesting Guide notebooks and includes documentation for harvesting metadata from different sources.
