@@ -1,7 +1,7 @@
 # Resource Lifecycle
 
-**5 Stages of the Resource Lifecycle
-**
+**5 Stages of the Resource Lifecycle**
+
 ``` mermaid
 flowchart LR
   
@@ -33,8 +33,9 @@ This step also involves using a crosswalk to convert the metadata into the schem
 
 !!! info "Why do we rely on CSV?"
 
-	CSV (Comma Separated Values) files are used widely in the world of harvesting and scraping data from the web, including data science because they are simple, lightweight, and widely supported. CSV files are a type of file format used to store tabular data in plain text format, where each row of data is separated by a line break, and each column of data is separated by a delimiter.
-	CSV files are easy to read and write, can be opened with a simple text editor, and can be processed using many programming languages, including Python. Python has built-in libraries, such as `csv`, that allow you to read and write CSV files easily.
+	CSV (Comma Separated Values) files organize tabular data in plain text format, where each row of data is separated by a line break, and each column of data is separated by a delimiter.
+	
+	We have found this tabular format to be the most human-readable way to batch create, edit, and troubleshoot metadata records. We can visually scan large numbers of records at once and normalize the values in ways that would be difficult with native nested formats, like JSON or XML. Therefore, many of our workflow processes involve transforming things to and from CSV.
 
 ## 3. Edit
 
@@ -42,7 +43,7 @@ This step also involves using a crosswalk to convert the metadata into the schem
 
 When working with metadata, it is common to come across missing or corrupted values, which require troubleshooting and manual editing in our spreadsheets. Refer to the [Collections Project Board](https://github.com/orgs/geobtaa/projects/4) for examples of this work.
 
-After preparing the metadata, we upload the completed spreadsheet to GEOMG, which serves as the administrative interface for the Geoportal. If GEOMG detects any formatting errors, it will issue a warning and may reject the upload.
+After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to GEOMG, which serves as the administrative interface for the Geoportal. If GEOMG detects any formatting errors, it will issue a warning and may reject the upload.
 
 ## 4. Index
 

@@ -2,6 +2,10 @@
 
 To scan the [Action API for CKAN data portals](https://docs.ckan.org/en/2.9/api/) and retrieve metadata for new items while returning a list of deleted items.
 
+!!! warning
+
+	This batch CKAN recipe is being deprecated and replaced with recipes tailored to each site.
+
 
 ``` mermaid
 graph TB
