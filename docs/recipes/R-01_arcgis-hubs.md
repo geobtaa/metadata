@@ -5,20 +5,31 @@ To scan the [DCAT 1.1 API](https://resources.data.gov/resources/dcat-us/) of Arc
 !!! warning " "
 
 	This recipe includes steps that use the metadata toolkit [GEOMG](https://geobtaa.github.io/metadata/geomg/). Access to GEOMG is restricted to UMN BTAA-GIN staff and requires a login account. External users can create their own list or use one provided in this repository.
+	
 
 ``` mermaid
 graph TB
 
-A((STEP 1. <br>Download arcHubs.csv)) --> B[STEP 2. <br>Run Jupyter Notebook harvest script] ;
+A{{STEP 1. <br>Download arcHubs.csv}}:::green --> B[[STEP 2. <br>Run Jupyter Notebook harvest script]]:::green;
 B --> C{Did the script run successfully?};
-C --> |No| D[Troubleshoot];
+C --> |No| D[Troubleshoot]:::yellow;
 D --> H{Did the script stall because of a Hub?};
-H --> |Yes| I[Refer to the page Update ArcGIS Hubs];
-H --> |No & I can't figure it out.| F[Refer issue back to Product Manager];
-H --> |No| J[Try updating your Python modules or investigating the error];
+H --> |Yes| I[Refer to the page Update ArcGIS Hubs]:::yellow;
+H --> |No & I can't figure it out.| F[Refer issue back to Product Manager]:::red;
+H --> |No| J[Try updating your Python modules or investigating the error]:::yellow;
 J --> B;
 I --> A;
-C --> |Yes| E[STEP 3. <br>Publish/unpublish records in GEOMG]; 
+C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
+K --> E[STEP 4. <br>Publish/unpublish records in GEOMG]:::green; 
+
+
+classDef green fill:#E0FFE0
+classDef yellow fill:#FAFAD2
+classDef red fill:#E6C7C2
+
+
+classDef questionCell fill:#fff,stroke:#333,stroke-width:2px;
+class C,H questionCell;
 
 ```
 
@@ -36,8 +47,6 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
   	 - Accrual Method: DCAT US 1.1
 3. Select all the results and click Export -> CSV
 4. Download the CSV and rename it `arcHubs.csv`
-
-
 
 
 
@@ -76,16 +85,22 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 !!! warning " "
 
 	The Hub sites are fairly unstable and it is likely that one or more of them will occasionally fail and interrupt the script. 
+	
+update-hub-list/
 
 1. Visit the URL for the Hub to check and see if the site is down, moved, etc. 
-2. **If a site is missing**
-	- Unpublish it from GEOMG and indicate the Date Retired, and make a note in the Status field.  
-3. If a site is still live, but **the JSON API link is not working**
-	 - remove the value "DCAT US 1.1" from the Accrual Method field and make a note in the Status field.
-4. Start over from Step 1.
+2. Refer to the [Update ArcGIS Hubs list page ](update-hub-list.md)for guidance on how to edit the website record.
+	* **If a site is missing**: Unpublish it from GEOMG, indicate the Date Retired, and make a note in the Status field.  
+	* If a site is still live, but **the JSON API link is not working**: remove the value "DCAT US 1.1" from the Accrual Method field and make a note in the Status field.
+	* If the site has moved to a **new URL**, update the website record with the new information.
+3. Start over from Step 1.
+
+## Step 3: Validate and Clean
+
+Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GEOMG.
 
 
-## Step 3: Upload to GEOMG
+## Step 4: Upload to GEOMG
 
 1. Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. 
 2. Upload the new CSV file. This will overwrite the Date Accessioned value for any items that were already present.

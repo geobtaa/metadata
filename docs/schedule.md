@@ -4,20 +4,20 @@
 
 ### Weekly
 
-* ArcGIS Hubs
+* [ArcGIS Hubs](../recipes/R-01_arcgis-hubs)
 
 ### Monthly
 
-* Socrata
-* CKAN
-* [UMedia](https://geo.btaa.org/catalog/05d-01) (during active scanning projects)
+* CKAN sites
+* Minnesota Geospatial Commons
 
 ### Quarterly
 
-* [PASDA](https://geo.btaa.org/catalog/08a-01)
+* [PASDA](../recipes/R-08_pasda/)
 * OpenGeoMetadata
 * [Illinois Geospatial Data Clearinghouse](https://geo.btaa.org/catalog/02a-01)
 * [Minnesota Natural Resource Atlas](https://geo.btaa.org/catalog/05d-11)
+* [Socrata](recipes/R-02_socrata)
 
 ### Annually
 
@@ -28,6 +28,8 @@
 
 * Any website that reports errors during the [automated monthly broken link scan](https://github.com/geobtaa/geoportal/wiki/Monthly-URI-Testing).
 * Any website when we receive notification that new records are available. 
+
+
 
 !!! info
 

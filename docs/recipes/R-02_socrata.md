@@ -11,12 +11,22 @@ Note: This recipe is very similar to the ArcGIS Hubs Scanner.
 ``` mermaid
 graph TB
 
-A((STEP 1. <br>Download socrataPortals.csv)) --> B[STEP 2. <br>Run Jupyter Notebook harvest script] ;
-B --> C{Did the script run successfully?};
-C --> |No| D[Troubleshoot];
-D -->A;
-C --> |No & I can't figure it out.| F[Refer issue back to Product Manager];
-C --> |Yes| E[STEP 3. <br>Publish/unpublish records in GEOMG]; 
+A{{STEP 1. <br>Download socrataPortals.csv}}:::green --> B[[STEP 2. <br>Run Jupyter Notebook harvest script]]:::green;
+B --> C{Did the script run successfully?}:::white;
+C --> |No| D[Troubleshoot]:::yellow;
+D --> H{Did the script stall because of a portal?}:::white;
+H --> |Yes| I[Remove or update the portal from the list]:::yellow;
+H --> |No & I can't figure it out.| F[Refer issue back to Product Manager]:::red;
+H --> |No| J[Try updating your Python modules or investigating the error]:::yellow;
+J --> B;
+I --> A;
+C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
+K --> E[STEP 4. <br>Publish/unpublish records in GEOMG]:::green; 
+
+classDef green fill:#E0FFE0
+classDef yellow fill:#FAFAD2
+classDef red fill:#E6C7C2
+classDef white fill:#FFFFFF
 
 ```
 
@@ -46,7 +56,7 @@ We maintain a list of active Socrata Hub sites in GEOMG.
 	* **Spatial Coverage**: A list of place names. These are transferred to the Spatial Coverage for each dataset
 	* **Member Of**: a larger collection level record. Most of the Hubs are either part of our [Government Open Geospatial Data Collection](https://geo.btaa.org/catalog/ba5cc745-21c5-4ae9-954b-72dd8db6815a) or the [Research Institutes Geospatial Data Collection](https://geo.btaa.org/catalog/b0153110-e455-4ced-9114-9b13250a7093)
 
-	However, it is not necessary to take extra time and manually remove the extra fields, because the Jupyter Notebook code will ignore them.
+	It is not necessary to take extra time and manually remove the unused fields, because the Jupyter Notebook code will ignore them.
 
 -------------------
 
@@ -56,22 +66,20 @@ We maintain a list of active Socrata Hub sites in GEOMG.
 2. Open [R-02_socrata.ipynb](https://github.com/geobtaa/harvesting-guide/blob/main/recipes/R-02_socrata)
 3. Move the downloaded file `socrataPortals.csv` into the same directory as the Jupyter Notebook.
 
-??? info "Expand to read about the R-02_socrata.ipynb Jupyter Notebook"
-
-	tbd
-
-
 
 ## Troubleshooting (as needed)
-
 
 1. Visit the URL for the Socrata Portal to check and see if the site is down, moved, etc. 
 2. **If a site is missing**
 	- Unpublish it from GEOMG and indicate the Date Retired, and make a note in the Status field.  
 3. Start over from Step 1.
 
+## Step 3: Validate and Clean
 
-## Step 3: Upload to GEOMG
+Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GEOMG.
+
+
+## Step 4: Upload to GEOMG
 
 1. Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. 
 2. Upload the new CSV file. This will overwrite the Date Accessioned value for any items that were already present.

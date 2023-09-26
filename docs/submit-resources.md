@@ -61,7 +61,7 @@ Geospatial metadata standards are expressed in the XML or JSON format, which can
 * MARC
 * MODS
 
-!!! info
+!!! tip
 
 	The best way to transfer MARC records is to send a single file containing multiple records in the .MRC or MARC XML format. The Metadata Coordinator will use MarcEdit or XML parsing to transform the records.
 
