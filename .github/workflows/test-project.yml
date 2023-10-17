@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          assignees: "majew030"
+          assignees: "karenmajewicz"
           labels: "reharvest"
           title: ${{ env.TODAY }} this is a test
           project-v2-path: orgs/geobtaa/projects/4
