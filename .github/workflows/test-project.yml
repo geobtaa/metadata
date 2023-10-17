@@ -1,0 +1,30 @@
+name: testing projects
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: 30 13 * * 2
+
+jobs:
+  create_issue:
+    name: test
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Today's date
+        run: echo "TODAY=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
+    
+      - name: Create issue
+        uses: imjohnbo/issue-bot@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          assignees: "majew030"
+          labels: "reharvest"
+          title: ${{ env.TODAY }} this is a test
+          project-v2-path: orgs/geobtaa/projects/4
+          body: |
+            ### fill
+          pinned: false
+          close-previous: false
+        
