@@ -6,9 +6,14 @@ These tutorials are short, easy to complete exercises to help someone get the ba
 * Getting Started with GitHub: Provides an introduction to GitHub and a walkthrough of creating a repository.
 * Getting Started with Jupyter Notebooks: Provides an introduction and overview of cell types.
 
-## 2. Navigating paths
+## 2. [Navigating paths](https://github.com/geobtaa/harvesting-guide/blob/main/tutorials/T-02_changing_paths)
 
-This guide will show users how to navigate file paths within a Jupyter Notebook.
+This tutorial shows how to navigate and list directories. Techniques covered include:
+
+* Using the `cd` command in the terminal
+* Navigating to and from the home directory
+* Listing the current path
+* Listing documents within the current path
 
 ## 3. [Iterating over files](https://github.com/geobtaa/harvesting-guide/tree/main/tutorials/T-03_iterating-files)
 
