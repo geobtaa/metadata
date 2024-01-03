@@ -49,14 +49,26 @@ If a Hub site stalls the Harvesting script, it needs to be updated in GEOMG.
 Try to find a replacement site. When a Hub is updated to a new version, sometimes the baseURL will change. If a new site is found, update:
 
 * **Links - Reference - "Full layer description"** : new landing page 
- **Identifier** the new API
+* **Identifier** : the new API (with the suffix `/api/feed/dcat-us/1.1.json`)
 
 ### If the site is present, but the API is returning an error:
 
-In this case, we keep the website record, but stop harvesting it. Make these changes:
+In this case, we freeze the website and the dataset records, but stop new harvests. Make these changes:
+
+
+#### Website Record
 
 * ==Accrual Method==: remove `DCAT US 1.1` and leave blank
 * Status: Change the value "Indexed" to "Not indexed". Leave a short explanation if the API is broken.
+
+#### Dataset Records
+
+* Export all of the records using the `Code` field
+* ==Accrual Method==: change from "ArcGIS Hub" to "ArcGISHub-paused"
+
+!!! info "Broken APIs"
+
+	These steps will remove the records from our preset query to select active ArcGIS Hubs in GBL Admin. The effect will be to freeze them until the API starts working again. Once the API becomes accessible again, reverse the Accrual Method values.
 
 
 
