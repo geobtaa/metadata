@@ -1877,11 +1877,11 @@
 <h2 id="3-edit">3. Edit<a class="headerlink" href="#3-edit" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3h-91.4z"/></svg></span> Graduate Research Assistants and <abbr title="Karen Majewicz - majew030@umn.edu">Product Manager</abbr> </p>
 <p>When working with metadata, it is common to come across missing or corrupted values, which require troubleshooting and manual editing in our spreadsheets. Refer to the <a href="https://github.com/orgs/geobtaa/projects/4">Collections Project Board</a> for examples of this work.</p>
-<p>After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to GEOMG, which serves as the administrative interface for the Geoportal. If GEOMG detects any formatting errors, it will issue a warning and may reject the upload.</p>
+<p>After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>, which serves as the administrative interface for the Geoportal. If <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> detects any formatting errors, it will issue a warning and may reject the upload.</p>
 <h2 id="4-index">4. Index<a class="headerlink" href="#4-index" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3h-91.4z"/></svg></span> <abbr title="Karen Majewicz - majew030@umn.edu">Product Manager</abbr> </p>
-<p>Once the metadata is successfully uploaded to GEOMG, we can publish the records to the Geoportal. The technology that actually stores the records and enables searching is called <a href="https://solr.apache.org">Solr</a>. The action of adding records is known as "Indexing."</p>
-<p>Periodically, we need to remove records from the Geoportal. To do this, we use GEOMG to either delete them or change their status to "unpublished."</p>
+<p>Once the metadata is successfully uploaded to <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>, we can publish the records to the Geoportal. The technology that actually stores the records and enables searching is called <a href="https://solr.apache.org">Solr</a>. The action of adding records is known as "Indexing."</p>
+<p>Periodically, we need to remove records from the Geoportal. To do this, we use <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> to either delete them or change their status to "unpublished."</p>
 <h2 id="5-maintain">5. Maintain<a class="headerlink" href="#5-maintain" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3h-91.4z"/></svg></span> <abbr title="Big Ten Academic Alliance Geospatial Information Network">BTAA-GIN</abbr> Team Members, Graduate Research Assistants, and <abbr title="Karen Majewicz - majew030@umn.edu">Product Manager</abbr> </p>
 <p>The Geoportal is programmatically checked for broken links on a monthly basis. The are fixed either by manually repairing them or by reharvesting from the source.</p>
@@ -1895,7 +1895,7 @@
             actor Product Manager
             participant GitHub
             actor Research Assistant
-            participant GEOMG
+            participant GBL Admin
             participant Geoportal   
 
 
@@ -1907,12 +1907,12 @@
             Note left of Research Assistant:  HARVEST
             Note left of Research Assistant:  EDIT 
 
-            Research Assistant-&gt;&gt;GEOMG: Upload records
+            Research Assistant-&gt;&gt;GBL Admin: Upload records
             Research Assistant -&gt;&gt;GitHub: Update GitHub issue
-            Note right of GEOMG:  PUBLISH 
+            Note right of GBL Admin:  PUBLISH 
 
-            Product Manager-&gt;&gt;GEOMG: Publish records
-            GEOMG-&gt;&gt;Geoportal: Send records online 
+            Product Manager-&gt;&gt;GBL Admin: Publish records
+            GBL Admin-&gt;&gt;Geoportal: Send records online 
             Product Manager-&gt;&gt;GitHub: Close GitHub issue
             Product Manager -&gt;&gt; Team Member: Share link to published records
 

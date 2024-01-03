@@ -1780,8 +1780,8 @@
 <h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
 <p>One way to mitigate this is to create two bounding boxes for the OGM Aardvark <code>Geometry</code> field. The Bounding Box value will be the same, but the Geometry field will have a multipolygon that is made up of two adjacent boxes.</p>
 <p>The following script will scan a CSV of the records, identify which cross the 180th Meridian, and insert a multipolygon into a new column. </p>
-<p>The script was designed with the assumption that the input CSV will be in the OGM Aardvark format, likely exported from GEOMG. The CSV file must contain a field for <code>Bounding Box</code>.  It may contain a <code>Geometry</code> field with some values that we do not want to overwrite.</p>
-<p>This script will create a new field called "Bounding Box (WKT)". Items that crossed the 180th Meridian will have a multipolygon in that field. Items that don't cross will not have a value in that field. Copy and paste only the new values into the <code>Geometry</code> column and reupload the CSV to GEOMG.</p>
+<p>The script was designed with the assumption that the input CSV will be in the OGM Aardvark format, likely exported from <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>. The CSV file must contain a field for <code>Bounding Box</code>.  It may contain a <code>Geometry</code> field with some values that we do not want to overwrite.</p>
+<p>This script will create a new field called "Bounding Box (WKT)". Items that crossed the 180th Meridian will have a multipolygon in that field. Items that don't cross will not have a value in that field. Copy and paste only the new values into the <code>Geometry</code> column and reupload the CSV to <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>.</p>
 <div class="highlight"><pre><span></span><code>import csv
 
 def split_coordinates(coordinate_str):

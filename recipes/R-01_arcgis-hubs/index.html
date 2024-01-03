@@ -1846,7 +1846,7 @@
 <p>To scan the <a href="https://resources.data.gov/resources/dcat-us/"><abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> 1.1 <abbr title="Application Programming Interface">API</abbr></a> of ArcGIS Hubs and return the metadata for all suitable items as a CSV file in the GeoBTAA Metadata Application Profile.</p>
 <div class="admonition warning">
 <p class="admonition-title"> </p>
-<p>This recipe includes steps that use the GBL Admin toolkit. Access to this tool is restricted to UMN <abbr title="Big Ten Academic Alliance Geospatial Information Network">BTAA-GIN</abbr> staff and requires a login account. External users can create their own list or use one provided in this repository.</p>
+<p>This recipe includes steps that use the <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> toolkit. Access to this tool is restricted to UMN <abbr title="Big Ten Academic Alliance Geospatial Information Network">BTAA-GIN</abbr> staff and requires a login account. External users can create their own list or use one provided in this repository.</p>
 </div>
 <pre class="mermaid"><code>graph TB
 
@@ -1872,10 +1872,10 @@ classDef questionCell fill:#fff,stroke:#333,stroke-width:2px;
 class C,H questionCell;
 </code></pre>
 <h2 id="step-1-download-the-list-of-active-arcgis-hubs">Step 1: Download the list of active ArcGIS Hubs<a class="headerlink" href="#step-1-download-the-list-of-active-arcgis-hubs" title="Permanent link">&para;</a></h2>
-<p>We maintain a list of active ArcGIS Hub sites in GEOMG. </p>
+<p>We maintain a list of active ArcGIS Hub sites in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>. </p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Shortcut</p>
-<p><a href="https://geo.btaa.org/admin/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&amp;f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&amp;rows=20&amp;sort=score+desc">Pre-formatted GEOMG query link</a></p>
+<p><a href="https://geo.btaa.org/admin/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&amp;f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&amp;rows=20&amp;sort=score+desc">Pre-formatted <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> query link</a></p>
 </div>
 <ol>
 <li>Go to the Admin (<a href="https://geo.btaa.org/admin">https://geo.btaa.org/admin</a>) dashboard</li>
@@ -1889,7 +1889,7 @@ class C,H questionCell;
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Exporting from GEOMG will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:</p>
+<p>Exporting from <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:</p>
 <ul>
 <li><strong>ID</strong>: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.</li>
 <li><strong>Title</strong>: The name of the Hub. This is transferred to the "Provider" field for each dataset</li>
@@ -1921,7 +1921,7 @@ class C,H questionCell;
 <ol>
 <li>Visit the URL for the Hub to check and see if the site is down, moved, etc. </li>
 <li>Refer to the <a href="../update-hub-list/">Update ArcGIS Hubs list page</a> for more guidance on how to edit the website record.<ul>
-<li><strong>If a site is missing</strong>: Unpublish it from GEOMG, indicate the Date Retired, and make a note in the Status field.  </li>
+<li><strong>If a site is missing</strong>: Unpublish it from <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>, indicate the Date Retired, and make a note in the Status field.  </li>
 <li>If a site is still live, but <strong>the JSON <abbr title="Application Programming Interface">API</abbr> link is not working</strong>: remove the value "<abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> US 1.1" from the Accrual Method field and make a note in the Status field.</li>
 <li>If the site has moved to a <strong>new URL</strong>, update the website record with the new information.</li>
 </ul>
@@ -1929,7 +1929,7 @@ class C,H questionCell;
 <li>Start over from Step 1.</li>
 </ol>
 <h2 id="step-3-validate-and-clean">Step 3: Validate and Clean<a class="headerlink" href="#step-3-validate-and-clean" title="Permanent link">&para;</a></h2>
-<p>Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. <a href="../clean/">Run the cleaning script</a> to ensure that the records are valid before we try to ingest them into GEOMG.</p>
+<p>Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. <a href="../clean/">Run the cleaning script</a> to ensure that the records are valid before we try to ingest them into <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>.</p>
 <h2 id="step-4-upload-all-records">Step 4: Upload all records<a class="headerlink" href="#step-4-upload-all-records" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. </li>

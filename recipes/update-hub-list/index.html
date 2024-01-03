@@ -1659,9 +1659,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-geomg" class="md-nav__link">
+  <a href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-gbl-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      How to create or troubleshoot an ArcGIS Hub website record in GEOMG
+      How to create or troubleshoot an ArcGIS Hub website record in GBL Admin
     </span>
   </a>
   
@@ -1757,9 +1757,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-geomg" class="md-nav__link">
+  <a href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-gbl-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      How to create or troubleshoot an ArcGIS Hub website record in GEOMG
+      How to create or troubleshoot an ArcGIS Hub website record in GBL Admin
     </span>
   </a>
   
@@ -1796,19 +1796,19 @@
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>The BTAA Geoportal provides a central access point to find and browse public geospatial data. A large portion of these records come from ArcGIS Hubs that are maintained by states, counties, cities, and regional entities. These entities continually update the data and the website platforms. In turn, we need to continually update our links to these resources.</p>
 <p>The <a href="https://geobtaa.github.io/metadata/recipes/R-01_arcgis-hubs/">ArcGIS Harvesting Recipe</a> walks through how we programmatically query the ArcGIS Hubs to obtain the current list of datasets.  This page describes how to keep our list of ArcGIS Hub websites updated.</p>
-<h2 id="how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-geomg">How to create or troubleshoot an ArcGIS Hub website record in GEOMG<a class="headerlink" href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-geomg" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-gbl-admin">How to create or troubleshoot an ArcGIS Hub website record in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr><a class="headerlink" href="#how-to-create-or-troubleshoot-an-arcgis-hub-website-record-in-gbl-admin" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The <mark>highlighted</mark> fields listed below are required for the ArcGIS harvesting script. If the script fails, check that these fields have been added.
-The <ins class="critic">underlined</ins> fields are used to query GEOMG and produce the list of Hubs that we regularly harvest.</p>
+The <ins class="critic">underlined</ins> fields are used to query <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> and produce the list of Hubs that we regularly harvest.</p>
 </div>
-<p>Each Hub has its own entry in GEOMG. Manually create or update each record with the following parameters:</p>
+<p>Each Hub has its own entry in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>. Manually create or update each record with the following parameters:</p>
 <ul>
 <li><mark>Title</mark>: The name of the site as shown on its homepage. <strong>This value will be transferred into the Provider field of each dataset.</strong></li>
 <li>Description: Usually "Website for finding and accessing open data provided by " followed by the name of the administrative place or organization publishing the site. Additional descriptions are helpful.</li>
 <li>Language: 3-letter code as shown on the <a href="https://opengeometadata.org/ogm-aardvark/#language-values"><abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr></a> website.</li>
 <li><mark>Publisher</mark>: The administrative place or organization publishing the site. <strong>This value will be concatenated into the title of each dataset.</strong> For place names, use the FAST format (i.e. <code>Minnesota--Clay County</code>.</li>
-<li><ins class="critic">Resource Class</ins>: <code>Websites</code> <strong>This value is used for filtering &amp; finding the Hubs in GEOMG</strong></li>
+<li><ins class="critic">Resource Class</ins>: <code>Websites</code> <strong>This value is used for filtering &amp; finding the Hubs in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr></strong></li>
 <li>Temporal Coverage: <code>Continually updated resource</code></li>
 <li>Spatial Coverage: Add place names using the FAST format as described for the <a href="https://geobtaa.github.io/metadata/input-guidelines/#spatial-coverage">B1G Profile.</a></li>
 <li>Bounding Box: If the Hub covers a specific area, include a bounding box for it using the <a href="../add-bbox/">manual method</a> described in the Add bounding boxes recipe.</li>
@@ -1817,9 +1817,9 @@ The <ins class="critic">underlined</ins> fields are used to query GEOMG and prod
 <li><code>b0153110-e455-4ced-9114-9b13250a7093</code> (Research Institutes Geospatial Data Collection)</li>
 </ul>
 </li>
-<li><ins class="critic">Format</ins>: <code>ArcGIS Hub</code> <strong>This value is used for filtering &amp; finding the Hubs in GEOMG</strong></li>
+<li><ins class="critic">Format</ins>: <code>ArcGIS Hub</code> <strong>This value is used for filtering &amp; finding the Hubs in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr></strong></li>
 <li>Links - Reference - "Full layer description" : link to the homepage for the Hub</li>
-<li><mark>ID</mark> and Code: Both of the values will be the same. Create a new code by following the description on the <a href="../../codeNamingSchema/">Code Naming Schema page</a>. Use the Advanced Search in GEOMG to query which codes have already been used. If it is not clear what code to create, ask the <abbr title="Karen Majewicz - majew030@umn.edu">Product Manager</abbr> or use the <a href="https://www.uuidgenerator.net">UUID Generator website</a> to create a random one. <strong>The ID value will be transferred into the Code field of each dataset.</strong></li>
+<li><mark>ID</mark> and Code: Both of the values will be the same. Create a new code by following the description on the <a href="../../codeNamingSchema/">Code Naming Schema page</a>. Use the Advanced Search in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr> to query which codes have already been used. If it is not clear what code to create, ask the <abbr title="Karen Majewicz - majew030@umn.edu">Product Manager</abbr> or use the <a href="https://www.uuidgenerator.net">UUID Generator website</a> to create a random one. <strong>The ID value will be transferred into the Code field of each dataset.</strong></li>
 <li>
 <p><mark>Identifier</mark>: If the record will be part of the monthly harvests, add this to the end of the baseUrl (usually the homepage): <code>/api/feed/dcat-us/1.1.json</code>. <strong>The Identifier will be used to query the metadata for the website.</strong></p>
 <div class="admonition warning">
@@ -1830,12 +1830,12 @@ The <ins class="critic">underlined</ins> fields are used to query GEOMG and prod
 <li>
 <p><mark>Access Rights</mark>: <code>Public</code> for all ArcGIS Hubs.</p>
 </li>
-<li><mark>Accrual Method</mark>: <code>DCAT US 1.1</code>. <strong>This value is used for filtering &amp; finding the Hubs in GEOMG</strong></li>
+<li><mark>Accrual Method</mark>: <code>DCAT US 1.1</code>. <strong>This value is used for filtering &amp; finding the Hubs in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr></strong></li>
 <li>Status: If the site is part of the ArcGIS Harvest, use the value <code>Indexed</code>. If the site is not part of the harvest, use <code>Not indexed</code>. Other explanatory text can be included here, such as indicating if the site is broken.</li>
 <li>Publication State: When a new record is created it will automatically be assigned <code>Draft</code>. Change the state to <code>published</code> when the metadata record is ready. If the site breaks or is deprecated, change this value to <code>unpublished</code>.</li>
 </ul>
 <h2 id="how-to-remove-broken-or-deprecated-arcgis-hubs">How to remove broken or deprecated ArcGIS Hubs<a class="headerlink" href="#how-to-remove-broken-or-deprecated-arcgis-hubs" title="Permanent link">&para;</a></h2>
-<p>If a Hub site stalls the Harvesting script, it needs to be updated in GEOMG.</p>
+<p>If a Hub site stalls the Harvesting script, it needs to be updated in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>.</p>
 <h3 id="if-the-site-is-missing">If the site is missing:<a class="headerlink" href="#if-the-site-is-missing" title="Permanent link">&para;</a></h3>
 <p>Try to find a replacement site. When a Hub is updated to a new version, sometimes the baseURL will change. If a new site is found, update:</p>
 <ul>
@@ -1856,7 +1856,7 @@ The <ins class="critic">underlined</ins> fields are used to query GEOMG and prod
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Broken APIs</p>
-<p>These steps will remove the records from our preset query to select active ArcGIS Hubs in GBL Admin. The effect will be to freeze them until the <abbr title="Application Programming Interface">API</abbr> starts working again. Once the <abbr title="Application Programming Interface">API</abbr> becomes accessible again, reverse the Accrual Method values.</p>
+<p>These steps will remove the records from our preset query to select active ArcGIS Hubs in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>. The effect will be to freeze them until the <abbr title="Application Programming Interface">API</abbr> starts working again. Once the <abbr title="Application Programming Interface">API</abbr> becomes accessible again, reverse the Accrual Method values.</p>
 </div>
 
 
