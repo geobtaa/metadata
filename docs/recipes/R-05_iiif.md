@@ -25,4 +25,4 @@ To extract metadata from IIIF JSON Manifests.
 
 Although the Jupyter Notebook extracts the metadata to a flat CSV, we still need to merge this with any existing metadata for the records.
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload to GBL Admin

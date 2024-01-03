@@ -208,7 +208,7 @@ This page documents the custom metadata elements for the GeoBTAA Metadata Profil
 | Field type            | string |                                                                                                                                     
 | Purpose               | To communicate to Solr if the item is public or hidden                                                                                      |
 | Entry Guidelines      | Use the dropdown or batch editing functions to change the state              |
-| Commentary            | When items are first added to GEOMG, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished
+| Commentary            | When items are first added to GBL Admin, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished
 | Controlled Vocabulary | yes                                                                                                                                                          |
 | Example value         | Draft                                                                                                                           |
 | Element Set           | B1G                                                                                                                                          |

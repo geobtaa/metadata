@@ -1,4 +1,4 @@
-The [GeoBTAA Metadata Template](https://z.umn.edu/b1g-template) ([https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-template)) is a set of spreadsheets that are formatted for our metadata editor, GEOMG. 
+The [GeoBTAA Metadata Template](https://z.umn.edu/b1g-template) ([https://z.umn.edu/b1g-template](https://z.umn.edu/b1g-template)) is a set of spreadsheets that are formatted for our metadata editor, GBL Admin. 
 
 Users will need to make a copy of the spreadsheet to use for editing.  In some cases, the Metadata Coordinator can provide a customized version of the sheets for specific collections.
 
@@ -12,7 +12,7 @@ The Template contains the following tabs:
 
 !!! Warning "Note"
 
-	The input format for some fields in this template may differ from how the field is documented in [OpenGeoMetadata](https://opengeometadata.org). These differences are intended to make it easier to enter values, which will be transformed when we upload the record to GEOMG.
+	The input format for some fields in this template may differ from how the field is documented in [OpenGeoMetadata](https://opengeometadata.org). These differences are intended to make it easier to enter values, which will be transformed when we upload the record to GBL Admin.
 
 	- **Bounding Box** coordinates should be entered as `W,S,E,N`. The coordinates are automatically transformed to a different order `ENVELOPE(W,E,N,S)`. Read more under the [Local Input Guidelines](input-guidelines.md).
 

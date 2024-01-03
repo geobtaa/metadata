@@ -4,7 +4,7 @@ To scan the [DCAT 1.1 API](https://resources.data.gov/resources/dcat-us/) of Arc
 
 !!! warning " "
 
-	This recipe includes steps that use the metadata toolkit [GEOMG](https://geobtaa.github.io/metadata/geomg/). Access to GEOMG is restricted to UMN BTAA-GIN staff and requires a login account. External users can create their own list or use one provided in this repository.
+	This recipe includes steps that use the GBL Admin toolkit. Access to this tool is restricted to UMN BTAA-GIN staff and requires a login account. External users can create their own list or use one provided in this repository.
 	
 
 ``` mermaid
@@ -20,7 +20,7 @@ H --> |No| J[Try updating your Python modules or investigating the error]:::yell
 J --> B;
 I --> A;
 C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
-K --> E[STEP 4. <br>Publish/unpublish records in GEOMG]:::green; 
+K --> E[STEP 4. <br>Publish/unpublish records in GBL Admin]:::green; 
 
 
 classDef green fill:#E0FFE0
@@ -35,13 +35,13 @@ class C,H questionCell;
 
 ## Step 1: Download the list of active ArcGIS Hubs
 
-We maintain a list of active ArcGIS Hub sites in GEOMG. 
+We maintain a list of active ArcGIS Hub sites in GBL Admin. 
 
 !!! tip inline end "Shortcut"
 
-	[Pre-formatted GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&rows=20&sort=score+desc)
+	[Pre-formatted GBL Admin query link](https://geo.btaa.org/admin/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=DCAT+US+1.1&f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&rows=20&sort=score+desc)
 
-1. Go to the [GEOMG](https://geomg.lib.umn.edu) dashboard
+1. Go to the Admin (https://geo.btaa.org/admin) dashboard
 2. Filter for items with these parameters:
   	 - Resource Class: Websites
   	 - Accrual Method: DCAT US 1.1
@@ -52,7 +52,7 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 
 !!! info
     
-	Exporting from GEOMG will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
+	Exporting from GBL Admin will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
 
 	* **ID**: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.
 	* **Title**: The name of the Hub. This is transferred to the "Provider" field for each dataset
@@ -85,26 +85,26 @@ We maintain a list of active ArcGIS Hub sites in GEOMG.
 !!! warning " "
 
 	The Hub sites are fairly unstable and it is likely that one or more of them will occasionally fail and interrupt the script. 
-	
-update-hub-list/
+
 
 1. Visit the URL for the Hub to check and see if the site is down, moved, etc. 
-2. Refer to the [Update ArcGIS Hubs list page ](update-hub-list.md)for guidance on how to edit the website record.
-	* **If a site is missing**: Unpublish it from GEOMG, indicate the Date Retired, and make a note in the Status field.  
+2. Refer to the [Update ArcGIS Hubs list page](update-hub-list.md) for more guidance on how to edit the website record.
+	* **If a site is missing**: Unpublish it from GBL Admin, indicate the Date Retired, and make a note in the Status field.  
 	* If a site is still live, but **the JSON API link is not working**: remove the value "DCAT US 1.1" from the Accrual Method field and make a note in the Status field.
 	* If the site has moved to a **new URL**, update the website record with the new information.
 3. Start over from Step 1.
 
 ## Step 3: Validate and Clean
 
-Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GEOMG.
+Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GBL Admin.
 
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload all records
 
 1. Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. 
 2. Upload the new CSV file. This will overwrite the Date Accessioned value for any items that were already present.
-3. Use the old Date Accessioned value to search for the previous harvest date. This example uses 2023-03-07: (https://geomg.lib.umn.edu/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=ArcGIS+Hub&q=%222023-03-07%22&rows=20&sort=score+desc)
-4. Unpublish the ones that have the old date in the Date Accessioned field 5. Record this number in the GitHub issue for the scan under Number Deleted
+3. Use the old Date Accessioned value to search for the previous harvest date. This example uses 2023-03-07: (https://geo.btaa.org/admin/documents?f%5Bb1g_dct_accrualMethod_s%5D%5B%5D=ArcGIS+Hub&q=%222023-03-07%22&rows=20&sort=score+desc)
+4. Unpublish the ones that have the old date in the Date Accessioned field 
+5. Record this number in the GitHub issue for the scan under Number Deleted
 6. Look for records in the uploaded batch that are still "Draft" - these are new records. 
 7. Publish them and record this number in the GitHub issue under Number Added

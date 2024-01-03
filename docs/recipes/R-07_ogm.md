@@ -25,4 +25,4 @@ Collect the metadata JSONs. This type of metadata typically is obtain in one of 
 
 The GeoBTAA Metadata Profile may have additional or different requirements. Consult with the Product Manager on which fields may need augmentation.
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload to GBL Admin

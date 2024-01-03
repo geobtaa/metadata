@@ -36,7 +36,7 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 ## Who is this handbook for?
 
-* Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://z.umn.edu/btaagdp) (BTAA-GIN)
+* Team Members in the [Big Ten Academic Alliance Geospatial Information Network](http://gin.btaa.org) (BTAA-GIN)
 
 * Development & Operations Staff in the BTAA-GIN
 

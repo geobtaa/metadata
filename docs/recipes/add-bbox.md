@@ -44,7 +44,7 @@ hide:
 ### Part C: Copy back to GeoBTAA metadata
 
 1. Click the “Copy to Clipboard” icon on the Klokan site.
-2. Paste the coordinates into the Bounding Box field in the GeoBTAA metadata template or in the GEOMG metadata editor.
+2. Paste the coordinates into the Bounding Box field in the GeoBTAA metadata template or in the GBL Admin metadata editor.
 
 ## Programmatic method
 
