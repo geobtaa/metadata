@@ -14,7 +14,7 @@ It is the role of the Team members to seek out new content for the geoportal. Se
 
 This stage involves batch processing of the records, including harvesting, transformations, crosswalking information. This stage is carried out by the Metadata Coordinator, who may contact Team members for assistance.
 
-Regardless of the method used for acquiring the metadata, it is always transformed into a spreadsheet for editing. These spreadsheets are uploaded to GEOMG Metadata Editor.
+Regardless of the method used for acquiring the metadata, it is always transformed into a spreadsheet for editing. These spreadsheets are uploaded to GBL Admin Metadata Editor.
 
 Because of the variety of platforms and standards, this process can take many forms. The Metadata Coordinator will contact Team members if they need to supply metadata directly. 
 
@@ -29,9 +29,9 @@ Once the metadata is in spreadsheet form, it is ready to be normalized and augme
 
 ## 4. Publish Records
 
-Once the editing spreadsheets are completed, UMN Staff uploads the records to `GEOMG`, a metadata management tool. GEOMG validates records and performs any needed field transformations. Once the records are satisfactory, they are published and available in the BTAA Geoportal.
+Once the editing spreadsheets are completed, UMN Staff uploads the records to `GBL Admin`, a metadata management tool. GBL Admin validates records and performs any needed field transformations. Once the records are satisfactory, they are published and available in the BTAA Geoportal.
 
-[Read more on the GEOMG documentation page.](geomg.md)
+[Read more on the GBL Admin documentation page.](GBL Admin.md)
 
 
 ## 5. Maintenance

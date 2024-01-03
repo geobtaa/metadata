@@ -70,11 +70,11 @@ The new records can be found in `reports/allNewItems_{today's date}.csv` and wil
 
 ## Step 4: Upload metadata for new records
 
-Open GEOMG and upload the new items found in `reports/allNewItems_{today's date}.csv`
+Open GBL Admin and upload the new items found in `reports/allNewItems_{today's date}.csv`
 
 ## Step 5: Delete metadata for retired records
 
-Unpublish records found in `reports/allDeletedItems_{today's date}.csv`. This can be done in GEOMG manually (one by one) or with the [GEOMG documents update script](https://github.com/geobtaa/workflows/tree/main/editing/geomg-documents-update).
+Unpublish records found in `reports/allDeletedItems_{today's date}.csv`. This can be done in GBL Admin manually (one by one) or with the [GBL Admin documents update script](https://github.com/geobtaa/workflows/tree/main/editing/GBL Admin-documents-update).
 
 
 

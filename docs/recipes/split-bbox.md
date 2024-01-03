@@ -10,9 +10,9 @@ One way to mitigate this is to create two bounding boxes for the OGM Aardvark `G
 
 The following script will scan a CSV of the records, identify which cross the 180th Meridian, and insert a multipolygon into a new column. 
 
-The script was designed with the assumption that the input CSV will be in the OGM Aardvark format, likely exported from GEOMG. The CSV file must contain a field for `Bounding Box`.  It may contain a `Geometry` field with some values that we do not want to overwrite.
+The script was designed with the assumption that the input CSV will be in the OGM Aardvark format, likely exported from GBL Admin. The CSV file must contain a field for `Bounding Box`.  It may contain a `Geometry` field with some values that we do not want to overwrite.
 
-This script will create a new field called "Bounding Box (WKT)". Items that crossed the 180th Meridian will have a multipolygon in that field. Items that don't cross will not have a value in that field. Copy and paste only the new values into the `Geometry` column and reupload the CSV to GEOMG.
+This script will create a new field called "Bounding Box (WKT)". Items that crossed the 180th Meridian will have a multipolygon in that field. Items that don't cross will not have a value in that field. Copy and paste only the new values into the `Geometry` column and reupload the CSV to GBL Admin.
 
 ```
 import csv

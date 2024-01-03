@@ -6,7 +6,7 @@ Note: This recipe is very similar to the ArcGIS Hubs Scanner.
 
 !!! warning " "
 
-	This recipe includes steps that use the metadata toolkit [GEOMG](https://geobtaa.github.io/metadata/geomg/). Access to GEOMG is restricted to UMN BTAA-GIN staff and requires a login account. External users can create their own list or use one provided in this repository.
+	This recipe includes steps that use the metadata toolkit [GBL Admin](https://geobtaa.github.io/metadata/GBL Admin/). Access to GBL Admin is restricted to UMN BTAA-GIN staff and requires a login account. External users can create their own list or use one provided in this repository.
 
 ``` mermaid
 graph TB
@@ -21,7 +21,7 @@ H --> |No| J[Try updating your Python modules or investigating the error]:::yell
 J --> B;
 I --> A;
 C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
-K --> E[STEP 4. <br>Publish/unpublish records in GEOMG]:::green; 
+K --> E[STEP 4. <br>Publish/unpublish records in GBL Admin]:::green; 
 
 classDef green fill:#E0FFE0
 classDef yellow fill:#FAFAD2
@@ -33,13 +33,13 @@ classDef white fill:#FFFFFF
 
 ## Step: Download the list of active Socrata Data Portals
 
-We maintain a list of active Socrata Hub sites in GEOMG. 
+We maintain a list of active Socrata Hub sites in GBL Admin. 
 
 !!! tip inline end "Shortcut"
 
-	[Pre-formatted GEOMG query link](https://geomg.lib.umn.edu/documents?f%5Bb1g_publication_state_s%5D%5B%5D=published&f%5Bdct_format_s%5D%5B%5D=Socrata+data+portal&q=&rows=20&sort=score+desc)
+	[Pre-formatted GBL Admin query link](https://GBL Admin.lib.umn.edu/documents?f%5Bb1g_publication_state_s%5D%5B%5D=published&f%5Bdct_format_s%5D%5B%5D=Socrata+data+portal&q=&rows=20&sort=score+desc)
 
-1. Go to the [GEOMG](https://geomg.lib.umn.edu) dashboard
+1. Go to the [GBL Admin](https://GBL Admin.lib.umn.edu) dashboard
 2. Use the Advanced Search to filter for items with these parameters:
   	 - Format: "Socrata data portal"
 3. Select all the results and click Export -> CSV
@@ -48,7 +48,7 @@ We maintain a list of active Socrata Hub sites in GEOMG.
 
 !!! info
     
-	Exporting from GEOMG will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
+	Exporting from GBL Admin will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
 
 	* **ID**: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.
 	* **Title**: The name of the Hub. This is transferred to the "Provider" field for each dataset
@@ -71,15 +71,15 @@ We maintain a list of active Socrata Hub sites in GEOMG.
 
 1. Visit the URL for the Socrata Portal to check and see if the site is down, moved, etc. 
 2. **If a site is missing**
-	- Unpublish it from GEOMG and indicate the Date Retired, and make a note in the Status field.  
+	- Unpublish it from GBL Admin and indicate the Date Retired, and make a note in the Status field.  
 3. Start over from Step 1.
 
 ## Step 3: Validate and Clean
 
-Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GEOMG.
+Although the harvest notebook will produce valide metadata for most of the items, there may still be some errors. [Run the cleaning script](clean.md) to ensure that the records are valid before we try to ingest them into GBL Admin.
 
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload to GBL Admin
 
 1. Review the previous upload. Check the Date Accessioned field of the last harvest and copy it. 
 2. Upload the new CSV file. This will overwrite the Date Accessioned value for any items that were already present.

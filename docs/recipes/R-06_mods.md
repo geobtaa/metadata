@@ -17,4 +17,4 @@ This list may be supplied by the submitter or we may need to query the website t
 
 Manually adjust the names of the columns to match metadata into our [GeoBTAA metadata template.](https://z.umn.edu/b1g-template)
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload to GBL Admin

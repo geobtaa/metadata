@@ -43,15 +43,15 @@ This step also involves using a crosswalk to convert the metadata into the schem
 
 When working with metadata, it is common to come across missing or corrupted values, which require troubleshooting and manual editing in our spreadsheets. Refer to the [Collections Project Board](https://github.com/orgs/geobtaa/projects/4) for examples of this work.
 
-After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to GEOMG, which serves as the administrative interface for the Geoportal. If GEOMG detects any formatting errors, it will issue a warning and may reject the upload.
+After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to GBL Admin, which serves as the administrative interface for the Geoportal. If GBL Admin detects any formatting errors, it will issue a warning and may reject the upload.
 
 ## 4. Index
 
 :fontawesome-solid-user: Product Manager 
 
-Once the metadata is successfully uploaded to GEOMG, we can publish the records to the Geoportal. The technology that actually stores the records and enables searching is called [Solr](https://solr.apache.org). The action of adding records is known as "Indexing."
+Once the metadata is successfully uploaded to GBL Admin, we can publish the records to the Geoportal. The technology that actually stores the records and enables searching is called [Solr](https://solr.apache.org). The action of adding records is known as "Indexing."
 
-Periodically, we need to remove records from the Geoportal. To do this, we use GEOMG to either delete them or change their status to "unpublished."
+Periodically, we need to remove records from the Geoportal. To do this, we use GBL Admin to either delete them or change their status to "unpublished."
 
 ## 5. Maintain
 
@@ -72,7 +72,7 @@ The Geoportal is programmatically checked for broken links on a monthly basis. T
     		actor Product Manager
     		participant GitHub
     		actor Research Assistant
-    		participant GEOMG
+    		participant GBL Admin
     		participant Geoportal	
     			
     		
@@ -84,12 +84,12 @@ The Geoportal is programmatically checked for broken links on a monthly basis. T
     		Note left of Research Assistant:  HARVEST
     		Note left of Research Assistant:  EDIT 
     		
-    		Research Assistant->>GEOMG: Upload records
+    		Research Assistant->>GBL Admin: Upload records
     		Research Assistant ->>GitHub: Update GitHub issue
-    		Note right of GEOMG:  PUBLISH 
+    		Note right of GBL Admin:  PUBLISH 
     		
-    		Product Manager->>GEOMG: Publish records
-    		GEOMG->>Geoportal: Send records online 
+    		Product Manager->>GBL Admin: Publish records
+    		GBL Admin->>Geoportal: Send records online 
     		Product Manager->>GitHub: Close GitHub issue
     		Product Manager ->> Team Member: Share link to published records
     		

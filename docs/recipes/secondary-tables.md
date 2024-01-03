@@ -1,8 +1,8 @@
-# How to upload links in secondary tables in GEOMG
+# How to upload links in secondary tables in GBL Admin
 
 * We use two compound metadata fields, `Multiple Download Links` and `Institutional Access Links`, that include multiple links that are formatted with both a label + a link. 
-* Because these fields are not regular JSON flat key:value pairs, they are stored in secondary tables within GEOMG.
-    * When using GEOMG's **Form** view, these values can be entered by clicking into a side page linked from the record.
+* Because these fields are not regular JSON flat key:value pairs, they are stored in secondary tables within GBL Admin.
+    * When using GBL Admin's **Form** view, these values can be entered by clicking into a side page linked from the record.
     * For **CSV uploads**, these values are uploaded with a separate CSV from the one used for the main import template.
 
 !!! tip

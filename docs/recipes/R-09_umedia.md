@@ -29,6 +29,6 @@ This folder stores all CSV files for metadata by month. Once we have JSON files 
 
 ## Step 3: Edit the metadata
 
-## Step 4: Upload to GEOMG
+## Step 4: Upload to GBL Admin
 
 
