@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          assignees: "conno234"
+          assignees: "karenmajewicz"
           labels: "reharvest"
           title: ${{ env.TODAY }} Scan ArcGIS Hubs
           project: 4
