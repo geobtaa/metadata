@@ -1,14 +1,5 @@
 # Resource Lifecycle
 
-**5 Stages of the Resource Lifecycle**
-
-``` mermaid
-flowchart LR
-  
-  I((1.<br> IDENTIFY)) --> H[/2. <br> HARVEST/] --> P[3. <br> EDIT] --> X[4. <br>INDEX] --> M{{5. <br>MAINTAIN}}--> H[/2. <br>HARVEST/]
-   
-```
-
 ## 1. Identify
 
 :fontawesome-solid-user: BTAA-GIN Team Members and Product Manager 
@@ -29,7 +20,9 @@ Here are the most common ways that we obtain the metadata:
 4. we manually copy and paste the metadata into a spreadsheet
 5. a combination of one or more of the above
 
-This step also involves using a crosswalk to convert the metadata into the schema needed for the Geoportal. Our goal is to end up with a spreadsheet containing columns matching our [metadata template](https://z.umn.edu/b1g-template).
+## 3. Crosswalk
+
+This step involves using a crosswalk to convert the metadata into the schema needed for the Geoportal. Our goal is to end up with a spreadsheet containing columns matching our [metadata template](https://z.umn.edu/b1g-template).
 
 !!! info "Why do we rely on CSV?"
 
@@ -37,27 +30,34 @@ This step also involves using a crosswalk to convert the metadata into the schem
 	
 	We have found this tabular format to be the most human-readable way to batch create, edit, and troubleshoot metadata records. We can visually scan large numbers of records at once and normalize the values in ways that would be difficult with native nested formats, like JSON or XML. Therefore, many of our workflow processes involve transforming things to and from CSV.
 
-## 3. Edit
+## 4. Edit
 
 :fontawesome-solid-user: Graduate Research Assistants and Product Manager 
 
 When working with metadata, it is common to come across missing or corrupted values, which require troubleshooting and manual editing in our spreadsheets. Refer to the [Collections Project Board](https://github.com/orgs/geobtaa/projects/4) for examples of this work.
 
-After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. Finally, we upload the completed spreadsheet to GBL Admin, which serves as the administrative interface for the Geoportal. If GBL Admin detects any formatting errors, it will issue a warning and may reject the upload.
+## 5. Validate
 
-## 4. Index
+After compiling the metadata, we run a validation and cleaning script to ensure the records conform to the required elements of our schema. 
+
+## 6. Index
 
 :fontawesome-solid-user: Product Manager 
 
+We upload the completed spreadsheet to GBL Admin, which serves as the administrative interface for the Geoportal. If GBL Admin detects any formatting errors, it will issue a warning and may reject the upload.
+
 Once the metadata is successfully uploaded to GBL Admin, we can publish the records to the Geoportal. The technology that actually stores the records and enables searching is called [Solr](https://solr.apache.org). The action of adding records is known as "Indexing."
 
-Periodically, we need to remove records from the Geoportal. To do this, we use GBL Admin to either delete them or change their status to "unpublished."
 
-## 5. Maintain
+
+## 7. Maintain
 
 :fontawesome-solid-user: BTAA-GIN Team Members, Graduate Research Assistants, and Product Manager 
 
-The Geoportal is programmatically checked for broken links on a monthly basis. The are fixed either by manually repairing them or by reharvesting from the source.
+Periodically, we need to remove records from the Geoportal. To do this, we use GBL Admin to either delete them or change their status to "unpublished."
+
+
+We monitor currentness and re-harvest based on how frequently sources update their content. See the [Collections Dashboard](https://github.com/orgs/geobtaa/projects/4) for this schedule.
 
 
 ##  Sequence diagram of Resource Lifecycle
