@@ -12,15 +12,18 @@ graph TB
 
 A{{STEP 1. <br>Download arcHubs.csv}}:::green --> B[[STEP 2. <br>Run Jupyter Notebook harvest script]]:::green;
 B --> C{Did the script run successfully?};
+C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
+K --> E[[STEP 4. <br>Upload the CSV]]:::green; 
+E --> L[[STEP 5. <br>Publish and republish records]]:::green; 
+L --> M[[STEP 6. <br>Unpublish retired records]]:::green; 
+M --> N{{STEP 7. <br>Record changes}}:::red; 
 C --> |No| D[Troubleshoot]:::yellow;
 D --> H{Did the script stall because of a Hub?};
 H --> |Yes| I[Refer to the page Update ArcGIS Hubs]:::yellow;
-H --> |No & I can't figure it out.| F[Refer issue back to Product Manager]:::red;
-H --> |No| J[Try updating your Python modules or investigating the error]:::yellow;
+H --> |No & I can't figure it out.| F{{Refer issue back to Product Manager}}:::red;
+H --> |No| J[Try updating your Python modules or debugging the error message]:::yellow;
 J --> B;
 I --> A;
-C --> |Yes| K[[STEP 3. Validate and Clean]]:::green; 
-K --> E[STEP 4. <br>Publish/unpublish records in GBL Admin]:::green; 
 
 
 classDef green fill:#E0FFE0
@@ -51,13 +54,16 @@ We maintain a list of active ArcGIS Hub sites in GBL Admin.
 
 
 !!! info    
->Exporting from GBL Admin will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
->- **ID**: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.
->- **Title**: The name of the Hub. This is transferred to the "Provider" field for each dataset
->- **Publisher**: The place or administration associated with the portal. This is applied to the title in each dataset in brackets
->- **Spatial Coverage**: A list of place names. These are transferred to the Spatial Coverage for each dataset
->- **Member Of**: a larger collection level record. Most of the Hubs are either part of our [Government Open Geospatial Data Collection](https://geo.btaa.org/catalog/ba5cc745-21c5-4ae9-954b-72dd8db6815a) or the [Research Institutes Geospatial Data Collection](https://geo.btaa.org/catalog/b0153110-e455-4ced-9114-9b13250a7093)
-> However, it is not necessary to take extra time and manually remove the extra fields, because the Jupyter Notebook code will ignore them.
+
+	Exporting from GBL Admin will produce a CSV containing all of the metadata associated with each Hub. For this recipe, the only fields used are:
+	
+	- **ID**: Unique code assigned to each portal. This is transferred to the "Is Part Of" field for each dataset.
+	- **Title**: The name of the Hub. This is transferred to the "Provider" field for each dataset
+	- **Publisher**: The place or administration associated with the portal. This is applied to the title in each dataset in brackets
+	- **Spatial Coverage**: A list of place names. These are transferred to the Spatial Coverage for each dataset
+	- **Member Of**: a larger collection level record. Most of the Hubs are either part of our [Government Open Geospatial Data Collection](https://geo.btaa.org/catalog/ba5cc745-21c5-4ae9-954b-72dd8db6815a) or the [Research Institutes Geospatial Data Collection](https://geo.btaa.org/catalog/b0153110-e455-4ced-9114-9b13250a7093)
+	
+	However, it is not necessary to take extra time and manually remove the extra fields from the CSV export, because the Jupyter Notebook code will ignore them.
 
 -------------------
 
@@ -68,24 +74,17 @@ We maintain a list of active ArcGIS Hub sites in GBL Admin.
 3. Move the downloaded file `arcHubs.csv` into the same directory as the Jupyter Notebook.
 4. Run all cells.
 
-??? info "Expand to read about the R-01_arcgis-hubs.ipynb Jupyter Notebook"
 
-	This code reads data from `hubFile.csv` using the `csv.DictReader` function. It then iterates over each row in the file and extracts values from specific columns to be used later in the script.
+### Troubleshooting script failures
 
-	For each row, the script also defines default values for a set of metadata fields. It then checks if the URL provided in the CSV file exists and is a valid JSON response. If the response is not valid, the script prints an error message and continues to the next row. Otherwise, it extracts dataset identifiers from the JSON response and passes the response along with the identifiers to a function called metadataNewItems.
-
-	It also includes a function to drop duplicate rows. ArcGIS Hub administrators can include datasets from other Hubs in their own site. As a result, some datasets are duplicated in other Hubs. However, they always have the same Identifier, so we can use pandas to detect and remove duplicate rows.
-
-
-## Troubleshooting (as needed)
-
-!!! warning " "
+!!! warning
 
 	The Hub sites are fairly unstable and it is likely that one or more of them will occasionally fail and interrupt the script. 
 
+If the script stalls or fails to parse certain Hub sites, try the following:
 
 1. Visit the URL for the Hub to check and see if the site is down, moved, etc. 
-2. Refer to the [Update ArcGIS Hubs list page](update-hub-list.md) for more guidance on how to edit the website record.
+2. Refer to the page on [How to remove broken or deprecated ArcGIS Hubs](../update-hub-list/#how-to-remove-broken-or-deprecated-arcgis-hubs) for more guidance on how to edit the website record.
 	* **If a site is missing**: Unpublish it from GBL Admin, indicate the Date Retired, and make a note in the Status field.  
 	* If a site is still live, but **the JSON API link is not working**: remove the value "DCAT US 1.1" from the Accrual Method field and make a note in the Status field.
 	* If the site has moved to a **new URL**, update the website record with the new information.
@@ -100,23 +99,35 @@ Although the harvest notebook will produce valide metadata for most of the items
 4. Run all cells. Takes less than a minute. 
 
 ## Step 4: Upload the CSV 
->See also: [General Import Instructions](https://gin.btaa.org/geoblacklight_admin_docs/import/)
+
+!!! tip
+
+	See also: [General Import Instructions](https://gin.btaa.org/geoblacklight_admin_docs/import/)
+
 1. In GBL Admin, select **Imports** in the **Admin Tools** menu at the top of the page, then **New Import**.
 2. Enter the Name "[GitbHub Issue Number] ArcGIS Hubs scan YYYY-MM-DD" and the type "BTAA CSV." 
 3. Click **Choose File** and upload the cleaned scanned records of today’s date (likely still located in the **R-00_clean recipe** folder). 
 4. Click **Create Import**. Wait! The page may not immediately change. 
 5. Briefly review the Field Mappings to make sure none of the fields are blank. No changes should be needed. Click **Create Mapping** at the bottom of the page. 
->	Optional verification: Check that the **CSV Row Count** matches the actual row count of your CSV. (In Excel, select any column header, then find the row count at the bottom of the window. It will be 1 greater than expected because it includes the column header row.) 
+
+    !!!	tip "Optional verification"
+
+        Check that the **CSV Row Count** matches the actual row count of your CSV. (In Excel, select any column header, then find the row count at the bottom of the window. It will be 1 greater than expected because it includes the column header row.) 
+
 6. Click **Run Import**, then wait for about 30 minutes or more. Refresh the page to see how many records have been imported so far. The import is complete when the Total count under **Imported Documents** matches the **CSV Row Count**. There is no notification. 
 
 ## Step 5: Publish and republish records 
+
 #### Convert new records from Draft to Published:
+
 1. Click the GBL*Admin logo to return to the [Documents view](https://geo.btaa.org/admin/documents).
 2. Click **Imports** at the top of the left column menu and click on today’s ArcGIS Hub import.
 3. Under publication state, click on **Draft**. 
 4. Record the number of Draft records in a comment on the GitHub issue. This is the “New” stat used in the last step. 
 5. Check the box to select all, **Select all results that match this search**, select **Bulk Actions** > **Published**, and **Run Bulk Action**. Reload the page to see the results.
+
 #### Republish previously unpublished records that have returned:
+
 1. Return to the [Documents view](https://geo.btaa.org/admin/documents), click on Imports, and select today’s import.
 2. Under publication state, click on Unpublished. 
 	- These are items that were found in past scans, then not found and therefore removed in subsequent scans, but have now been found once again in today’s scan. 
@@ -128,28 +139,35 @@ Although the harvest notebook will produce valide metadata for most of the items
 
 ## Step 6: Unpublish retired records 
 
->The purpose of this step is to unpublish from the Geoportal any records that have been removed from their source hub by their owners. When an existing record is found and imported in a new scan, its Date Accessioned is updated. We want to keep records found in the most recent two scans (including today's) but unpublish everything older than that. This should remove intentionally retired records but leave any that were just temporarily unavailable. 
+!!! purpose "Purpose" 
+
+	The purpose of this step is to unpublish from the Geoportal any records that have been removed from their source hub by their owners. When an existing record is found and imported in a new scan, its Date Accessioned is updated. We want to keep records found in the most recent two scans (including today's) but unpublish everything older than that. This should remove intentionally retired records but leave any that were just temporarily unavailable. 
 
 1. If you're not there already, return to the [Documents view](https://geo.btaa.org/admin/documents) so you're viewing *all* records. Scroll down to **Accrual Method** and click **ArcGIS Hub**. 
 2. Click **Published** under **Publication State** to see all published Hub records.
 3. Under **Date Accessioned**, identify any results with a date earlier than the two most recent dates, including today's. (There might be only one or none). Note that they are sorted by number of records, not by date! 
 4. In a comment on the GitHub issue, record the total number of records on those earlier dates as “Retired.”
 5. For each of these earlier dates: Select the date, check the box to select all records, click **Select all results that match this search**, select **Bulk Actions** > **Unpublished**, and click **Run Bulk Action**. Again, reload the page to see the results. 
->If you see weird behavior during this step, scroll down to “Notes and Troubleshooting”
+
+!!! tip
+
+	If you see weird behavior during this step, scroll down to “Notes and Troubleshooting”
 
 ## Step 7: Record what has changed 
 1. Optional but helpful: save your GitHub comment with the numbers you recorded of new, republished, and retired records. 
 2. Mandatory: In the right sidebar, expand **Collections** under **Projects**. Put the sum of new + republished in the **Records Added** field, and fill in the **Records Retired** field. 
->This information gets exported and added to a monthly report to showcase the way our collection fluctuates. As a general rule of thumb, the total change in records shouldn’t be much more than 100 - if it’s a lot more, try to evaluate why or ask for help. 
 
-## Notes and troubleshooting: 
-- Sometimes records will appear in the list that you get when you click “published” under publication state and then click the older date accessioned saved queries, but when viewed in the results list, have a red “unpublished” label. (this mismatch can also happen in reverse - if something’s unpublished but you can’t publish it, or if there are any other records are not updated and syncing)
-- The record lives in 2 places: admin (database - back end) and geoportal (solr - front end). If it’s corrupted, it “freezes” in the front end. No changes you make to it will apply, and it may display incorrect values.
-- This is almost always because of the bounding box, but it can also be because of the date range. 
-To resolve:
-1. Click on the record title
-2. Click under “admin view” 
-3. Scroll down to the Spatial section and either clear or fix the Bounding Box and Geometry fields.
-	- If you don't know the correct values, it's fine to leave both fields blank.
-	- If you're going to add corrected values, it's fine to just fill in the Bounding Box field. When you click save, it will automatically generate the geometry based on the bounding box.
-	- If you know the specific geometry that should applied, you can add it, but it's not important. 
+!!! info
+
+	This information gets exported and added to a monthly report to showcase the way our collection fluctuates. As a general rule of thumb, the total change in records shouldn’t be much more than 100 - if it’s a lot more, try to evaluate why or ask for help. 
+
+## Note on records that do not respond to edits
+
+- Sometimes GBL Admin records will appear in the list that you get when you click “published” under publication state and then click the older date accessioned saved queries, but when viewed in the results list, have a red “unpublished” label. (this mismatch can also happen in reverse - if something’s unpublished but you can’t publish it, or if there are any other records are not updated and syncing)
+- The record lives in 2 places: admin (database - back end) and geoportal (solr - front end). If it’s corrupted, it “freezes” in the front end. No changes you make to it will apply, and it may display incorrect values. This is almost always because of the bounding box, but it can also be because of the date range. To resolve:
+    1. Click on the record title
+    2. Click under “admin view” 
+    3. Scroll down to the Spatial section and either clear or fix the Bounding Box and Geometry fields.
+	    - If you don't know the correct values, it's fine to leave both fields blank.
+	    - If you're going to add corrected values, it's fine to just fill in the Bounding Box field. When you click save, it will automatically generate the geometry based on the bounding box.
+	    - If you know the specific geometry that should applied, you can add it, but it's not important. 
