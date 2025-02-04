@@ -3,7 +3,13 @@
 
 This page documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the [official OpenGeoMetadata (Aardvark) schema](https://opengeometadata.org).
 
-| b1g-id | Label                                         | URI                             | Obligation  |
+
+{{ read_csv('b1g-elements.csv') }}
+
+
+
+
+<!--| b1g-id | Label                                         | URI                             | Obligation  |
 | ------ | --------------------------------------------- | ------------------------------- | ----------- |
 | b1g-01 | [Code](#code)                               | `b1g_code_s`                    | Required    |
 | b1g-02 | [Status](#status)                           | `b1g_status_s`                 | Optional    |
@@ -20,6 +26,7 @@ This page documents the custom metadata elements for the GeoBTAA Metadata Profil
 | b1g-13 | [Language String](#language-string)         |`b1g_language_sm`                  | Required |
 | b1g-14 | [Creator ID](#creator-id)                   |`b1g_creatorID_sm`               |Optional|
 
+-->
 ## Code
 
 | Label                 | Code                                                                                                                                                                                                                                                                                          |
