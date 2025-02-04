@@ -102,7 +102,7 @@ CKAN is a tool for making open data websites, it helps you manage and publish co
 
 This chart provides links to documentation about the common metadata standards and schemas we encounter when harvesting.
 
-{{ read_csv('../tables/metadataStandards.csv') }}
+{{ read_csv('tables/metadataStandards.csv') }}
 
 * Dublin Core: A set of metadata elements that are used to describe resources in a simple and standardized way. Dublin Core is widely used in library systems, archives, and other digital repositories.
 * MODS (Metadata Object Description Schema): A flexible and extensible XML schema for describing a wide range of resources, including books, articles, and other types of digital content.

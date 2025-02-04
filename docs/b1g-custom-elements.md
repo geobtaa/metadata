@@ -1,10 +1,8 @@
 # Custom Elements
 
-
 This page documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the [official OpenGeoMetadata (Aardvark) schema](https://opengeometadata.org).
 
-
-{{ read_csv('b1g-elements.csv') }}
+{{ read_csv('tables/b1g-elements.csv') }}
 
 
 

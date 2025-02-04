@@ -7,41 +7,53 @@ theme:
       font:
             text: helvetica neue
       features:
-      - navigation.sections
-      - content.tooltips
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.top
+            - navigation.sections
+            - content.tooltips
+            - navigation.tabs
+            - navigation.tabs.sticky
+            - navigation.top
       logo: images/btaa-logo-white.png
       highlightjs: true
-      plugins:
-            - search
-            - table-reader
+plugins:
+      - search
+      - table-reader
+#             - git-revision-date-localized:
+#                   enable_creation_date: true
 #             - with-pdf:
 #                   output_path: export/b1g-handbook.pdf
-            - git-revision-date-localized:
-                  enable_creation_date: true
-
 extra_css:
       - stylesheets/extra.css
 
 markdown_extensions:
       - abbr
+      - def_list
+      - footnotes
       - tables
       - attr_list
       - md_in_html
+      - admonition
       - pymdownx.critic
       - pymdownx.caret
       - pymdownx.keys
       - pymdownx.mark
       - pymdownx.tilde
-      - pymdownx.magiclink
+      - pymdownx.details
+      - pymdownx.superfences
+      - pymdownx.snippets
+      - pymdownx.emoji:
+            emoji_index: !!python/name:material.extensions.emoji.twemoji
+            emoji_generator: !!python/name:material.extensions.emoji.to_svg
+            options:
+                  custom_icons:
+                        - overrides/.icons
+      - pymdownx.tabbed:
+            alternate_style: true
+            slugify: !!python/object/apply:pymdownx.slugs.slugify
+                  kwds:
+                        case: lower
       - toc:
             toc_depth: 2
             permalink: true
-      - pymdownx.emoji:
-            emoji_index: !!python/name:materialx.emoji.twemoji
-            emoji_generator: !!python/name:materialx.emoji.to_svg
       - def_list
       - pymdownx.tasklist:
             custom_checkbox: true
@@ -50,17 +62,17 @@ markdown_extensions:
               - includes/abbreviations.md
       - admonition
       - pymdownx.details
-      - pymdownx.superfences:
-            custom_fences:
-                  - name: mermaid
-                    class: mermaid
-                    format: !!python/name:pymdownx.superfences.fence_code_format
-                    showSequenceNumbers: true
-                    noteFontWeight: "10px"
-                    actorFontSize: "10px"
-                    messageFontSize: "10px"
-      - pymdownx.tabbed:
-            alternate_style: true
+#       - pymdownx.superfences:
+#             custom_fences:
+#                   - name: mermaid
+#                     class: mermaid
+#                     format: !!python/name:pymdownx.superfences.fence_code_format
+#                     showSequenceNumbers: true
+#                     noteFontWeight: "10px"
+#                     actorFontSize: "10px"
+#                     messageFontSize: "10px"
+#       - pymdownx.tabbed:
+#             alternate_style: true
 
 
 nav:
@@ -81,7 +93,7 @@ nav:
 - Explanation:
       - Metadata Workflows:
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
-            - 'GEOMG Metadata Toolkit' : 'geomg.md'
+
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
