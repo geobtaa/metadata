@@ -1,6 +1,7 @@
 # Harvesting Schedule
 
 `Established April 2023`
+`Updated February 2025`
 
 ### Weekly
 
@@ -8,25 +9,26 @@
 
 ### Monthly
 
-* CKAN sites
-* Minnesota Geospatial Commons
+* [Minnesota Geospatial Commons](https://geo.btaa.org/catalog/05a-01)
 
 ### Quarterly
 
-* [PASDA](../recipes/R-08_pasda/)
-* OpenGeoMetadata
 * [Illinois Geospatial Data Clearinghouse](https://geo.btaa.org/catalog/02a-01)
-* [Minnesota Natural Resource Atlas](https://geo.btaa.org/catalog/05d-11)
+* [PASDA](https://geo.btaa.org/catalog/08a-01)
+* [Geodata@Wisconsin](https://geo.btaa.org/catalog/10d-03)
+* [Humanitarian Data Exchange](https://geo.btaa.org/catalog/99-1400)
+* [CKAN portals](https://geo.btaa.org/?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites&q=CKAN&search_field=all_fields)
 * [Socrata](recipes/R-02_socrata)
 
 ### Annually
 
 * Licensed Resources
 * Custom HTML sites for public data
+* Smaller data portals that are updated infrequently
 
 ### As Needed
 
-* Any website that reports errors during the [automated monthly broken link scan](https://github.com/geobtaa/geoportal/wiki/Monthly-URI-Testing).
+* Any website that reports errors during broken link scans.
 * Any website when we receive notification that new records are available. 
 
 
