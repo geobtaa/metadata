@@ -1,7 +1,9 @@
 # Harvesting Schedule
 
-`Established April 2023`
-`Updated February 2025`
+!!! info
+
+	* 	This schedule was established April 2023
+	* 	Updated February 2025
 
 ### Weekly
 

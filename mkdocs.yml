@@ -62,17 +62,18 @@ markdown_extensions:
               - includes/abbreviations.md
       - admonition
       - pymdownx.details
-#       - pymdownx.superfences:
-#             custom_fences:
-#                   - name: mermaid
-#                     class: mermaid
-#                     format: !!python/name:pymdownx.superfences.fence_code_format
-#                     showSequenceNumbers: true
-#                     noteFontWeight: "10px"
-#                     actorFontSize: "10px"
-#                     messageFontSize: "10px"
-#       - pymdownx.tabbed:
-#             alternate_style: true
+      - pymdownx.magiclink
+      - pymdownx.superfences:
+            custom_fences:
+                  - name: mermaid
+                    class: mermaid
+                    format: !!python/name:pymdownx.superfences.fence_code_format
+                    showSequenceNumbers: true
+                    noteFontWeight: "10px"
+                    actorFontSize: "10px"
+                    messageFontSize: "10px"
+      - pymdownx.tabbed:
+            alternate_style: true
 
 
 nav:
@@ -84,27 +85,24 @@ nav:
             - 'Custom Elements' : 'b1g-custom-elements.md'
             - 'Editing Template' : 'editingTemplate.md'
       - Guidelines:
-            - 'Local Input Guidelines': 'input-guidelines.md'
-            - 'Harvest Schedule': 'schedule.md'
-            - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
             - 'Submit Resources' : 'submit-resources.md'
+            - 'Local Input Guidelines': 'input-guidelines.md'
+            
+            
       - 'Glossary': 'glossary.md'
       
 - Explanation:
       - Metadata Workflows:
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
-
+            - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
             - 'Supplemental Metadata' : 'supplementalMetadata.md'
-      - BTAA Geoportal:
-            - 'About the BTAA Geoportal' : 'purpose.md'
-            - 'Collection Development Policy': 'collection-development-policy.md'
-            - 'Curation Priorities': 'curation-priorities.md'
       - Harvesting:
             - 'About Metadata Harvesting' : 'about-harvesting.md'
             - 'Ephemeral Data' : 'ephemeral-data.md'
+            - 'Harvest Schedule': 'schedule.md'
             - 'DCAT Metadata' : 'dcat.md'
             - 'CKAN Data Portals' : 'ckan.md'
             
