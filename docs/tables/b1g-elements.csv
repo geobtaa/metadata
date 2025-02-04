@@ -13,7 +13,8 @@ b1g-11,[GeoNames](#geonames),`b1g_geonames_sm`,Optional
 b1g-12,[Publication State](#publication-state),`b1g_publication_state_s`,Required
 b1g-13,[Language String](#language-string),`b1g_language_sm`,Required
 b1g-14,[Creator ID](#creator-id),`b1g_creatorID_sm`,Optional
-,,,
-,,,
-,,,
-,,,
+b1g-15,[Conforms To](#conforms-to),`b1g_dct_conformsTo_sm`,Optional
+b1g-16,[Spatial Resolution in Meters](#spatial-resolution-in-meters),`b1g_dcat_spatialResolutionInMeters_sm`,Optional
+b1g-17,[Spatial Resolution as Text](#spatial-resolution-as-text),`b1g_geodcat_spatialResolutionAsText_sm`,Optional
+b1g-18,[Provenance Statement](#provenance-statement),`b1g_dct_provenanceStatement_sm`,Optional
+b1g-19,[Admin Tags](#admin-tags),`b1g_adminTags_sm`,Optional
