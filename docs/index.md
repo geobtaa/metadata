@@ -49,6 +49,16 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 ??? info "Metadata Handbook Version History"
 
+	_Changes for Version 5.2 (February 4, 2025)_
+	
+	This release includes documentation for several new metadata fields and updated worflows.
+	
+	* 	Five new metadata fields on the [Custom Elements](b1g-custom-elements.md) page
+	*  An updated workflow for the [ArcGIS Hub recipe](recipes/R-01_arcgis-hubs.md)
+	*  Description of a new tutorial about changing paths in the Terminal.
+	*  Removing links to documentation about GEOMG, now replaced by GBL Admin
+	*  An updated and refined the [Resource Lifecycle steps and accompanying graphics](resource-lifecycle/).
+	
 	_Changes for Version 5.1 (September 25, 2023)_
 	
 	This version adds several new recipes and page cleanups.
