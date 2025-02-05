@@ -1,47 +1,59 @@
 site_name: GeoBTAA Metadata Handbook
 site_author: Big Ten Academic Alliance Geospatial Information Network
-copyright : "2023"
+copyright : "2025"
 repo_url: https://github.com/geobtaa/metadata
 theme:
       name: material
       font:
             text: helvetica neue
       features:
-      - navigation.sections
-      - content.tooltips
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.top
+            - navigation.sections
+            - content.tooltips
+            - navigation.tabs
+            - navigation.tabs.sticky
+            - navigation.top
       logo: images/btaa-logo-white.png
       highlightjs: true
-      plugins:
-            - search
-            - table-reader
+plugins:
+      - search
+      - table-reader
+#             - git-revision-date-localized:
+#                   enable_creation_date: true
 #             - with-pdf:
 #                   output_path: export/b1g-handbook.pdf
-            - git-revision-date-localized:
-                  enable_creation_date: true
-
 extra_css:
       - stylesheets/extra.css
 
 markdown_extensions:
       - abbr
+      - def_list
+      - footnotes
       - tables
       - attr_list
       - md_in_html
+      - admonition
       - pymdownx.critic
       - pymdownx.caret
       - pymdownx.keys
       - pymdownx.mark
       - pymdownx.tilde
-      - pymdownx.magiclink
+      - pymdownx.details
+      - pymdownx.superfences
+      - pymdownx.snippets
+      - pymdownx.emoji:
+            emoji_index: !!python/name:material.extensions.emoji.twemoji
+            emoji_generator: !!python/name:material.extensions.emoji.to_svg
+            options:
+                  custom_icons:
+                        - overrides/.icons
+      - pymdownx.tabbed:
+            alternate_style: true
+            slugify: !!python/object/apply:pymdownx.slugs.slugify
+                  kwds:
+                        case: lower
       - toc:
             toc_depth: 2
             permalink: true
-      - pymdownx.emoji:
-            emoji_index: !!python/name:materialx.emoji.twemoji
-            emoji_generator: !!python/name:materialx.emoji.to_svg
       - def_list
       - pymdownx.tasklist:
             custom_checkbox: true
@@ -50,6 +62,7 @@ markdown_extensions:
               - includes/abbreviations.md
       - admonition
       - pymdownx.details
+      - pymdownx.magiclink
       - pymdownx.superfences:
             custom_fences:
                   - name: mermaid
@@ -72,27 +85,24 @@ nav:
             - 'Custom Elements' : 'b1g-custom-elements.md'
             - 'Editing Template' : 'editingTemplate.md'
       - Guidelines:
-            - 'Local Input Guidelines': 'input-guidelines.md'
-            - 'Harvest Schedule': 'schedule.md'
-            - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
             - 'Submit Resources' : 'submit-resources.md'
+            - 'Local Input Guidelines': 'input-guidelines.md'
+            
+            
       - 'Glossary': 'glossary.md'
       
 - Explanation:
       - Metadata Workflows:
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
-            - 'GEOMG Metadata Toolkit' : 'geomg.md'
+            - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
             - 'Supplemental Metadata' : 'supplementalMetadata.md'
-      - BTAA Geoportal:
-            - 'About the BTAA Geoportal' : 'purpose.md'
-            - 'Collection Development Policy': 'collection-development-policy.md'
-            - 'Curation Priorities': 'curation-priorities.md'
       - Harvesting:
             - 'About Metadata Harvesting' : 'about-harvesting.md'
             - 'Ephemeral Data' : 'ephemeral-data.md'
+            - 'Harvest Schedule': 'schedule.md'
             - 'DCAT Metadata' : 'dcat.md'
             - 'CKAN Data Portals' : 'ckan.md'
             

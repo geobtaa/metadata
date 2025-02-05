@@ -2,13 +2,10 @@
 
 `Version 2.0 - April 24, 2023`
 
-!!! info
-
-	This document replaces the [BTAA GDP Accession Guidelines for ArcGIS Open Data Portals, version 1.0](arcgis-harvest-policy-2018.md).
 
 ## Overview
 
-This document describes the BTAA-GIN Scanning Guidelines for ArcGIS Hubs, including eligible sites and records, harvest schedules, and remediation work. This policy may change at any time in response to updates to the ArcGIS Hub architecturs platform and/or the BTAA-GIN harvesting and remediation processes.
+This document describes the BTAA-GIN Scanning Guidelines for ArcGIS Hubs, including eligible sites and records, harvest schedules, and remediation work. This policy may change at any time in response to updates to the ArcGIS Hub architecture platform and/or the BTAA-GIN harvesting and remediation processes.
 
 ## Eligible sites
 
@@ -39,4 +36,7 @@ This document describes the BTAA-GIN Scanning Guidelines for ArcGIS Hubs, includ
 **Explanation**: We now scan a large number of ArcGIS Hubs, which makes manual remediation unrealistic.  This is in contrast to the previous policy established in 2018, when our collection was smaller.
 
 
+!!! info
+
+	This document replaces the [BTAA GDP Accession Guidelines for ArcGIS Open Data Portals, version 1.0](arcgis-harvest-policy-2018.md).
 

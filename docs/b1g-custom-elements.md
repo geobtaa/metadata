@@ -1,24 +1,9 @@
 # Custom Elements
 
-
 This page documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the [official OpenGeoMetadata (Aardvark) schema](https://opengeometadata.org).
 
-| b1g-id | Label                                         | URI                             | Obligation  |
-| ------ | --------------------------------------------- | ------------------------------- | ----------- |
-| b1g-01 | [Code](#code)                               | `b1g_code_s`                    | Required    |
-| b1g-02 | [Status](#status)                           | `b1g_status_s`                 | Optional    |
-| b1g-03 | [Accrual Method](#accrual-method)           | `b1g_dct_accrualMethod_s`      | Required    |
-| b1g-04 | [Accrual Periodicity](#accrual-periodicity) | `b1g_dct_accrualPeriodicity_s`| Optional    |
-| b1g-05 | [Date Accessioned](#date-accessioned)       | `b1g_dateAccessioned_s`        | Required    |
-| b1g-06 | [Date Retired](#date-retired)               | `b1g_dateRetired_s`             | Conditional |
-| b1g-07 | [Child Record](#child-record)               | `b1g_child_record_b`           | Conditional    |
-| b1g-08 | [Mediator](#mediator)                       | `b1g_dct_mediator_sm`          | Conditional |
-| b1g-09 | [Access](#access)                           | `b1g_access_s`                  | Conditional |
-| b1g-10 | [Image](#image)                             | `b1g_image_ss`                  | Optional |
-| b1g-11 | [GeoNames](#geonames)                       | `b1g_geonames_sm`                  | Optional |
-| b1g-12 | [Publication State](#publication-state)     |`b1g_publication_state_s`                  | Required |
-| b1g-13 | [Language String](#language-string)         |`b1g_language_sm`                  | Required |
-| b1g-14 | [Creator ID](#creator-id)                   |`b1g_creatorID_sm`               |Optional|
+{{ read_csv('tables/b1g-elements.csv') }}
+
 
 ## Code
 
@@ -243,5 +228,86 @@ This page documents the custom metadata elements for the GeoBTAA Metadata Profil
 | Entry Guidelines      | This field is entered as a URI representing an authority record            |
 | Commentary            | These best practices recommend consulting one or two name registries when deciding how to standardize names of creators: the Faceted Application of Subject Terminology (FAST) or the Library of Congress Name Authority File (LCNAF). FAST is a controlled vocabulary based on the Library of Congress Subject Headings (LCSH) that is well-suited to the faceted navigation of the Geoportal. The LCNAF is an authoritative list of names, events, geographic locations and organizations used by libraries and other organizations to collocate authorized creator names to make searching and browsing easier.
 | Controlled Vocabulary | yes                                                                                                                                                          |
-| Example value         | fst02013467                                                                                                                          |
+| Example value         | http://id.worldcat.org/fast/2013467                                                                                                                          |
+| Element Set           | B1G                                                                                                                                          |
+
+
+## Conforms To
+
+| Label                 | Conforms To                                                                                                                                                    |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_dct_conformsTo_sm`                                                                                                                                          |
+| Profile ID            | b1g-15                                                                                                                                                      |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To display the coordinate reference system                                                                                  |
+| Entry Guidelines      | This field is entered as a URI from a known online reference, such as epsg.io           |
+| Commentary            | This field is from Dublin Core. Our usage aligns with the DCAT-3 profile
+| Controlled Vocabulary | no                                                                                                                                                          |
+| Example value         | https://epsg.io/26915                                                                                                                          |
+| Element Set           | B1G/DCAT                                                                                                                                          |
+
+## Spatial Resolution in Meters
+
+| Label                 | Spatial Resolution in Meters                                                                                                                                                   |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_dcat_spatialResolutionInMeters_sm`                                                                                                                                          |
+| Profile ID            | b1g-16                                                                                                                                                    |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To indicate the resolution of a raster dataset                                                                                     |
+| Entry Guidelines      |   Enter a number representing the resolution in meters         |
+| Commentary            |  This is a DCAT-3 field |
+| Controlled Vocabulary | no                                                                                                                                                          |
+| Example value         | 100                                                                                                                         |
+| Element Set           | B1G/DCAT                                                                                                                                          |
+
+## Spatial Resolution as Text
+
+| Label                 | Spatial Resolution as Text                                                                                                                                                     |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_geodcat_spatialResolutionAsText_sm`                                                                                                                            |
+| Profile ID            | b1g-17                                                                                                                                                      |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To descriptively indicate the spatial resolution of an item                                                                                 |
+| Entry Guidelines      | Can be a scale, distance measure, or other free text.         |
+| Commentary            | This can be used for any resource, but may be most applicable to scanned map records that have a Scale value in the original MARC metadata. 
+| Controlled Vocabulary | no                                                                                                                                                          |
+| Example value         | Scale: 1:24,000                                                                                                                        |
+| Element Set           | B1G/GeoDCAT                                                                                                                                        |
+
+## Provenance Statement
+
+| Label                 | Provenance Statement                                                                                                                                                  |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_dct_provenanceStatement_sm`                                                                                                                                          |
+| Profile ID            | b1g-18                                                                                                                                                       |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To indicate where a dataset came from                                                                                     |
+| Entry Guidelines      | Enter plain text. It may include URLs.          |
+| Commentary            | This is primarily used for logging accessions, processing activities, and data sources. We are not currently using it to track where *metadata* was sourced- only where the *dataset* itself was sourced.  This is a Dublin Core field that has been adopted by DCAT-3. It is a crosswalk from the lineage element in ISO 19139.
+| Controlled Vocabulary | yes                                                                                                                                                          |
+| Example value         | Downloaded from https://www.nj.gov/transportation/refdata/gis/data.shtm August 19, 2024                                                                                                                       |
+| Element Set           | B1G / DCAT                                                                                                                                        |
+
+## Admin Tags
+
+| Label                 | Admin Tags                                                                                                                                                    |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URI                   | `b1g_adminTags_sm`                                                                                                                                          |
+| Profile ID            | b1g-19                                                                                                                                                       |
+| Obligation            | Optional                                                                                                                                                 |
+| Multiplicity          | 0-*                                                                                                                                                  |
+| Field type            | string |                                                                                                                                     
+| Purpose               | To store local tags to aid in finding and filtering items.                                                                                     |
+| Entry Guidelines      | Enter tags and codes as strings. Examples are for records cleaned during sprints and metadata updates.        |
+| Commentary            | This is a custom field that is only useful locally and not intended to be interoperable.
+| Controlled Vocabulary | no                                                                                                                                                          |
+| Example value         | bbox_cleanupSprint_2024                                                                                                                          |
 | Element Set           | B1G                                                                                                                                          |
