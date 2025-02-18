@@ -106,7 +106,9 @@ nav:
             - 'DCAT Metadata' : 'dcat.md'
             - 'CKAN Data Portals' : 'ckan.md'
             
-- Tutorials: 'tutorials.md'
+- Tutorials: 
+      - 'Harvesting': 'tutorials/python-jupyter.md' 
+      - 'Orientation': 'tutorials/orientation.md'
 
 - Recipes:  
       - 'About': 'recipes/index.md'
