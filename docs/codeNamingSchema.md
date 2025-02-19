@@ -19,8 +19,8 @@ Each website / collection in the BTAA Geoportal has an alphanumeric code. This c
 | 13 | University of Nebraska-Lincoln |
 | 14 | Rutgers University |
 | 15 | Northwestern University |
-| 16 | Washington University |
-| 17 | Oregon University |
+| 16 | University of Washington |
+| 17 | University of Oregon |
 
 | Second part of string | Type of organization hosting the datasests |
 | --- | ----------- |
