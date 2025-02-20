@@ -1,0 +1,20 @@
+b1g-id,Label,URI,Obligation
+b1g-01,[Code](#code),`b1g_code_s`,Required
+b1g-02,[Status](#status),`b1g_status_s`,Optional
+b1g-03,[Accrual Method](#accrual-method),`b1g_dct_accrualMethod_s`,Required
+b1g-04,[Accrual Periodicity](#accrual-periodicity),`b1g_dct_accrualPeriodicity_s`,Optional
+b1g-05,[Date Accessioned](#date-accessioned),`b1g_dateAccessioned_s`,Required
+b1g-06,[Date Retired](#date-retired),`b1g_dateRetired_s`,Conditional
+b1g-07,[Child Record](#child-record),`b1g_child_record_b`,Conditional
+b1g-08,[Mediator](#mediator),`b1g_dct_mediator_sm`,Conditional
+b1g-09,[Access](#access),`b1g_access_s`,Conditional
+b1g-10,[Image](#image),`b1g_image_ss`,Optional
+b1g-11,[GeoNames](#geonames),`b1g_geonames_sm`,Optional
+b1g-12,[Publication State](#publication-state),`b1g_publication_state_s`,Required
+b1g-13,[Language String](#language-string),`b1g_language_sm`,Required
+b1g-14,[Creator ID](#creator-id),`b1g_creatorID_sm`,Optional
+b1g-15,[Conforms To](#conforms-to),`b1g_dct_conformsTo_sm`,Optional
+b1g-16,[Spatial Resolution in Meters](#spatial-resolution-in-meters),`b1g_dcat_spatialResolutionInMeters_sm`,Optional
+b1g-17,[Spatial Resolution as Text](#spatial-resolution-as-text),`b1g_geodcat_spatialResolutionAsText_sm`,Optional
+b1g-18,[Provenance Statement](#provenance-statement),`b1g_dct_provenanceStatement_sm`,Optional
+b1g-19,[Admin Tags](#admin-tags),`b1g_adminTags_sm`,Optional
