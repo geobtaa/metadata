@@ -22,7 +22,7 @@ This handbook describes how to harvest and format metadata records for the [BTAA
 
 <div class="grid cards" markdown>
 
-- ### [Tutorials](tutorials.md)
+- ### [Tutorials](tutorials/python-jupyter.md)
 	
 	Short, easy to complete exercises to help someone get the basics of running and writing scripts to harvest metadata.
 
