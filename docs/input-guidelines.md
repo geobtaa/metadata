@@ -23,8 +23,11 @@ If the Creator value is from a name authority, insert the ID in this field.
 ### Provider
 This is the name of the organization hosting the resources. If the organization is part of the BTAA library network, a university icon will display next to the resource's title. However, most Providers will not have an icon.
 
+### Subject
+The OGM Aardvark profile recommends using a controlled vocabulary for subject terms, but does not specify one.  For the BTAA Geoportal, subjects should be in the format used by the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).
+
 ### Spatial Coverage
-This should be in the format used by the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).  
+Spatial Coverage (place names) should be in the format used by the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).  
 
 For US counties and cities, the format should be `state--county` or `state--city`. The state itself should also be included. Examples:
 
@@ -35,6 +38,9 @@ For US counties and cities, the format should be `state--county` or `state--city
 	- Wisconsin--Madison
 
 	- Wisconsin
+
+To facilitate searching, this field should include values up to the state level. For example, include both `Wisconsin--Dane County` and `Wisconsin`
+
 
 
 ### Bounding Box
