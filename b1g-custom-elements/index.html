@@ -1,0 +1,3391 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Big Ten Academic Alliance Geospatial Information Network">
+      
+      
+      
+        <link rel="prev" href="../geobtaa-metadata-application-profile/">
+      
+      
+        <link rel="next" href="../editingTemplate/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Custom Elements - GeoBTAA Metadata Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=helvetica+neue:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"helvetica neue";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#custom-elements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GeoBTAA Metadata Handbook" class="md-header__button md-logo" aria-label="GeoBTAA Metadata Handbook" data-md-component="logo">
+      
+  <img src="../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GeoBTAA Metadata Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Custom Elements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/geobtaa/metadata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../geobtaa-metadata-application-profile/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../resource-lifecycle/" class="md-tabs__link">
+          
+  
+  
+  Explanation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorials/python-jupyter/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../recipes/" class="md-tabs__link">
+          
+  
+  
+  Recipes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GeoBTAA Metadata Handbook" class="md-nav__button md-logo" aria-label="GeoBTAA Metadata Handbook" data-md-component="logo">
+      
+  <img src="../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    GeoBTAA Metadata Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/geobtaa/metadata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HOME
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Schema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Schema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geobtaa-metadata-application-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GeoBTAA Metadata Profile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Custom Elements
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Elements
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accrual-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accrual Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accrual-periodicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accrual Periodicity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-accessioned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date Accessioned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-retired" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date Retired
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      Child Record
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mediator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mediator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geonames" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeoNames
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publication-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creator ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conforms-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conforms To
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-resolution-in-meters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Resolution in Meters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-resolution-as-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Resolution as Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provenance-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provenance Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editingTemplate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Editing Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guidelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../submit-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Submit Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local Input Guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Explanation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Metadata Workflows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Metadata Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resource Lifecycle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcgis-hub-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArcGIS Hubs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Content Organization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Content Organization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content Organization Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resourceClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resource Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplementalMetadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supplemental Metadata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Harvesting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Harvesting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-harvesting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Metadata Harvesting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ephemeral-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ephemeral Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Harvest Schedule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dcat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DCAT Metadata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ckan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CKAN Data Portals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/python-jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Harvesting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/orientation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Orientation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Recipes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Harvest
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Harvest
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-01_arcgis-hubs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArcGIS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-02_socrata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Socrata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-03_ckan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CKAN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-04_oai-pmh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OAI-PMH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-05_iiif/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IIIF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-06_mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MODS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-07_ogm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenGeoMetadata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-08_pasda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PASDA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/R-09_umedia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UMedia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Edit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Edit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/clean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validate and Clean
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/add-bbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add bounding boxes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/split-bbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Split bounding boxes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/standardize-creators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standardize Creator names
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/update-hub-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update ArcGIS Hubs list
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipes/secondary-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multiple links in GEOMG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accrual-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accrual Method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accrual-periodicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accrual Periodicity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-accessioned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date Accessioned
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-retired" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date Retired
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      Child Record
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mediator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mediator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geonames" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeoNames
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publication-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creator ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conforms-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conforms To
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-resolution-in-meters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Resolution in Meters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-resolution-as-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Resolution as Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provenance-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provenance Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="custom-elements">Custom Elements<a class="headerlink" href="#custom-elements" title="Permanent link">&para;</a></h1>
+<p>This page documents the custom metadata elements for the GeoBTAA Metadata Profile. These elements extend the <a href="https://opengeometadata.org">official <abbr title="Metadata schema for GeoBlacklight">OpenGeoMetadata</abbr> (Aardvark) schema</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">b1g-id</th>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">URI</th>
+<th style="text-align: left;">Obligation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">b1g-01</td>
+<td style="text-align: left;"><a href="#code">Code</a></td>
+<td style="text-align: left;"><code>b1g_code_s</code></td>
+<td style="text-align: left;">Required</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-02</td>
+<td style="text-align: left;"><a href="#status">Status</a></td>
+<td style="text-align: left;"><code>b1g_status_s</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-03</td>
+<td style="text-align: left;"><a href="#accrual-method">Accrual Method</a></td>
+<td style="text-align: left;"><code>b1g_dct_accrualMethod_s</code></td>
+<td style="text-align: left;">Required</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-04</td>
+<td style="text-align: left;"><a href="#accrual-periodicity">Accrual Periodicity</a></td>
+<td style="text-align: left;"><code>b1g_dct_accrualPeriodicity_s</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-05</td>
+<td style="text-align: left;"><a href="#date-accessioned">Date Accessioned</a></td>
+<td style="text-align: left;"><code>b1g_dateAccessioned_s</code></td>
+<td style="text-align: left;">Required</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-06</td>
+<td style="text-align: left;"><a href="#date-retired">Date Retired</a></td>
+<td style="text-align: left;"><code>b1g_dateRetired_s</code></td>
+<td style="text-align: left;">Conditional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-07</td>
+<td style="text-align: left;"><a href="#child-record">Child Record</a></td>
+<td style="text-align: left;"><code>b1g_child_record_b</code></td>
+<td style="text-align: left;">Conditional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-08</td>
+<td style="text-align: left;"><a href="#mediator">Mediator</a></td>
+<td style="text-align: left;"><code>b1g_dct_mediator_sm</code></td>
+<td style="text-align: left;">Conditional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-09</td>
+<td style="text-align: left;"><a href="#access">Access</a></td>
+<td style="text-align: left;"><code>b1g_access_s</code></td>
+<td style="text-align: left;">Conditional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-10</td>
+<td style="text-align: left;"><a href="#image">Image</a></td>
+<td style="text-align: left;"><code>b1g_image_ss</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-11</td>
+<td style="text-align: left;"><a href="#geonames">GeoNames</a></td>
+<td style="text-align: left;"><code>b1g_geonames_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-12</td>
+<td style="text-align: left;"><a href="#publication-state">Publication State</a></td>
+<td style="text-align: left;"><code>b1g_publication_state_s</code></td>
+<td style="text-align: left;">Required</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-13</td>
+<td style="text-align: left;"><a href="#language-string">Language String</a></td>
+<td style="text-align: left;"><code>b1g_language_sm</code></td>
+<td style="text-align: left;">Required</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-14</td>
+<td style="text-align: left;"><a href="#creator-id">Creator ID</a></td>
+<td style="text-align: left;"><code>b1g_creatorID_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-15</td>
+<td style="text-align: left;"><a href="#conforms-to">Conforms To</a></td>
+<td style="text-align: left;"><code>b1g_dct_conformsTo_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-16</td>
+<td style="text-align: left;"><a href="#spatial-resolution-in-meters">Spatial Resolution in Meters</a></td>
+<td style="text-align: left;"><code>b1g_dcat_spatialResolutionInMeters_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-17</td>
+<td style="text-align: left;"><a href="#spatial-resolution-as-text">Spatial Resolution as Text</a></td>
+<td style="text-align: left;"><code>b1g_geodcat_spatialResolutionAsText_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-18</td>
+<td style="text-align: left;"><a href="#provenance-statement">Provenance Statement</a></td>
+<td style="text-align: left;"><code>b1g_dct_provenanceStatement_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;">b1g-19</td>
+<td style="text-align: left;"><a href="#admin-tags">Admin Tags</a></td>
+<td style="text-align: left;"><code>b1g_adminTags_sm</code></td>
+<td style="text-align: left;">Optional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_code_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-01</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To group records based upon their source</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Codes are developed by the metadata coordinator and indicate the provider, the type of institution hosting the resources, and a numeric sequence number. For more details, see <a href="../codeNamingSchema/">Code Naming Schema </a></td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This administrative field is used to group and track records based upon where they are harvested. This is frequently an identical value to "Member Of". The value will differ for records that are retired (these are removed from "Member Of") and records that are part of a subcollection.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes-strict</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>12d-01</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_status_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-02</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate if a record is currently active, retired, or unknown. It can also be used to indicate if individual data layers from website has been indexed in the Geoportal.</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Plain text string is acceptable</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This is a legacy admin field that was previously used to track published vs retired items. The current needs are still TBD.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accrual-method">Accrual Method<a class="headerlink" href="#accrual-method" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Accrual Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dct_accrualMethod_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-03</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To describe how the record was obtained</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Some values, such as "ArcGIS Hub" should be entered consistently. Others may be more descriptive, such as "Manually entered from text file."</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This allows us to find all of the ArcGIS records in one search. It also can help track records that have been harvested via different methods within the same collection.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>ArcGIS Hub</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/ Dublin Core</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accrual-periodicity">Accrual Periodicity<a class="headerlink" href="#accrual-periodicity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Accrual Periodicity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dct_accrualPeriodicity_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-04</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate how often a collection is reaccessioned</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter one of the following values: Annually, Semiannually, Quarterly, Monthly, As Needed</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This field is primarily for collection level records.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes-not strict</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>As Needed</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/ Dublin Core</td>
+</tr>
+</tbody>
+</table>
+<h2 id="date-accessioned">Date Accessioned<a class="headerlink" href="#date-accessioned" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Date Accessioned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dateAccessioned_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-05</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To store the date a record was harvested</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter the date a record was harvested OR when it was added to the geoportal using the format yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This field allows us to track how many records are ingested into the portal in a given time period and to which collections.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>2021-01-01</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="date-retired">Date Retired<a class="headerlink" href="#date-retired" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Date Retired</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dateRetired_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-06</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To store the date the record was removed from the geoportal public interface</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter the date a record was removed from the geoportal</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This field allows us to track how many records have been removed from the geoportal interface by time period and collection.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>2021-01-02</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="child-record">Child Record<a class="headerlink" href="#child-record" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Child Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_child_record_b</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-07</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string boolean</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To apply an algorithm to the record that causes it to appear lower in search results</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Only one of two values are allowed: true or false</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This is used to lower a record's placement in search results. This can be useful for a large collection with many similar metadata values that might clutter a user's experience.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>string boolean</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mediator">Mediator<a class="headerlink" href="#mediator" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Mediator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dct_mediator_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-08</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-0 or 1-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate the universities that have licensed access to a record</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>The value for this field should be one of the names for each institution that have been coded in the GeoBlacklight application.</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This populates a facet on the search page so that users can filter to only databases that they are able log into based upon their institutional affiliation.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>University of Wisconsin-Madison</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/ Dublin Core</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access">Access<a class="headerlink" href="#access" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_access_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-09</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-0 or 1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string JSON</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To supply the links for restricted records</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>The field value is an array of key/value pairs, with keys representing an insitution code and values the URL for the library catalog record. See the Access Template for entry.</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This field is challenging to construct manually, is it is a JSON string of institutional codes and URLs. The codes are used instead of the actual names in order to make the length of the field more manageable and to avoid spaces.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>{\"03\":\"<a href="https://purl.lib.uiowa.edu/PolicyMap">https://purl.lib.uiowa.edu/PolicyMap</a>\",\"04\":\"<a href="https://www.lib.umd.edu/dbfinder/id/UMD09180">https://www.lib.umd.edu/dbfinder/id/UMD09180</a>\",\"05\":\"<a href="https://primo.lib.umn.edu/permalink/f/1q7ssba/UMN_ALMA51581932400001701">https://primo.lib.umn.edu/permalink/f/1q7ssba/UMN_ALMA51581932400001701</a>\",\"06\":\"<a href="http://catalog.lib.msu.edu/record=b10238077~S39a">http://catalog.lib.msu.edu/record=b10238077~S39a</a>\",\"07\":\"<a href="https://search.lib.umich.edu/databases/record/39117">https://search.lib.umich.edu/databases/record/39117</a>\",\"09\":\"<a href="https://libraries.psu.edu/databases/psu01762">https://libraries.psu.edu/databases/psu01762</a>\",\"10\":\"<a href="https://digital.library.wisc.edu/1711.web/policymap">https://digital.library.wisc.edu/1711.web/policymap</a>\",\"11\":\"<a href="https://library.ohio-state.edu/record=b7869979~S7">https://library.ohio-state.edu/record=b7869979~S7</a>\"}</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_image_ss</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-10</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-0 or 0-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>stored string (URL)</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To show a thumbnail on the search results page</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter an image file using a secure link (https). Acceptable file types are JPEG or PNG</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This link is used to harvest an image into the Geoportal server for storage and display. Once it has been harvested, it will remain in storage, even if the orginal link to the image stops working.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td><a href="https://gis.allencountyohio.com/GIS/Image/countyseal.jpg">https://gis.allencountyohio.com/GIS/Image/countyseal.jpg</a></td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="geonames">GeoNames<a class="headerlink" href="#geonames" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>GeoNames</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_geonames_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-11</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>stored string (URI)</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate a URI for a place name from the <a href="https://www.geonames.org">GeoNames database</a></td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter a value in the format "<a href="http://sws.geonames.org/">http://sws.geonames.org/</a><code>URI</code>"</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This URI provides a linked data value for one or more place names. It is optional as there is currently no functionality tied to it in the GeoBlacklight application</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td><a href="https://sws.geonames.org/2988507">https://sws.geonames.org/2988507</a></td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="publication-state">Publication State<a class="headerlink" href="#publication-state" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Publication State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_publication_state_s</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-12</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-1</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To communicate to Solr if the item is public or hidden</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Use the dropdown or batch editing functions to change the state</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>When items are first added to <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr>, they are set as Draft by default. When they are ready to be published, they can be manually changed to Published. If the record is retired or needs to be hidden, it can be changed to Unpublished</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="language-string">Language string<a class="headerlink" href="#language-string" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Language string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_language_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-13</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>1-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To display the spelled out string (in English) of a language code to users</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>This field is automatically generated from the <a href="https://opengeometadata.org/docs/ogm-aardvark/language">Language</a> field in the main form</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>The OGM schema specified using a 3-digit code to indicate lanuage. In order to display this to users, it needs to be translated into a human-readable string.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>French</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creator-id">Creator ID<a class="headerlink" href="#creator-id" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Creator ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_creatorID_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-14</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To track the URI of a creator value</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>This field is entered as a URI representing an authority record</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>These best practices recommend consulting one or two name registries when deciding how to standardize names of creators: the Faceted Application of Subject Terminology (FAST) or the Library of Congress Name Authority File (LCNAF). FAST is a controlled vocabulary based on the Library of Congress Subject Headings (LCSH) that is well-suited to the faceted navigation of the Geoportal. The LCNAF is an authoritative list of names, events, geographic locations and organizations used by libraries and other organizations to collocate authorized creator names to make searching and browsing easier.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td><a href="http://id.worldcat.org/fast/2013467">http://id.worldcat.org/fast/2013467</a></td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conforms-to">Conforms To<a class="headerlink" href="#conforms-to" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Conforms To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dct_conformsTo_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-15</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To display the coordinate reference system</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>This field is entered as a URI from a known online reference, such as epsg.io</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This field is from Dublin Core. Our usage aligns with the <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr>-3 profile</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td><a href="https://epsg.io/26915">https://epsg.io/26915</a></td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/<abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spatial-resolution-in-meters">Spatial Resolution in Meters<a class="headerlink" href="#spatial-resolution-in-meters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Spatial Resolution in Meters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dcat_spatialResolutionInMeters_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-16</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate the resolution of a raster dataset</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter a number representing the resolution in meters</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This is a <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr>-3 field</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/<abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr></td>
+</tr>
+</tbody>
+</table>
+<h2 id="spatial-resolution-as-text">Spatial Resolution as Text<a class="headerlink" href="#spatial-resolution-as-text" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Spatial Resolution as Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_geodcat_spatialResolutionAsText_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-17</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To descriptively indicate the spatial resolution of an item</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Can be a scale, distance measure, or other free text.</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This can be used for any resource, but may be most applicable to scanned map records that have a Scale value in the original MARC metadata.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>Scale: 1:24,000</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G/GeoDCAT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="provenance-statement">Provenance Statement<a class="headerlink" href="#provenance-statement" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Provenance Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_dct_provenanceStatement_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-18</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To indicate where a dataset came from</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter plain text. It may include URLs.</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This is primarily used for logging accessions, processing activities, and data sources. We are not currently using it to track where <em>metadata</em> was sourced- only where the <em>dataset</em> itself was sourced.  This is a Dublin Core field that has been adopted by <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr>-3. It is a crosswalk from the lineage element in ISO 19139.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>Downloaded from <a href="https://www.nj.gov/transportation/refdata/gis/data.shtm">https://www.nj.gov/transportation/refdata/gis/data.shtm</a> August 19, 2024</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G / <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr></td>
+</tr>
+</tbody>
+</table>
+<h2 id="admin-tags">Admin Tags<a class="headerlink" href="#admin-tags" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Admin Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URI</td>
+<td><code>b1g_adminTags_sm</code></td>
+</tr>
+<tr>
+<td>Profile ID</td>
+<td>b1g-19</td>
+</tr>
+<tr>
+<td>Obligation</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Multiplicity</td>
+<td>0-*</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>To store local tags to aid in finding and filtering items.</td>
+</tr>
+<tr>
+<td>Entry Guidelines</td>
+<td>Enter tags and codes as strings. Examples are for records cleaned during sprints and metadata updates.</td>
+</tr>
+<tr>
+<td>Commentary</td>
+<td>This is a custom field that is only useful locally and not intended to be interoperable.</td>
+</tr>
+<tr>
+<td>Controlled Vocabulary</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Example value</td>
+<td>bbox_cleanupSprint_2024</td>
+</tr>
+<tr>
+<td>Element Set</td>
+<td>B1G</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
