@@ -2,36 +2,66 @@
 
 ## Background and Purpose
 
-We do annual reviews of websites with a lot of resources that can't easily be updated or evaluated by an existing script or recipe, usually due to issues with the APIs or site structure. 
+We annually review websites with many GIS resources that can't easily be updated by an existing script or recipe, usually due to issues with the site's API or structure. 
 
-The purpose of an annual review is not to fix or update all records associated with a website, but simply to assess whether the website has changed, evaluate the magnitude of any changes, and make a recommendation for further action. If many resources have been added or removed from the website, if the site structure has changed significantly, or if many of our associated records in GBL have broken links, then the site will need to be partially or completely re-harvested. 
+These sites can be found by searching GeoBlacklight Admin for the tag "staticSites" and then filtering by the Resource Class "Website". Their child resources are tagged "staticSitesPart." Generally speaking, the resources on these sites do not have direct file download links in the GeoPortal, and in some cases the individual resources may not be indexed. 
+
+The purpose of an annual review is not to fix or update all records associated with a website, but rather to 1. assess and triage major changes to the website's main page, 2. make a snapshot of the site's current state for future comparison, and 3. in some cases, compare the current state of the resources available on the site to past snapshots and/or records in GBL.
+
+This may lead to recommendations for further harvesting or editing steps. These could include re-classifying the site to be harvested with a recipe (for example, if it has been converted to an ArcGIS Hub), removing some records, reharvesting some or all of the site manually, etc. If the site structure has changed significantly, if many resources have been added or removed from the website, or if many of our associated records in GBL have broken links, the site may need to be partially or completely re-harvested. Complete as many steps as possible at the time of the review, as long as they are brief enough that they don't delay other reviews. 
 
 ## How to Complete an Annual Review
-Use the GitHub issue to track your progress and record your results. This process is best done with a wide screen or multiple monitors so you can view two windows next to each other. 
+Use the GitHub issue to track progress and record results. This process is best done with a wide screen or multiple monitors so you can view two windows next to each other. 
 
-### Evaluate the main website record page
+### Triage the Main Website Record Page
+
+> This step is required.
+
 1. Visit the Geoportal resource page for the parent website that you're reviewing. You can typically find the link associated with the GitHub issue, or you can search the Geoportal directly, usually under the **Websites** Resource Class. 
 
-2. Use the blue **Visit Source** link in the right sidebar to open the source site in a new tab or window. You will compare this site to the records in the Geoportal, so viewing them side by side is helpful. 
+2. Check the **Title**, **Description**, and **Format** sections of the main website record page in the Geoportal. Is this information still accurate? If there are any links in the **Description** field, do they still work? *Note* changes or no change in the GitHub issue.
 
-3. If the **Visit Source** link is broken or doesn't bring you to the expected source website, try to locate the correct URL for this website. Use search engines and/or look for mentions of GIS or maps on the site(s) of the agency or entity providing the records. *Make a note* in the GitHub issue on the status of the **Visit Source** link and any new URLs, as appropriate. 
+3. Use the blue **Visit Source** link in the right sidebar to open the source site in a new tab or window. It should bring you to a static web page with a list of links to GIS resources. 
 
-4. Check the **Title**, **Description**, and **Format** sections of the main website record page in the Geoportal. Is this information still accurate? *Note* any changes in the GitHub issue.
+4. If the **Visit Source** link is broken or brings you to a web page that *doesn't* have links to GIS resources, try to locate a working or better URL for this website. Use search engines and/or look for mentions of GIS or maps on the site(s) of the agency or entity providing the records. In most cases, the list of resources in GBL should roughly match those on the source site. 
 
-### Compare the Geoportal records with the resources on the source website
+> If the **Visit Source** link needs to be updated, do so right away using the following instructions.
 
-5. On the Geoportal website record, click **Browse all [number] records** under the  **Has part...** section. This will open a search for **Is Part Of > *resource ID***. 
+> If you find that the website has been replaced by an ArcGIS Hub, follow the instructions to [add a new ArcGIS Hub website](https://gin.btaa.org/metadata/recipes/update-hub-list/). 
 
-6. Compare the total number of resources in this list with the total number of GIS resources available on the source website. *Make a note* in the Github issue of how many resources exist in both places. 
 
-7. Briefly, visually scan both lists of resources. Note your assessment of what has been added or removed, if anything. You don't need to check every link or make a complete list of changes. Our goal is to evaluate the magnitude of the change.  
+#### If Needed: Update "Visit Source" Link  
+1. Search GeoBlacklight Admin for the ID of the website. Select all records with the incorrect source website link, including the indexed child records. 
 
-5. In the **Is Part Of** search results, open the first record in a new tab or window. In a comment on the GitHub issue or notes elsewhere, start a numbered list, and put the link/title of this resource as the first item in the list. 
-6. Check to see if a resource with the same name is present on the source cite. This could be in the main list of resources, or you may need to search the site. Every source cite is organized slightly differently. Note "resource present on source site" or "resource not present on source site" in the comment.
-7. check links in description of geoportal page, if any, and note broken links
-8. Make an attempt to find resource elsewhere and if you find that it's been moved, note new location
-9. Label this numbered list item in the comment as **NO CHANGE**, **NEEDS CHANGE**, or **REMOVED**.
-10. Repeat steps 5-9 for each resource in the **Is Part Of** search results.
-10. Check main page of source site and any additional locations you've found for GIS resources that aren't part of the catalog in the geoportal. Make a list of **ADDED** resources. 
+2. Export the Distributions CSV for these records. Edit this to create a list of only the links that need to be replaced. These will generally be "documentatation - external" type links, so you can do this by removing all rows *except* that type. 
 
-- we can spot check instead of checking every record if there are more than a certain total number
+3. Go to **Distributions** under the **Admin Tools** menu. Click **Delete CSV** in the upper right corner. Click **Choose File** and select the CSV you downloaded in the previous step. Use this to delete the incorrect source URLs before uploading the corrected ones. This is necessary because there can be multiple entries for each type of distribution link, which means that uploading a new table does not overwrite existing data.
+
+4. In the Distributions CSV edited in step 2, replace all instances of the broken or outdated link with the new correct link. 
+
+5. Import this corrected Distributions table in GeoBlacklight Admin. 
+
+6. Spot check the results on the GBL record pages of affected records. 
+
+### Create a Snapshot for Comparison
+
+> This step is required only for large indexed websites with many child records. 
+
+1. Make a snapshot of the resources currently on the source website by copying and pasting all text on the page(s) or saving the whole page as an HTML file. 
+
+2. Make a snapshot of the records currently in GeoBlacklight by exporting both Primary and Distributions CSVs of all indexed records associated with the website. 
+
+3. Attach these snapshotes to the GitHub ticket for the annual review. This ticket can be referenced for comparison the following year.
+
+
+### Compare the Current Website to the Previous Snapshot
+
+> This step applies only to indexed websites with many child records and only if a snapshot was previously created. 
+
+1. Check past GitHub tickets for snapshots of the source website or past GeoBlacklight records.
+
+2. If CSV exports of past GBL records exist, compare these to the current snapshot CSVs made in the previous step. This can be done manually or with a script if many records are involved. 
+
+3. If only a snapshot of the website exists, compare it with the current snapshot of the website. Use this to evaluate the magnitude of changes. Note in the GitHub ticket roughly how many resources appear to have been added, removed, or otherwise altered. 
+
+4. If a great number of records have been changed, evaluate whether the website can be reharvested with any automated means, needs to be reharvested manually, or may no longer need to be indexed at all. Make a recommendation for next steps. 
