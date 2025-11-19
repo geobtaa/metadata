@@ -10,7 +10,7 @@ For the following elements, the GeoBTAA Metadata Profile has input guidelines be
 Although [Language is optional in the OGM schema](https://opengeometadata.org/docs/ogm-aardvark/language), a three-digit code is required for the BTAA Geoportal.
 
 ### Creator
-When possible, Creators should be drawn from a value in the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).
+When possible, Creators should be drawn from a value in the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html). It is the first value in a data citation.
 
 ### Creator ID
 If the Creator value is from a name authority, insert the ID in this field.
@@ -18,10 +18,12 @@ If the Creator value is from a name authority, insert the ID in this field.
 ### Publisher
 **Maps**: Publisher values for maps are pulled from the original catalog record. Remove subfields for place names and dates.
 
-**Datasets**: The BTAA Geoportal does not use the Publisher field for Datasets.
+**Datasets**: The organization or project that makes the resource available, such as an agency or data portal.
+
+This value appears after the title and year in a data citation.
 
 ### Provider
-This is the name of the organization hosting the resources. If the organization is part of the BTAA library network, a university icon will display next to the resource's title. However, most Providers will not have an icon.
+This field is for identifying the library or organization that archives the resource. It is primarily for submissions to the OpenGeoMetadata project. It is not part of a citation.
 
 ### Subject
 The OGM Aardvark profile recommends using a controlled vocabulary for subject terms, but does not specify one.  For the BTAA Geoportal, subjects should be in the format used by the [Faceted Application of Subject Terminology (FAST)](https://www.oclc.org/research/areas/data-science/fast.html).
