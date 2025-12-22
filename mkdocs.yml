@@ -113,6 +113,7 @@ nav:
 - Recipes:  
       - 'About': 'recipes/index.md'
       - Harvest:
+            - 'Harvest Workflows': 'harvest-workflows.md'
             - 'ArcGIS': 'recipes/R-01_arcgis-hubs.md'
             - 'Socrata': 'recipes/R-02_socrata.md'
             - 'CKAN': 'recipes/R-03_ckan.md'
