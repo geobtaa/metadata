@@ -1,4 +1,4 @@
-# Annual Review of Catalog Websites
+# How to Perform Annual Reviews of Catalog Websites
 
 ## Background and Purpose
 

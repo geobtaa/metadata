@@ -52,7 +52,7 @@ markdown_extensions:
                   kwds:
                         case: lower
       - toc:
-            toc_depth: 2
+            toc_depth: 3
             permalink: true
       - def_list
       - pymdownx.tasklist:
@@ -80,56 +80,29 @@ nav:
 - HOME: 'index.md'
   
 - Reference:
-      - Schema:
-            - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
-            - 'Custom Elements' : 'b1g.md'
-            - 'Editing Template' : 'editingTemplate.md'
-      - Guidelines:
-            - 'Submit Resources' : 'submit-resources.md'
-            - 'Local Input Guidelines': 'input-guidelines.md'
-            
-            
-      - 'Glossary': 'glossary.md'
+      - 'Custom Elements' : 'b1g.md'
+      - 'Local Controlled Values': 'local-values.md'
       
 - Explanation:
       - Metadata Workflows:
+            - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
+            - 'Editing Template' : 'editingTemplate.md'
             - 'Resource Lifecycle' : 'resource-lifecycle.md'
             - 'ArcGIS Hubs' : 'arcgis-hub-guidelines.md'
       - Content Organization:
             - 'Content Organization Model' : 'model.md'
             - 'Resource Classes' : 'resourceClasses.md'
             - 'Supplemental Metadata' : 'supplementalMetadata.md'
-      - Harvesting:
-            - 'About Metadata Harvesting' : 'about-harvesting.md'
-            - 'Ephemeral Data' : 'ephemeral-data.md'
-            - 'Harvest Schedule': 'schedule.md'
-            - 'DCAT Metadata' : 'dcat.md'
-            - 'CKAN Data Portals' : 'ckan.md'
-            
-- Tutorials: 
-      - 'Harvesting': 'tutorials/python-jupyter.md' 
-      - 'Orientation': 'tutorials/orientation.md'
 
-- Recipes:  
-      - 'About': 'recipes/index.md'
-      - Harvest:
-            - 'Harvest Workflows': 'harvest-workflows.md'
-            - 'ArcGIS': 'recipes/R-01_arcgis-hubs.md'
-            - 'Socrata': 'recipes/R-02_socrata.md'
-            - 'CKAN': 'recipes/R-03_ckan.md'
-            - 'OAI-PMH': 'recipes/R-04_oai-pmh.md'
-            - 'IIIF': 'recipes/R-05_iiif.md'
-            - 'MODS': 'recipes/R-06_mods.md'
-            - 'OpenGeoMetadata': 'recipes/R-07_ogm.md'
-            - 'PASDA' : 'recipes/R-08_pasda.md'
-            - 'UMedia' : 'recipes/R-09_umedia.md'
-                  
-      - Edit:   
-            - 'Validate and Clean': 'recipes/clean.md'
-            - 'Add bounding boxes': 'recipes/add-bbox.md'
-            - 'Split bounding boxes': 'recipes/split-bbox.md'
-            - 'Standardize Creator names': 'recipes/standardize-creators.md'
-            - 'Update ArcGIS Hubs list': 'recipes/update-hub-list.md'
-            - 'Multiple links in GEOMG': 'recipes/secondary-tables.md'
-      
+- How To Guides:
+      - 'Submit resources' : 'recipes/submit-resources.md'
+      - 'Perform annual reviews': 'recipes/annual-review.md'
+      - 'Add bounding boxes': 'recipes/add-bbox.md'
+      - 'Split bounding boxes': 'recipes/split-bbox.md'
+      - 'Standardize Creator names': 'recipes/standardize-creators.md'
+      - 'Update ArcGIS Hubs list': 'recipes/update-hub-list.md'     
+
+- Tutorials: 
+      - 'Orientation': 'tutorials/orientation.md' 
+      - 'Harvesting Basics': 'tutorials/python-jupyter.md' 
       

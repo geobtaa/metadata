@@ -3,6 +3,8 @@ hide:
   - toc
 ---
 
+# How to Add Bounding Boxes
+
 !!! summary
 
 	This page describes processes for obtaining bounding box coordinates for our scanned maps. The coordinates will be used for indexing the records in the Big Ten Academic Alliance Geoportal.

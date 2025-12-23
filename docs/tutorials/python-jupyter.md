@@ -1,4 +1,6 @@
-These tutorials are short, easy to complete exercises to help someone get the basics of running and writing scripts to harvest metadata. They are available as Jupyter Notebooks hosted in GitHub in the [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).
+# Tutorials for Harvesting Basics
+
+These tutorials are short, easy to complete exercises to help someone get the basics of running and writing scripts to harvest metadata. They are available as Jupyter Notebooks in the [Harvesting Guide repository](https://github.com/geobtaa/harvesting-guide).
 
 ## 1. [Setting up your environment](https://github.com/geobtaa/harvesting-guide/tree/main/tutorials/T-01_setting-up)
 

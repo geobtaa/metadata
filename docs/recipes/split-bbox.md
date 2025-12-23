@@ -1,4 +1,4 @@
-# Split Bounding Boxes that cross the 180th Meridian
+# How to Split Bounding Boxes that cross the 180th Meridian
 
 ## Problem
 

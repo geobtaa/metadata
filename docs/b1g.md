@@ -8,7 +8,7 @@
 | Entry Guidelines | Use the Licensed Data tab in the GeoBTAA Template. It has three columns: friendlier_id, institution_code, and access_URL. friendlier_id is the ID of the parent record. institution_code is a dropdown value for a BTAA institution. access_URL is the URL for the institution’s library catalog record for the database. |
 | Example Value | https://search.lib.umich.edu/databases/record/39117 |
 | Controlled Vocabulary? | FALSE |
-| Vocabulary List | https://docs.google.com/spreadsheets/d/1g7TFqjYQ2KEShhocI0stINnI1cYDoMpoFgD8yWA6tbM/edit?gid=1084902039#gid=1084902039 |
+| Vocabulary List | |
 | Field Type | String |
 | Multivalued? | FALSE |
 | Required? | FALSE |
