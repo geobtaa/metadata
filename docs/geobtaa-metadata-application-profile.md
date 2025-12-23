@@ -18,7 +18,7 @@ The GeoBTAA Metadata Application Profile consists of the following components:
 - The GeoBTAA profile includes custom fields for lifecycle tracking and administration
 - These elements are generally added to the record by admin staff. When they appear on editing templates, they are grayed out.
 - They all start with the namespace `b1g`
-- **See the [Custom Elements page](b1g-custom-elements.md) for more detail**
+- **See the [Custom Elements page](b1g.md) for more detail**
 
 
 ### 3. GeoBTAA Input Guidelines

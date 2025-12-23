@@ -82,7 +82,7 @@ nav:
 - Reference:
       - Schema:
             - 'GeoBTAA Metadata Profile': 'geobtaa-metadata-application-profile.md'
-            - 'Custom Elements' : 'b1g-custom-elements.md'
+            - 'Custom Elements' : 'b1g.md'
             - 'Editing Template' : 'editingTemplate.md'
       - Guidelines:
             - 'Submit Resources' : 'submit-resources.md'
