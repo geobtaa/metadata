@@ -1,4 +1,4 @@
-# Best Practices for Standardizing Creator Field Data
+# How to Standardize the Creator Field
 
 :fontawesome-solid-user: Authors: Creator Standardization Working Group
 

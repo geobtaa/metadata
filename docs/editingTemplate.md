@@ -9,23 +9,19 @@ The Template contains the following tabs:
 
 - `Primary Template full`
 : 	This tab contains all of fields in our profile and is useful for records with more extensive metadata.
+
+- `Schema Documentation`
+:	This lists all of the fields, their definitions, how to enter values, and key attributes.
 	
-- `Distributions Template`
-:	This tab is for each resource's links, including landing pages, downloads, web services, and supplemental documentation.
-	
-- `Field Definitions`
-:	This lists all of the fields, their definitions, and key attributes.
+- `Distributions`
+:	A secondary template for each resource's links, including landing pages, downloads, web services, and supplemental documentation.
 
 - `Licensed Access Links`
-:	A special template for uploading access links for licensed databases
+:	A secondary template for uploading access links for licensed databases
+
+- `Data Dictionary`
+:	A secondary template for creating Data Dictionaries. These are uploaded as separate tables for resources.
 	
 - `Controlled Vocabulary`
 :	A list of the acceptable values for certain fields. This tab powers the dropdown fields in the templates.
 
-!!! Warning "Note"
-
-	The input format for some fields in this template may differ from how the field is documented in [OpenGeoMetadata](https://opengeometadata.org). These differences are intended to make it easier to enter values, which will be transformed when we upload the record to GBL Admin.
-
-	- **Bounding Box** coordinates should be entered as `W,S,E,N`. The coordinates are automatically transformed to a different order `ENVELOPE(W,E,N,S)`. Read more under the [Local Input Guidelines](input-guidelines.md).
-
-	- **Date Range **should be entered as `yyyy-yyyy`. This is automatically transformed to [yyyy TO yyyy].
