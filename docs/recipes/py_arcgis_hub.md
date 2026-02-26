@@ -53,8 +53,8 @@ How it works:
 - Does not update the "date accessioned" field. 
 
 Steps: 
-1. In VSCode, navigate to the **scripts** folder within the **harvester-api** repository.
-2. Open and run the **build_uploads.py** script. When it's finished, there should be new Primary and Distributions CSVs in the **outputs** folder named with the present date and the suffix "**_upload**." These are *difference* CSVs, and they include only records that have changed 
+1. In VSCode, change directories to the **scripts** folder within the **harvester-api** repository.
+2. Run the **build_uploads.py** script ("uv run build_uploads.py"). When it's finished, there should be new Primary and Distributions CSVs in the **outputs** folder named with the present date and the suffix "**_upload**." These are *difference* CSVs, and they include only records that have changed since the previous full harvest CSVs in your Outputs folder.
 3. In the VSCode terminal, the script should also report how many records were added and retired. Record these numbers in the harvest ticket. 
 4. In GeoBlacklight Admin, navigate to the **Admin Tools** menu and select **Import Primary**. Name the import "**[Ticket #]-ArcHubs Harvest-YYYY-MM-DD**". Select **BTAA CSV** under **Type**. 
 5. Click the **Choose file** button and select the current **primary_upload** difference CSV from the **outputs** folder. Click through to start the import.
@@ -74,7 +74,7 @@ Steps:
 2. Click the **Choose file** button and select the current date's **primary** CSV from the **outputs** folder. (No need to run the build_uploads script - just use the harvest script's output directly!) Click through to start the import.
 3. Next, navigate to the **Admin Tools** menu and select **Import Distributions**. Name the import "**[Ticket #]-ArcHubs Harvest-YYYY-MM-DD-Distributions**". *Note*: you must import the Primary CSV before the Distributions CSV.
 4. Click the **Choose file** button and select the current date's **distributions** CSV from the **outputs** folder (again, NOT distributions-uploads, just [date]-distributions). Click through to start the import. 
-5. Unlike a difference upload, a full upload does not unpublish records that have been removed from their parent hubs. This must be done manually. (Details in progress.)
+5. Unlike a difference upload, a full upload does not unpublish records that have been removed from their parent hubs. This must be done manually. After completing the upload, view the list of all published ArcGIS Hub records, and unpublish any whose date accessioned field is older than several weeks. 
 
 
 ## Troubleshooting
@@ -93,7 +93,7 @@ Unless otherwise specified, all values in the fields below are automatically pop
 
 - Accrual Method: Automated retrieval
 - Accrual Periodicity: Weekly
-- Date Accessioned: The most recent date on which a record's *parent hub* was harvested. *Not necessarily* the most recent time the child record was confirmed to still exist during a harvest!
+- Date Accessioned: The most recent date on which a record's *parent hub* was harvested, *not necessarily* the most recent time the child record was confirmed to still exist during a harvest.
 - Date Retired: The most recent date on which a record was unpublished. 
 - Endpoint Description: DCAT API
 - Endpoint URL: The DCAT 1.1 API feed URL of the parent Hub, which can be found by clicking the "Explore Feeds" link at the bottom of a Hub's homepage. Typically, this is the hub's main URL followed by "api/feed/dcat-us/1.1.json"
