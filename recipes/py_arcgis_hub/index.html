@@ -1,0 +1,1539 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Big Ten Academic Alliance Geospatial Information Network">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>ArcGIS Hubs Harvest Recipe - GeoBTAA Metadata Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=helvetica+neue:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"helvetica neue";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arcgis-hubs-harvest-recipe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GeoBTAA Metadata Handbook" class="md-header__button md-logo" aria-label="GeoBTAA Metadata Handbook" data-md-component="logo">
+      
+  <img src="../../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GeoBTAA Metadata Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ArcGIS Hubs Harvest Recipe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/geobtaa/metadata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../b1g/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../geobtaa-metadata-application-profile/" class="md-tabs__link">
+          
+  
+  
+  Explanation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../submit-resources/" class="md-tabs__link">
+          
+  
+  
+  How To Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/orientation/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GeoBTAA Metadata Handbook" class="md-nav__button md-logo" aria-label="GeoBTAA Metadata Handbook" data-md-component="logo">
+      
+  <img src="../../images/btaa-logo-white.png" alt="logo">
+
+    </a>
+    GeoBTAA Metadata Handbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/geobtaa/metadata" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b1g/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Controlled Values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explanation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Explanation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metadata Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geobtaa-metadata-application-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeoBTAA Metadata Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editingTemplate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resource-lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arcgis-hub-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArcGIS Hubs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Organization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Content Organization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Organization Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resourceClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../supplementalMetadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supplemental Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How To Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How To Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../submit-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submit resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annual-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perform annual reviews
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-bbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add bounding boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../split-bbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Split bounding boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standardize-creators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standardize Creator names
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-hub-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Update ArcGIS Hubs list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/orientation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/python-jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Harvesting Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-launch-the-fastapi-arcgis-metadata-harvester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Launch the fastAPI ArcGIS Metadata Harvester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-retrieve-and-prepare-the-hubs-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Retrieve and Prepare the Hubs List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-the-harvester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the Harvester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-prepare-and-upload-the-harvest-csvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Prepare and Upload the Harvest CSVs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation-of-fields-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation of Fields and Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explanation of Fields and Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provenance-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provenance Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="arcgis-hubs-harvest-recipe">ArcGIS Hubs Harvest Recipe<a class="headerlink" href="#arcgis-hubs-harvest-recipe" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This article contains instructions for harvesting and ingesting metadata records from ArcGIS Hub websites. It also includes troubleshooting recommendations and information about field values.</p>
+<p>The metadata is retrieved from <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> 1.1 <abbr title="Application Programming Interface">API</abbr> feeds using a python script, returned as a CSV using the GeoBTAA Metadata Schema, and uploaded to the BTAA Geoportal through the GeoBlacklight Admin interface.   </p>
+<p>Records can be uploaded in two ways: 
+- A <em>full upload</em>, in which all records that were found by the harvest script are published and absent records must be manually unpublished
+- A <em>difference upload</em>, in which the CSV returned by the harvest script is filtered to include only records that have changed since the previous harvest. When this <em>difference CSV</em> is uploaded, records that are newly absent in the current harvest are automatically unpublished and only newly present records are published. </p>
+<p>This workflow uses VSCode (or another code editor) and a fastAPI browser interface to run Python scripts. This method was introduced in 2025 and replaces our Jupyter Notebook harvest recipes. </p>
+<p>Like all of our current harvest workflows, the ArcGIS Hubs harvest script produces two output tables: a <strong>Primary</strong> table and a <strong>Distributions</strong>  table containing links. For more information, see documentation on <strong>Distributions</strong> (in progress). </p>
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Important:</strong> The following instructions assume you've already completed the <strong>Harvest Tools Setup Guide</strong> (in progress).  </p>
+</blockquote>
+<p>Updated January 2026.</p>
+<h3 id="step-1-launch-the-fastapi-arcgis-metadata-harvester">Step 1: Launch the fastAPI ArcGIS Metadata Harvester<a class="headerlink" href="#step-1-launch-the-fastapi-arcgis-metadata-harvester" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In VSCode (or the code editor of your choice), open a bash terminal.</li>
+<li>Activate your fastAPI harvester conda environment and change directories to the <strong>harvester-api</strong> repository.</li>
+<li>Enter the command: <strong>uvicorn main:app --reload</strong></li>
+<li>In a web browser, visit <strong>localhost:8000</strong>.</li>
+<li>Click the <strong>ArcGIS Harvester</strong> link. </li>
+</ol>
+<h3 id="step-2-retrieve-and-prepare-the-hubs-list">Step 2: Retrieve and Prepare the Hubs List<a class="headerlink" href="#step-2-retrieve-and-prepare-the-hubs-list" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The list of currently active ArcGIS Hubs may change in between harvests, so it's best practice to download a new list every time. 
+1. Click the link labeled <strong>Filter ArcGIS Hubs in <abbr title="The backend metadata administrative tool for GeoBlacklight">GBL Admin</abbr></strong> to open a list of all currently active ArcGIS Hubs in GeoBlacklight Admin in a new tab. 
+2. Select all results that match this search, then export and download their Primary CSV.
+3. On the fastAPI ArcGIS Harvester page, click the <strong>Choose File</strong> button under <strong>Step 1: Upload CSV of ArcGIS Hubs</strong>, navigate to and select the CSV downloaded in the previous step, and click <strong>Upload</strong>.
+This interface will automatically move the CSV into the <strong>inputs</strong> folder in the <strong>harvester-api</strong> repository and rename it <strong>arcHubs.csv</strong>.<br />
+Alternatively, any of the above steps can be done manually: 
+1. In GeoBlacklight Admin, apply the following filters: Publication State = <strong>published</strong>, Resource Class = <strong>Websites</strong>, Harvest Workflow = <strong>py_arcgis_hub</strong>. For added validation, you may also filter for Accrual Periodicity = <strong>Weekly</strong> and/or Source Platform = <strong>ArcGIS Hub</strong>. 
+2. Select all results that match this search, then export and download their Primary CSV.
+3. Rename the resulting CSV "<strong>arcHubs.csv</strong>" and move it into the <strong>inputs</strong> folder within the <strong>harvester-api</strong> respository.</p>
+</blockquote>
+<h3 id="step-3-run-the-harvester">Step 3: Run the Harvester<a class="headerlink" href="#step-3-run-the-harvester" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>Run Harvester</strong> button. A line for each hub site will be displayed as it is harvested. A full harvest often takes about 10-15 minutes. </li>
+<li>When the harvester has finished, confirm that both <strong>Primary</strong> and <strong>Distributions</strong> CSVs for the present date exist within the <strong>outputs</strong> folder in the repository. These are the <em>full upload</em> CSVs.</li>
+</ol>
+<h3 id="step-4-prepare-and-upload-the-harvest-csvs">Step 4: Prepare and Upload the Harvest CSVs<a class="headerlink" href="#step-4-prepare-and-upload-the-harvest-csvs" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Important:</strong> There are two ways to complete this step.
+- A <em>difference upload</em> should done for most weekly harvests. This updates only child records that have been added or removed since the last harvest. 
+- A <em>full upload</em> should be done once per quarter or if you don't have CSVs from a previous harvest. This updates all child records. </p>
+</blockquote>
+<h4 id="weekly-difference-upload">Weekly: Difference Upload<a class="headerlink" href="#weekly-difference-upload" title="Permanent link">&para;</a></h4>
+<p>How it works:
+- Compares the current full list of harvested records to the CSVs from the previous harvest saved on your computer. 
+- Returns a CSV that will unpublish newly absent records and publish newly present records. 
+- Does not update the "date accessioned" field. </p>
+<p>Steps: 
+1. In VSCode, change directories to the <strong>scripts</strong> folder within the <strong>harvester-api</strong> repository.
+2. Run the <strong>build_uploads.py</strong> script ("uv run build_uploads.py"). When it's finished, there should be new Primary and Distributions CSVs in the <strong>outputs</strong> folder named with the present date and the suffix "<strong>_upload</strong>." These are <em>difference</em> CSVs, and they include only records that have changed since the previous full harvest CSVs in your Outputs folder.
+3. In the VSCode terminal, the script should also report how many records were added and retired. Record these numbers in the harvest ticket. 
+4. In GeoBlacklight Admin, navigate to the <strong>Admin Tools</strong> menu and select <strong>Import Primary</strong>. Name the import "<strong>[Ticket #]-ArcHubs Harvest-YYYY-MM-DD</strong>". Select <strong>BTAA CSV</strong> under <strong>Type</strong>. 
+5. Click the <strong>Choose file</strong> button and select the current <strong>primary_upload</strong> difference CSV from the <strong>outputs</strong> folder. Click through to start the import.
+6. Next, navigate to the <strong>Admin Tools</strong> menu and select <strong>Import Distributions</strong>. Name the import "<strong>[Ticket #]-ArcHubs Harvest-YYYY-MM-DD-Distributions</strong>". <em>Note</em>: you must import the Primary CSV before the Distributions CSV. </p>
+<h4 id="quarterly-full-upload">Quarterly: Full Upload<a class="headerlink" href="#quarterly-full-upload" title="Permanent link">&para;</a></h4>
+<p>How it works:
+- All records that were found by the harvest script are published.
+- Records that were previously published but are now absent must be manually unpublished.
+- A previous harvest's CSV is not required, and there is no need to run the build_uploads script. 
+- Full uploads will take much longer to import in GBL admin than difference uploads.   </p>
+<p>Steps:  </p>
+<ol>
+<li>In GeoBlacklight Admin, navigate to the <strong>Admin Tools</strong> menu and select <strong>Import Primary</strong>. Name the import <strong>[Ticket #]-ArcHubs Harvest-YYYY-MM-DD</strong>. Select <strong>BTAA CSV</strong> under <strong>Type</strong>. </li>
+<li>Click the <strong>Choose file</strong> button and select the current date's <strong>primary</strong> CSV from the <strong>outputs</strong> folder. (No need to run the build_uploads script - just use the harvest script's output directly!) Click through to start the import.</li>
+<li>Next, navigate to the <strong>Admin Tools</strong> menu and select <strong>Import Distributions</strong>. Name the import "<strong>[Ticket #]-ArcHubs Harvest-YYYY-MM-DD-Distributions</strong>". <em>Note</em>: you must import the Primary CSV before the Distributions CSV.</li>
+<li>Click the <strong>Choose file</strong> button and select the current date's <strong>distributions</strong> CSV from the <strong>outputs</strong> folder (again, NOT distributions-uploads, just [date]-distributions). Click through to start the import. </li>
+<li>Unlike a difference upload, a full upload does not unpublish records that have been removed from their parent hubs. This must be done manually. After completing the upload, view the list of all published ArcGIS Hub records, and unpublish any whose date accessioned field is older than several weeks. </li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p>If an individual hub produces an error message during a harvest, it's often worth simply ignoring it once and trying again the following week. If it continues to return an error, check if its endpoint URL still loads a valid JSON. If not, unpublish the site. Create a GitHub issue, put it on hold, and attach the "monitor" label to it.  </p>
+<p>If the Hubs list needs additions or changes, visit the article <strong>Adding and Updating ArcGIS Hubs</strong> (in progress). </p>
+<h2 id="explanation-of-fields-and-parameters">Explanation of Fields and Parameters<a class="headerlink" href="#explanation-of-fields-and-parameters" title="Permanent link">&para;</a></h2>
+<p>Most of the following fields apply to <em>the child records harvested from the Hub sites</em>, not the Hub sites themselves. For a detailed explanation of Hub website metadata, visit <strong>Adding and Updating ArcGIS Hubs</strong>(in progress). </p>
+<p>Unless otherwise specified, all values in the fields below are automatically populated by the harvest script using a combination of the parent Hub's metadata and the metadata retrieved from the <abbr title="Application Programming Interface">API</abbr> feed. </p>
+<h3 id="provenance-fields">Provenance Fields<a class="headerlink" href="#provenance-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Accrual Method: Automated retrieval</li>
+<li>Accrual Periodicity: Weekly</li>
+<li>Date Accessioned: The most recent date on which a record's <em>parent hub</em> was harvested, <em>not necessarily</em> the most recent time the child record was confirmed to still exist during a harvest.</li>
+<li>Date Retired: The most recent date on which a record was unpublished. </li>
+<li>Endpoint Description: <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> <abbr title="Application Programming Interface">API</abbr></li>
+<li>Endpoint URL: The <abbr title="Data Catalog Vocabulary (a metadata schema)">DCAT</abbr> 1.1 <abbr title="Application Programming Interface">API</abbr> feed URL of the parent Hub, which can be found by clicking the "Explore Feeds" link at the bottom of a Hub's homepage. Typically, this is the hub's main URL followed by "api/feed/dcat-us/1.1.json"</li>
+<li>Harvest Workflow: py_arcgis_hubs</li>
+<li>Source Platform: ArcGIS Hub</li>
+</ul>
+<blockquote>
+<p>Notes about the Date Accessioned field: Because records are only included in the difference CSV (described in Step 3) if they are being added or removed, the Date Accessioned won't reflect the last time a resource was found during a difference harvest - that date will be reflected by the Hub site's Date Accessioned. In other words, records that are still published were validated by the last harvest process, although they weren't changed. <em>When a full harvest upload is completed, the Date Accessioned field on all child records will be updated.</em></p>
+</blockquote>
+<h3 id="other-fields">Other Fields<a class="headerlink" href="#other-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Resource Class: Web Services</li>
+<li>Format: The type of web service. </li>
+</ul>
+<h3 id="other-parameters">Other Parameters<a class="headerlink" href="#other-parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Download links are no longer included in the harvest. </li>
+<li>Distributions URLs correspond to the web services only. These are typically REST service URL. </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
